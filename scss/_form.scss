@@ -37,41 +37,6 @@ input[type="submit"]{
 	color: var(--color-light-grey);
 }
 
-.wpcf7-form{	
-	.wpcf7-list-item{
-		margin: 0;
-	}
-	.wpcf7-form-control-wrap{
-		display: block;
-	}
-	.wpcf7-not-valid-tip {
-		color: var(--color-red);
-		font-size: var(--font-size-small);
-		font-weight: normal;
-		display: block;
-		margin-top: -10px;
-	}
-	.wpcf7-response-output{
-		font-size: var(--font-size-form);
-		border-color: var(--color-red) !important;
-		margin: 0 !important;
-		text-align: center;
-		border-radius: 4px;
-	}
-	.wpcf7-spinner{
-		display: none;
-	}
-	.wpcf7-acceptance{
-		display: block;
-		margin-top: 15px;
-		label{
-			display: flex;
-		}
-		.wpcf7-list-item-label{
-			margin-top: 2px;
-		}
-	}
-}
 
 
  /* Customize the label (the container__radio) */
@@ -138,7 +103,7 @@ input[type="submit"]{
 		<span class="checkmark"></span>
 	</label>
  */
-.checkbox__container, .wpcf7-acceptance label {
+.checkbox__container{
   display: block;
   position: relative;
   padding-left: 30px;
