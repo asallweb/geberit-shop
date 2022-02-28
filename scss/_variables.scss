@@ -1,27 +1,54 @@
 :root {
   --color-light: #FFFFFF;
-  --color-dark: #010B05;
-	--color-background: #F8F8F8;
-	--color-border: #E7E7E7;
-	--color-accent: #07984A;
+  --color-dark: #02020a;
+	--color-border: #E6E6E7;
+	--color-background: #FAFAFA;
+	--color-accent: #0075C9;
+  --color-green: #00D072;
+  --color-red: #FF0000;
 
   --color-grey: #595E5B;
   --color-light-grey: #9E9E9E;
-  --color-red: #E14F4F;
-  --color-green: #07984A;
 
-	--font-size-main: 15px;
+	--font-size-main: 16px;
 	--font-size-form: 15px;
 	--font-size-supertitle: 62px;
 	--font-size-title: 50px;
 	--font-size-subtitle: 18px;
 	--font-size-small: 12px;
 
-	--font-family-main: 'Fira Sans', sans-serif;
-	--font-family-title: 'Fira Sans', sans-serif;
+	--font-family-main: 'Noah', sans-serif;
+	--font-family-title: 'Noah', sans-serif;
 
-	--line-height-base: 1.2;
+	--line-height-base: 1.3;
 
-	--main-container-width: 1248px;
+	--main-container-width: 1290px;
 	--main-container-padding: 0 15px;
+
+
+	--blue-100: #0075c9;
+	--blue-90: #1a83cf;
+	--blue-80: #489cd9;
+	--blue-70: #5fa8dd;
+	--blue-60: #76b5e2;
+	--blue-50: #8cc1e7;
+	--blue-40: #a3cdec;
+	--blue-30: #badaf1;
+	--blue-20: #d1e6f5;
+	--blue-10: #e8f3fa;
+
+	--black-100: #02020a;
+	--black-90: #1b1b23;
+	--black-80: #35353b;
+	--black-70: #4e4e54;
+	--black-60: #67676c;
+	--black-50: #808084;
+	--black-40: #9a9a9d;
+	--black-30: #b3b3b6;
+	--black-20: #ccccce;
+	--black-10: #e6e6e7;
+
+	--yellow-100: #fec533;
+	--yellow-20: #fff3d6;
+	--yellow-10: #fff9eb;
 }
