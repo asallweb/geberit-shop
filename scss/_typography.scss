@@ -1,0 +1,60 @@
+html {
+   font-size: 1px;
+}
+body {
+	font-family: var(--font-family-main);
+	font-size: var(--font-size-main);
+	color: var(--color-dark);
+	line-height: var(--line-height-base);
+	font-weight: 400;
+	overflow-x: hidden;
+}
+
+a, button, input[type="submit"], .btn{
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.site-main{
+	h1, h2, h3, h4, .title{
+		font-family: var(--font-family-title);
+		color: var(--color-dark);
+		font-weight: bold;
+	}
+	h1{
+		font-size: var(--font-size-title);
+	}
+	h2{
+		font-size: 32px;
+	}
+	h3{
+		font-size: 26px;
+	}
+	h4{
+		font-size: 20px;
+	}
+	p{
+		margin-bottom: 15px;
+	}
+	ul, ol {
+		margin: 15px;
+		padding-left: 15px;
+		list-style: disc;
+		li{
+			margin-bottom: 10px;
+		}
+	}
+	ol {
+		list-style: none;
+		counter-reset: my-awesome-counter;
+	}
+	ol li {
+		counter-increment: my-awesome-counter;
+		display: flex;
+		grid-gap: 15px;
+	}
+	ol li::before {
+		content: counter(my-awesome-counter) ". ";
+		font-weight: bold;
+	}
+}

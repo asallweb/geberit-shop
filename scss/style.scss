@@ -1,0 +1,41 @@
+@import "resets/_normalize";
+@import "resets/_reset.local";
+@import "_variables";
+@import "_typography";
+
+.absoluteCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.container {
+	max-width: var(--main-container-width);
+	padding: var(--main-container-padding);
+	margin: 0 auto;
+}
+.hidden {
+	opacity: 0;
+}
+.visible {
+	opacity: 1;
+}
+.overflowed {
+	overflow: hidden;
+	padding-right: 17px !important;
+	touch-action: none;
+	-ms-touch-action: none;
+	-webkit-overflow-scrolling: touch;
+
+	@media (max-width: 1024px) {
+		padding-right: 0 !important;
+	}
+}
+
+@import "_header";
+@import "_main";
+@import "_sidebar";
+@import "_footer";
+@import "_ui";
+@import "_popups";
+@import "_form";

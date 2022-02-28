@@ -1,0 +1,258 @@
+input, textarea{
+	font-size: var(--font-size-form);
+	background: var(--color-light);
+	text-align: left;
+  display: block;
+	width: 100%;
+	border: none;
+	outline: none;
+	padding:18px 20px;
+	margin: 15px 0;
+	border-radius: 4px;
+}
+textarea{
+	height: 100px;
+}
+input[type="submit"]{
+	background: var(--color-dark);
+	color: var(--color-light);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	cursor: pointer;
+	&:hover{
+		background: var(--color-light);
+		color: var(--color-dark);
+	}
+}
+::placeholder {
+	color: var(--color-light-grey);
+  opacity: 1;
+}
+:-ms-input-placeholder { 
+	color: var(--color-light-grey);
+}
+::-ms-input-placeholder {
+	color: var(--color-light-grey);
+}
+
+.wpcf7-form{	
+	.wpcf7-list-item{
+		margin: 0;
+	}
+	.wpcf7-form-control-wrap{
+		display: block;
+	}
+	.wpcf7-not-valid-tip {
+		color: var(--color-red);
+		font-size: var(--font-size-small);
+		font-weight: normal;
+		display: block;
+		margin-top: -10px;
+	}
+	.wpcf7-response-output{
+		font-size: var(--font-size-form);
+		border-color: var(--color-red) !important;
+		margin: 0 !important;
+		text-align: center;
+		border-radius: 4px;
+	}
+	.wpcf7-spinner{
+		display: none;
+	}
+	.wpcf7-acceptance{
+		display: block;
+		margin-top: 15px;
+		label{
+			display: flex;
+		}
+		.wpcf7-list-item-label{
+			margin-top: 2px;
+		}
+	}
+}
+
+
+ /* Customize the label (the container__radio) */
+ /* 
+	<label class="container__radio"> Text
+		<input type="radio" name="radio">
+		<span class="radiobtn"></span>
+	</label>
+ */
+ .container__radio {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  font-size: 14px;
+	font-weight: bold;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+	.radiobtn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 16px;
+		width: 16px;
+		background-color: #fff;
+		border-radius: 50%;
+		border: 2px solid #31343E;
+		&:after {
+			content: "";
+			position: absolute;
+			display: none;
+			top: 2px;
+			left: 2px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: #31343E;
+		}
+	}
+	&:hover input ~ .radiobtn {
+		background-color: #ccc;
+	}
+	input:checked ~ .radiobtn {
+		background-color: #fff;
+		&:after {
+			display: block;
+		}
+	}
+}
+
+ /* Customize the checkbox */
+ /*
+	<label class="checkbox__container">1+
+		<input type="checkbox" checked="checked">
+		<span class="checkmark"></span>
+	</label>
+ */
+.checkbox__container, .wpcf7-acceptance label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+	.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 20px;
+		width: 20px;
+		background-color: transparent;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 4px;
+		&:after {
+			content: "";
+			position: absolute;
+			display: none;
+			left: 7px;
+			top: 2px;
+			width: 6px;
+			height: 12px;
+			border: solid var(--color-accent);
+			border-width: 0 2px 2px 0;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+	}
+	&:hover .checkmark {
+		background-color: transparent;
+		border: 1px solid var(--color-light);
+	}
+	input:checked ~ .wpcf7-list-item-label .checkmark {
+		background-color: var(--color-light);
+		border-color: transparent;
+		&:after {
+			display: block;
+		}
+	}
+}
+
+/* Customize the select
+<div class="custom-select">
+	<select name="" id="">
+		<option value="">0 ₽ — 1000 ₽</option>
+		<option value="">1000 ₽ — 2000 ₽</option>
+	</select>
+</div>*/
+.custom-select {
+  position: relative;
+	font-weight: bold;
+	font-size: 18px;
+	width: 260px;
+	select {
+		display: none;
+	}
+	.select-selected {
+		background-color: #fff;
+		height: 48px;
+		border-radius: 5px;
+		&:after {
+			content: "";
+			position: absolute;
+			top: 20px;
+			right: 22px;
+			display: block;
+			width: 10px;
+			height: 7px;
+			background: url("../images/icons/select.svg") 0 0 no-repeat;
+		}
+	}	
+	.select-selected.select-arrow-active {
+		border-radius: 5px 5px 0 0;
+		border: 1px solid #31343E;
+		border-bottom: none;
+		&:after {
+			border-color: transparent transparent #fff transparent;
+			top: 20px;
+		}
+	}
+	.select-items div, .select-selected {
+		color: #31343E;
+		padding: 10px 16px;
+		border: 1px solid transparent;
+		cursor: pointer;
+	}
+	.select-items {
+		position: absolute;
+		background-color: #fff;
+		top: 100%;
+		left: 0;
+		right: 0;
+		z-index: 99;
+		border-radius: 0 0 5px 5px;
+		border: 1px solid #31343E;
+		border-top: none;
+	}
+	.select-hide {
+		display: none;
+	}
+	.select-items div:hover, .same-as-selected {
+		background-color: rgba(49, 52, 62, 0.07);
+	} 
+}
