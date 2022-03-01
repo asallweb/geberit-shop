@@ -71,5 +71,85 @@
 				}
 			}
 		}
+		.account{
+			height: 100%;
+			margin-left: 30px;
+			.profile{
+				height: 100%;
+				width: 55px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-left: 1px solid #E6E6E7;
+				border-right: 1px solid #E6E6E7;
+
+			}
+		}
+	}
+	&__bottom{
+		padding: 20px 0;
+		.container{
+			display: flex;
+			align-items: center;
+			.logo{
+				margin-right: 92px;
+			}
+			.catalog{
+				margin-right: 30px;
+			}
+			.search{
+				max-width: 556px;
+				width: 100%;
+				form{
+					display: flex;
+					align-items: center;
+					border-bottom: 1px solid #CCCCCE;
+					height: 52px;
+					input[type="text"]{
+						padding: 0 12px;
+						height: 100%;
+						background-color: transparent;
+						font-size: 14px;
+						color: #B3B3B6;
+					}
+					input[type="submit"]{
+						height: 100%;
+						width: 44px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background: url(../images/icons/search.svg) center no-repeat transparent;
+					}
+				}
+			}
+			.tools{
+				margin-left: auto;
+				display: flex;
+				align-items: center;
+				grid-gap: 25px;
+				a{
+					position: relative;
+					display: flex;
+					align-items: center;
+				}
+				.cart{
+					span{
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 15px;
+						height: 15px;
+						background: var(--yellow-100);
+						font-weight: bold;
+						font-size: 8px;
+						line-height: 1;
+						border-radius: 50%;
+						position: absolute;
+						top: 1px;
+						right: 1px;
+					}
+				}
+			}
+		}
 	}
 }
