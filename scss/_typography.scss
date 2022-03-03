@@ -1,10 +1,10 @@
-@font-face { src: url("/fonts/noah/noah-regular.woff2") format("woff2"); font-family: "Noah"; font-weight: 400; font-style: normal; }
-@font-face { src: url("/fonts/noah/noah-regularitalic.woff2") format("woff2"); font-family: "Noah"; font-weight: 400; font-style: italic; }
-@font-face { src: url("/fonts/noah/noah-bold.woff2") format("woff2"); font-family: "Noah"; font-weight: 700; font-style: normal; }
-@font-face { src: url("/fonts/noah/noah-bolditalic.woff2") format("woff2"); font-family: "Noah"; font-weight: 700; font-style: italic; }
+@font-face { src: url("./fonts/noah/noah-regular.woff2") format("woff2"); font-family: "Noah"; font-weight: 400; font-style: normal; }
+@font-face { src: url("./fonts/noah/noah-regularitalic.woff2") format("woff2"); font-family: "Noah"; font-weight: 400; font-style: italic; }
+@font-face { src: url("./fonts/noah/noah-bold.woff2") format("woff2"); font-family: "Noah"; font-weight: 700; font-style: normal; }
+@font-face { src: url("./fonts/noah/noah-bolditalic.woff2") format("woff2"); font-family: "Noah"; font-weight: 700; font-style: italic; }
 
 html {
-   font-size: 1px;
+	font-size: 1px;
 }
 body {
 	font-family: var(--font-family-main);
