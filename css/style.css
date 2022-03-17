@@ -462,6 +462,7 @@ body {
 
 @media (max-width: 1110px) {
   :root {
+    --font-size-title: 36px;
     --font-size-main: 14px;
   }
 }
@@ -960,6 +961,10 @@ a, button, input[type="submit"], .btn {
   width: 100%;
 }
 
+.hero .hero_img.mobile {
+  display: none;
+}
+
 .hero .content {
   position: absolute;
   max-width: 747px;
@@ -1057,7 +1062,7 @@ a, button, input[type="submit"], .btn {
 
 @media (max-width: 798px) {
   .hero {
-    height: 340px;
+    height: 360px;
   }
   .hero .inner {
     height: 100%;
@@ -1067,14 +1072,24 @@ a, button, input[type="submit"], .btn {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .hero .hero_img.desktop {
+    display: none;
+  }
+  .hero .hero_img.mobile {
+    display: block;
+  }
   .hero .content {
     max-width: 380px;
+    padding-right: 30px;
   }
   .hero .content .title {
     font-size: 28px;
   }
   .hero .content .description {
     font-size: 14px;
+  }
+  .hero .lnk {
+    display: none;
   }
 }
 
@@ -1179,6 +1194,67 @@ a, button, input[type="submit"], .btn {
   .catalog__sections .section .youtube {
     bottom: 20px;
     right: 15px;
+  }
+}
+
+.warranties {
+  margin: 100px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.warranties .title {
+  font-size: var(--font-size-title);
+  max-width: 900px;
+  grid-column: 3 span / auto;
+  line-height: 1.2;
+  margin-bottom: 70px;
+}
+
+.warranties .item {
+  position: relative;
+  border: 1px solid #E6E6E7;
+  padding: 100px 40px 40px 40px;
+}
+
+.warranties .item svg {
+  background: #fff;
+  position: absolute;
+  top: -65px;
+  left: 40px;
+}
+
+.warranties .item .subtitle {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1024px) {
+  .warranties .item {
+    padding: 70px 30px 30px 30px;
+  }
+  .warranties .item svg {
+    width: 90px;
+    height: 90px;
+    top: -45px;
+    left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .warranties {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 60px 20px;
+  }
+  .warranties .title {
+    grid-column: 1 span / auto;
+    margin-bottom: 40px;
+  }
+  .warranties .item {
+    padding: 60px 30px 30px 30px;
   }
 }
 
