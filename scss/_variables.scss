@@ -51,4 +51,8 @@
 	--yellow-100: #fec533;
 	--yellow-20: #fff3d6;
 	--yellow-10: #fff9eb;
+
+	@media (max-width: 1110px) {
+		--font-size-main: 14px;
+	}
 }
