@@ -18,6 +18,69 @@ $(document).ready(function () {
 	/* Popup initialize */
 	popupInitialize();
 
+	$('.new__products .products').slick({
+		dots: false,
+		arrows: true,
+		fade: true,
+		autoplay: false,
+		autoplaySpeed: 1000,
+		speed: 500,
+		cssEase: 'linear',
+		appendArrows:'.new__products .slider-arrows',
+		prevArrow:"<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		nextArrow:"<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		responsive: [
+			{
+				breakpoint: 1080,
+				settings: {
+					slidesToShow: 1,
+					fade: false,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
+	$('.item_product_list .images').slick({
+		dots: true,
+		arrows: false,
+		fade: true,
+		touchMove: false,
+		autoplay: false,
+		autoplaySpeed: 1000,
+		speed: 500,
+		cssEase: 'linear'
+	});
+
+	$('.bestseller .slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		appendArrows:'.bestseller .slider-arrows',
+		prevArrow:"<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		nextArrow:"<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		responsive: [
+			{
+				breakpoint: 1220,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 460,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
 
 });
 $(window).resize(function () {
