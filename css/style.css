@@ -1632,6 +1632,10 @@ a, button, input[type="submit"], .btn {
   }
 }
 
+.bestseller {
+  margin: 100px auto;
+}
+
 .bestseller .head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1685,6 +1689,184 @@ a, button, input[type="submit"], .btn {
   }
   .bestseller .slider .slick-list {
     margin: 0 -10px;
+  }
+}
+
+.popular__sections {
+  margin: 100px auto;
+}
+
+.popular__sections .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.popular__sections .head .title {
+  font-size: var(--font-size-title);
+  line-height: 1.2;
+  position: relative;
+}
+
+.popular__sections .head .title svg {
+  position: absolute;
+  left: -14px;
+  top: -6px;
+}
+
+.popular__sections .body {
+  position: relative;
+}
+
+.popular__sections .body .media {
+  width: 85.7%;
+  margin-left: auto;
+}
+
+.popular__sections .body .media .text {
+  max-width: 68%;
+  margin: 0 auto 54px;
+}
+
+.popular__sections .body .media img {
+  display: block;
+  line-height: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.popular__sections .body .buttons {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.popular__sections .body .buttons .item {
+  display: block;
+  width: 22.63%;
+  height: 23.8%;
+  padding: 30px;
+  border: 1px solid #CCCCCE;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(34px);
+          backdrop-filter: blur(34px);
+  margin: 26px 0;
+  position: relative;
+}
+
+.popular__sections .body .buttons .item span {
+  font-size: 26px;
+  max-width: 70%;
+  font-weight: 700;
+}
+
+.popular__sections .body .buttons .item .ico {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  background: #FEC533;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--color-dark);
+  opacity: 0;
+}
+
+.popular__sections .body .buttons .item:hover {
+  background-color: #fff;
+}
+
+.popular__sections .body .buttons .item:hover .ico {
+  opacity: 1;
+}
+
+@media (max-width: 1080px) {
+  .popular__sections .body .media .text {
+    margin: 0 auto 50px;
+  }
+  .popular__sections .body .buttons .item {
+    padding: 20px;
+  }
+  .popular__sections .body .buttons .item span {
+    font-size: 20px;
+    max-width: 100%;
+  }
+  .popular__sections .body .buttons .item .ico {
+    width: 40px;
+    height: 40px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popular__sections .body .media {
+    width: 100%;
+    margin-left: 0;
+  }
+  .popular__sections .body .media .text {
+    max-width: 100%;
+    margin-bottom: 110px;
+  }
+  .popular__sections .body .buttons {
+    overflow-x: auto;
+    height: 190px;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 60px;
+  }
+  .popular__sections .body .buttons .item {
+    width: 263px;
+    height: 190px;
+    padding: 20px;
+    margin: 0 30px 0 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+}
+
+@media (max-width: 670px) {
+  .popular__sections .body .media .text {
+    margin-bottom: 150px;
+  }
+  .popular__sections .body .buttons {
+    height: 120px;
+    top: 140px;
+  }
+  .popular__sections .body .buttons .item {
+    width: 180px;
+    height: 120px;
+    padding: 15px;
+    margin: 0 20px 0 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .popular__sections .body .buttons {
+    top: 160px;
   }
 }
 
