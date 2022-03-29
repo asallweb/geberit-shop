@@ -2222,6 +2222,67 @@ a, button, input[type="submit"], .btn {
   }
 }
 
+.info__2cols {
+  margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 87px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info__2cols .img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: clamp(450px, 50vw, 666px);
+}
+
+.info__2cols .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.info__2cols .content .title {
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.info__2cols .content .list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+}
+
+.info__2cols .content .list .item .icon {
+  margin-bottom: 15px;
+}
+
+.info__2cols .content .list .item .name {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 900px) {
+  .info__2cols {
+    grid-gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info__2cols {
+    margin: 70px auto;
+  }
+  .info__2cols .img {
+    display: none;
+  }
+}
+
 button, .btn {
   background-color: var(--color-accent);
   display: -webkit-box;
