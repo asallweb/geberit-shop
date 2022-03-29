@@ -82,6 +82,41 @@ $(document).ready(function () {
 		]
 	});
 
+	
+	$('.collections .slider-for').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		appendArrows:'.collections .slider-arrows',
+		prevArrow:"<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		nextArrow:"<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		fade: true,
+		asNavFor: '.collections .slider-nav'
+	});
+	$('.collections .slider-nav').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '.collections .slider-for',
+		dots: false,
+		arrows: false,
+		centerMode: false,
+		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+		]
+	});
+	
 });
 $(window).resize(function () {
 
