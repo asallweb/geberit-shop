@@ -40,7 +40,6 @@ $(document).ready(function () {
 			}
 		]
 	});
-
 	$('.item_product_list .images').slick({
 		dots: true,
 		arrows: false,
@@ -51,7 +50,6 @@ $(document).ready(function () {
 		speed: 500,
 		cssEase: 'linear'
 	});
-
 	$('.bestseller .slider').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -81,8 +79,6 @@ $(document).ready(function () {
 			}
 		]
 	});
-
-	
 	$('.collections .slider-for').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -116,8 +112,18 @@ $(document).ready(function () {
 			}
 		]
 	});
-	
+	info__toggler();
 });
 $(window).resize(function () {
 
 });
+
+function info__toggler(){
+	$('.info__toggler .toggler .item').click(function(){
+		let bannerid = $(this).data('bannerid');
+		$('.info__toggler .toggler .item').removeClass('active');
+		$(this).addClass('active');
+		$('.info__toggler .body .item').hide();
+		$('.info__toggler .body .item#bannerid-' + bannerid).show();
+	});
+}
