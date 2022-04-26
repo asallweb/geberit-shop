@@ -1,14 +1,16 @@
-window.addEventListener('load', function(){
+window.addEventListener("load", function () {
 	setTimeout(function () {
 		/* Animate.css initialize */
-		$('.hasAnimation').each(function () {
-			var animateName = $(this).data('animate');
-			$(this).addClass("hidden").viewportChecker({
-				classToRemove: 'hidden',
-				classToAdd: 'visible animate__animated ' + animateName,
-				offset: 0
-			});
-		});	
+		$(".hasAnimation").each(function () {
+			var animateName = $(this).data("animate");
+			$(this)
+				.addClass("hidden")
+				.viewportChecker({
+					classToRemove: "hidden",
+					classToAdd: "visible animate__animated " + animateName,
+					offset: 0,
+				});
+		});
 	}, 200);
 });
 $(document).ready(function () {
@@ -18,29 +20,40 @@ $(document).ready(function () {
 	/* Popup initialize */
 	popupInitialize();
 
-	$('.new__products .products').slick({
+	//additional slider
+
+	$(".new__products .image").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+	});
+
+	//additional slider
+
+	$(".new__products .products").slick({
 		dots: false,
 		arrows: true,
 		fade: true,
 		autoplay: false,
 		autoplaySpeed: 1000,
+		asNavFor: ".new__products .image",
 		speed: 500,
-		cssEase: 'linear',
-		appendArrows:'.new__products .slider-arrows',
-		prevArrow:"<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-		nextArrow:"<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		cssEase: "linear",
+		appendArrows: ".new__products .slider-arrows",
+		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		responsive: [
 			{
 				breakpoint: 1080,
 				settings: {
 					slidesToShow: 1,
 					fade: false,
-					slidesToScroll: 1
-				}
-			}
-		]
+					slidesToScroll: 1,
+				},
+			},
+		],
 	});
-	$('.item_product_list .images').slick({
+	$(".item_product_list .images").slick({
 		dots: true,
 		arrows: false,
 		fade: true,
@@ -48,51 +61,51 @@ $(document).ready(function () {
 		autoplay: false,
 		autoplaySpeed: 1000,
 		speed: 500,
-		cssEase: 'linear'
+		cssEase: "linear",
 	});
-	$('.bestseller .slider').slick({
+	$(".bestseller .slider").slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		dots: false,
 		arrows: true,
-		appendArrows:'.bestseller .slider-arrows',
-		prevArrow:"<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-		nextArrow:"<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		appendArrows: ".bestseller .slider-arrows",
+		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		responsive: [
 			{
 				breakpoint: 1220,
 				settings: {
-					slidesToShow: 3
-				}
+					slidesToShow: 3,
+				},
 			},
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 2
-				}
+					slidesToShow: 2,
+				},
 			},
 			{
 				breakpoint: 460,
 				settings: {
-					slidesToShow: 1
-				}
-			}
-		]
+					slidesToShow: 1,
+				},
+			},
+		],
 	});
-	$('.collections .slider-for').slick({
+	$(".collections .slider-for").slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: true,
-		appendArrows:'.collections .slider-arrows',
-		prevArrow:"<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-		nextArrow:"<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		appendArrows: ".collections .slider-arrows",
+		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		fade: true,
-		asNavFor: '.collections .slider-nav'
+		asNavFor: ".collections .slider-nav",
 	});
-	$('.collections .slider-nav').slick({
+	$(".collections .slider-nav").slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		asNavFor: '.collections .slider-for',
+		asNavFor: ".collections .slider-for",
 		dots: false,
 		arrows: false,
 		centerMode: false,
@@ -101,29 +114,46 @@ $(document).ready(function () {
 			{
 				breakpoint: 768,
 				settings: {
-					slidesToShow: 3
-				}
+					slidesToShow: 3,
+				},
 			},
 			{
 				breakpoint: 500,
 				settings: {
-					slidesToShow: 2
-				}
-			}
-		]
+					slidesToShow: 2,
+				},
+			},
+		],
 	});
 	info__toggler();
 });
-$(window).resize(function () {
+$(window).resize(function () {});
 
-});
-
-function info__toggler(){
-	$('.info__toggler .toggler .item').click(function(){
-		let bannerid = $(this).data('bannerid');
-		$('.info__toggler .toggler .item').removeClass('active');
-		$(this).addClass('active');
-		$('.info__toggler .body .item').hide();
-		$('.info__toggler .body .item#bannerid-' + bannerid).show();
+function info__toggler() {
+	$(".info__toggler .toggler .item").click(function () {
+		let bannerid = $(this).data("bannerid");
+		$(".info__toggler .toggler .item").removeClass("active");
+		$(this).addClass("active");
+		$(".info__toggler .body .item").hide();
+		$(".info__toggler .body .item#bannerid-" + bannerid).show();
 	});
 }
+
+//menu acc
+
+$(".menu ul li.main").click(function () {
+	$(this).toggleClass("active");
+	$(this)
+		.find(".acc-list")
+		.slideToggle(300, function () {});
+});
+
+//phones acc
+
+$(".phones svg").click(function () {
+	$(this).toggleClass("active");
+	$(this)
+		.parent()
+		.find(".phones-list")
+		.slideToggle(300, function () {});
+});

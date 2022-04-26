@@ -1,30 +1,32 @@
 :root {
-	--color-light: #FFFFFF;
+	--color-light: #ffffff;
 	--color-dark: #02020a;
-	--color-border: #E6E6E7;
-	--color-background: #FAFAFA;
-	--color-accent: #0075C9;
-  --color-green: #00D072;
-  --color-red: #FF0000;
+	--color-border: #e6e6e7;
+	--color-background: #fafafa;
+	--color-accent: #0075c9;
+	--color-green: #00d072;
+	--color-red: #ff0000;
+	--color-orange: #ff9000;
+	--color-purple: #c879ff;
 
-  --color-grey: #595E5B;
-  --color-light-grey: #9E9E9E;
+	--color-grey: #595e5b;
+	--color-light-grey: #9e9e9e;
 
 	--font-size-main: 16px;
 	--font-size-form: 15px;
 	--font-size-supertitle: 62px;
+	--font-size-detail-title: 38px;
 	--font-size-title: 50px;
 	--font-size-subtitle: 18px;
 	--font-size-small: 12px;
 
-	--font-family-main: 'Noah', sans-serif;
-	--font-family-title: 'Noah', sans-serif;
+	--font-family-main: "Noah", sans-serif;
+	--font-family-title: "Noah", sans-serif;
 
 	--line-height-base: 1.3;
 
 	--main-container-width: 1290px;
 	--main-container-padding: 0 15px;
-
 
 	--blue-100: #0075c9;
 	--blue-90: #1a83cf;
@@ -52,8 +54,19 @@
 	--yellow-20: #fff3d6;
 	--yellow-10: #fff9eb;
 
+	//additional pages variables
+
+	--text-links-hover: #005fa3;
+	--text-links-pressed: #00477a;
+
 	@media (max-width: 1110px) {
 		--font-size-title: 36px;
 		--font-size-main: 14px;
+	}
+
+	@media (max-width: 576px) {
+		--font-size-title: 28px;
+		--font-size-main: 14px;
+		--font-size-detail-title: 24px;
 	}
 }
