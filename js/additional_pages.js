@@ -6,6 +6,26 @@ $(".upper-block").click(function () {
 		.slideToggle(300, function () {});
 
 	$(this).find($(".circle-plus")).toggleClass("opened");
+
+	setTimeout(function () {
+		$("#min-label")
+			.html("$" + $("#range").slider("values", 0))
+			.position({
+				my: "center bottom",
+				at: "center top",
+				of: $("#range .ui-slider-handle:eq(0)"),
+				offset: "0, 10",
+			});
+
+		$("#max-label")
+			.html("$" + $("#range").slider("values", 1))
+			.position({
+				my: "center bottom",
+				at: "center top",
+				of: $("#range .ui-slider-handle:eq(1)"),
+				offset: "0, 10",
+			});
+	}, 100);
 });
 
 //range
@@ -20,11 +40,32 @@ $(function () {
 		slide: function (event, ui) {
 			$("#min").val(ui.values[0]);
 			$("#max").val(ui.values[1]);
+
+			var delay = function () {
+				//loop through the span...
+				$("#range")
+					.find(".ui-slider-handle")
+					.each(function (index) {
+						var label = index == 0 ? "#min-label" : "#max-label"; //change selector
+						//assign value
+						$(label)
+							.html(ui.values[index])
+							.position({
+								my: "center bottom",
+								at: "center top",
+								of: $(this), // current span which is iterated..
+								offset: "0, 10",
+							});
+					});
+			};
+
+			// wait for the ui.handle to set its position
+			setTimeout(delay, 5);
 		},
 	});
 
 	$("#min, #max").keypress(function (event) {
-		if (event.keyCode == 13 && $("#min").val() < $("#max").val()) {
+		if (event.keyCode == 13 && parseInt($("#min").val()) < parseInt($("#max").val())) {
 			$("#range").slider({ values: [$("#min").val(), $("#max").val()] });
 		}
 	});
@@ -126,9 +167,6 @@ $(".add__slider").slick({
 	slidesToScroll: 1,
 	dots: false,
 	arrows: true,
-	appendArrows: ".add__buttons-block .slider-arrows",
-	prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-	nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 	variableWidth: true,
 	responsive: [
 		{
@@ -224,7 +262,50 @@ $(".container").each(function () {
 			ths.find(".tab-item").hide().eq($(this).index()).fadeIn();
 
 			$(".bonus__slider").slick("unslick");
-			$(".bonus__slider").slick();
+			$(".item_product_list .images").slick("unslick");
+			$(".bonus__slider").slick({
+				infinite: false,
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				dots: false,
+				arrows: true,
+				responsive: [
+					{
+						breakpoint: 1250,
+						settings: {
+							arrows: true,
+							centerMode: false,
+							slidesToShow: 3,
+						},
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							arrows: true,
+							centerMode: false,
+							slidesToShow: 2,
+						},
+					},
+					{
+						breakpoint: 576,
+						settings: {
+							arrows: true,
+							centerMode: false,
+							slidesToShow: 1,
+						},
+					},
+				],
+			});
+			$(".item_product_list .images").slick({
+				dots: true,
+				arrows: false,
+				fade: true,
+				touchMove: false,
+				autoplay: false,
+				autoplaySpeed: 1000,
+				speed: 500,
+				cssEase: "linear",
+			});
 		})
 		.eq(0)
 		.addClass("active");
@@ -239,24 +320,29 @@ $(".message-btn").click(function () {
 
 //counter basket
 
-// let count = document.querySelector(".count-block .number");
+$(".basket__item").each(function () {
+	let amount = $(this).find(".number").val();
 
-// $(".plus").click(function () {
-// 	count.innerHTML++;
-// 	console.log(count);
+	$(this)
+		.find(".plus")
+		.click(function () {
+			amount++;
+			console.log(amount);
+			$(this).parent().find(".number").val(amount);
+			$(this).parent().find(".minus").removeClass("unactive");
+		});
 
-// 	$(".minus").removeClass("unactive");
-// });
+	$(this)
+		.find(".minus")
+		.click(function () {
+			if (amount > 1) {
+				amount--;
+				console.log(amount);
+				$(this).parent().find(".number").val(amount);
+			}
 
-// $(".minus").click(function () {
-// 	if (count.innerHTML > 1) {
-// 		count.innerHTML--;
-// 	} else if (count.innerHTML <= 1) {
-// 		$(".minus").addClass("unactive");
-// 	}
-// });
-
-$(".plus").click(function () {
-	$(this).closest(".count-block").find(".number").val() + 1;
-	console.log($(this).closest(".count-block").find(".number").val());
+			if (amount == 1) {
+				$(this).parent().find(".minus").addClass("unactive");
+			}
+		});
 });
