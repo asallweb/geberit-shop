@@ -483,7 +483,7 @@ input[type="checkbox"] {
 					align-items: center;
 
 					&:hover {
-						color: var(--black-80);
+						color: var(--text-links-hover);
 
 						svg {
 							color: var(--blue-100);
@@ -491,7 +491,7 @@ input[type="checkbox"] {
 					}
 
 					svg {
-						margin-left: 8px;
+						margin-left: 5px;
 						color: var(--blue-100);
 					}
 				}
@@ -1079,6 +1079,10 @@ input[type="checkbox"] {
 						background-position: 50% 50%;
 						background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMgMTBMMTcgMTAiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPHBhdGggZD0iTTcuNjU1IDUuMzQzNzVMMyA5Ljk5ODc1TDcuNjU1IDE0LjY1MzgiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPC9zdmc+Cg==");
 					}
+
+					&:hover {
+						opacity: 0.5;
+					}
 				}
 
 				.slick-next {
@@ -1095,6 +1099,10 @@ input[type="checkbox"] {
 						background-repeat: no-repeat;
 						background-position: 50% 50%;
 						background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3IDEwTDMgMTAiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPHBhdGggZD0iTTEyLjM0NSA1LjM0Mzc1TDE3IDkuOTk4NzVMMTIuMzQ1IDE0LjY1MzgiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPC9zdmc+Cg==");
+					}
+
+					&:hover {
+						opacity: 0.5;
 					}
 				}
 
@@ -1711,6 +1719,10 @@ input[type="checkbox"] {
 						background-position: 50% 50%;
 						background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMgMTBMMTcgMTAiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPHBhdGggZD0iTTcuNjU1IDUuMzQzNzVMMyA5Ljk5ODc1TDcuNjU1IDE0LjY1MzgiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPC9zdmc+Cg==");
 					}
+
+					&:hover {
+						opacity: 0.5;
+					}
 				}
 
 				.slick-next {
@@ -1734,6 +1746,10 @@ input[type="checkbox"] {
 						background-repeat: no-repeat;
 						background-position: 50% 50%;
 						background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3IDEwTDMgMTAiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPHBhdGggZD0iTTEyLjM0NSA1LjM0Mzc1TDE3IDkuOTk4NzVMMTIuMzQ1IDE0LjY1MzgiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPC9zdmc+Cg==");
+					}
+
+					&:hover {
+						opacity: 0.5;
 					}
 				}
 				.add__slider-item {
@@ -1858,6 +1874,11 @@ input[type="checkbox"] {
 			position: relative;
 			font-size: 22px;
 			transition: background 0.3s ease-in-out;
+
+			&:hover {
+				background-color: rgb(241, 241, 241);
+				opacity: 1;
+			}
 
 			&.active {
 				background-color: var(--color-light);
@@ -2032,6 +2053,10 @@ input[type="checkbox"] {
 					background-position: 50% 50%;
 					background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMgMTBMMTcgMTAiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPHBhdGggZD0iTTcuNjU1IDUuMzQzNzVMMyA5Ljk5ODc1TDcuNjU1IDE0LjY1MzgiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPC9zdmc+Cg==");
 				}
+
+				&:hover {
+					opacity: 0.5;
+				}
 			}
 
 			.slick-next {
@@ -2054,6 +2079,10 @@ input[type="checkbox"] {
 					background-repeat: no-repeat;
 					background-position: 50% 50%;
 					background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3IDEwTDMgMTAiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPHBhdGggZD0iTTEyLjM0NSA1LjM0Mzc1TDE3IDkuOTk4NzVMMTIuMzQ1IDE0LjY1MzgiIHN0cm9rZT0iIzAyMDIwQSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPC9zdmc+Cg==");
+				}
+
+				&:hover {
+					opacity: 0.5;
 				}
 			}
 
@@ -2228,6 +2257,14 @@ input[type="checkbox"] {
 					grid-gap: 18px;
 					justify-content: flex-start;
 					flex-wrap: wrap;
+
+					.input-wrapper {
+						transition: all 0.3s ease-in-out;
+
+						&:hover {
+							color: var(--black-60);
+						}
+					}
 				}
 
 				.review__item {
@@ -2314,6 +2351,9 @@ input[type="checkbox"] {
 
 							&.active {
 								color: var(--black-100);
+							}
+							&:hover {
+								color: var(--text-links-hover);
 							}
 						}
 					}
@@ -2458,7 +2498,7 @@ input[type="checkbox"] {
 				}
 
 				&:hover {
-					border: 1px solid var(--black-100);
+					border: 1px solid var(--black-40);
 					font-weight: 700;
 					cursor: pointer;
 				}
@@ -2489,6 +2529,11 @@ input[type="checkbox"] {
 	height: 50px;
 	z-index: 20;
 	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		opacity: 0.5;
+	}
 
 	&:before {
 		content: "";
@@ -2542,6 +2587,10 @@ input[type="checkbox"] {
 		position: relative;
 		transition: all 0.3s ease-in-out;
 		top: 0px;
+
+		&:hover {
+			opacity: 0.5;
+		}
 
 		&.hidden {
 			top: 20px;
@@ -3006,6 +3055,11 @@ input[type="checkbox"] {
 							max-width: 242px;
 							width: 100%;
 							border-bottom: 1px solid var(--color-border);
+							border-radius: 0;
+						}
+
+						input[type="tel"]:focus {
+							border-bottom: 1px solid var(--blue-100);
 						}
 
 						input[type="submit"] {
@@ -3068,6 +3122,15 @@ input[type="checkbox"] {
 								&.textarea {
 									grid-column: span 3 / auto;
 								}
+
+								input:focus {
+									border-bottom: 1px solid var(--blue-100);
+								}
+
+								textarea:focus {
+									border-bottom: 1px solid var(--blue-100);
+								}
+
 								span {
 									font-size: 12px;
 								}
@@ -3075,6 +3138,7 @@ input[type="checkbox"] {
 									padding: 8px 12px;
 									background-color: var(--color-background);
 									border-bottom: 1px solid var(--color-border);
+									border-radius: 0;
 								}
 
 								textarea {
@@ -3082,6 +3146,7 @@ input[type="checkbox"] {
 									background-color: var(--color-background);
 									border-bottom: 1px solid var(--color-border);
 									resize: none;
+									border-radius: 0;
 								}
 							}
 
@@ -3201,6 +3266,7 @@ input[type="checkbox"] {
 								max-width: unset;
 								width: 100%;
 								margin: 0;
+								border-radius: 0;
 							}
 						}
 					}
