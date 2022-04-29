@@ -505,4 +505,8 @@
 		<path d="M12.5003 8.31331L14.5003 10.3133V6.97998V2.97998H7.16699V8.31331H12.5003Z" stroke="#02020A" stroke-width="1.2" stroke-linecap="square" />
 		<path d="M9.83333 10.9798V12.9798H4.5L2.5 14.9798V7.64648L4.5 7.64648" stroke="#02020A" stroke-width="1.2" stroke-linecap="square" />
 	</symbol>
+	<symbol id="arrow-bottom"  viewBox="0 0 17 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M8.76562 0L8.76563 68.5175" stroke="#67676C"/>
+		<path d="M1.26562 62L8.76563 69L16.2656 62" stroke="#67676C"/>
+	</symbol>
 </svg>

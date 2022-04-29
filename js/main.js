@@ -53,6 +53,7 @@ $(document).ready(function () {
 			},
 		],
 	});
+
 	$(".item_product_list .images").slick({
 		dots: true,
 		arrows: false,
@@ -63,6 +64,7 @@ $(document).ready(function () {
 		speed: 500,
 		cssEase: "linear",
 	});
+
 	$(".bestseller .slider").slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -156,4 +158,65 @@ $(".phones svg").click(function () {
 		.parent()
 		.find(".phones-list")
 		.slideToggle(300, function () {});
+});
+
+//big main slider reinit
+
+$(window).resize(function () {
+	if (window.innerWidth <= 1080) {
+		$(".new__products .image").slick("unslick");
+		$(".new__products .products").slick("unslick");
+
+		$(".new__products .image").slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			fade: true,
+		});
+		$(".new__products .products").slick({
+			dots: false,
+			arrows: true,
+			fade: false,
+			autoplay: false,
+			autoplaySpeed: 1000,
+			asNavFor: ".new__products .image",
+			speed: 500,
+			slidesToScroll: 1,
+			cssEase: "linear",
+			slidesToShow: 1,
+			appendArrows: ".new__products .slider-arrows",
+			prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+			nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		});
+	} else if (window.innerWidth > 1080) {
+		$(".new__products .image").slick("unslick");
+		$(".new__products .products").slick("unslick");
+
+		$(".new__products .image").slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			fade: true,
+		});
+		$(".new__products .products").slick({
+			dots: false,
+			arrows: true,
+			fade: true,
+			autoplay: false,
+			autoplaySpeed: 1000,
+			asNavFor: ".new__products .image",
+			speed: 500,
+			cssEase: "linear",
+			appendArrows: ".new__products .slider-arrows",
+			prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+			nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		});
+	}
+});
+
+//scroll links
+
+$("a").on("click", function (event) {
+	event.preventDefault();
+	var id = $(this).attr("href"),
+		top = $(id).offset().top;
+	$("body,html").animate({ scrollTop: top }, 500);
 });

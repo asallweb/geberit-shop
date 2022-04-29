@@ -4,6 +4,31 @@
 		margin: 0 auto;
 		max-width: 1440px;
 		position: relative;
+
+		.arrow-bottom {
+			position: absolute;
+			left: 6.2%;
+			bottom: 10%;
+			width: 15px;
+			height: 70px;
+		}
+
+		.logo-block {
+			position: absolute;
+			right: 6.2%;
+			bottom: 10%;
+			color: #fff;
+			max-width: 222px;
+			text-align: center;
+			line-height: 1.6;
+
+			img {
+				width: 100px;
+				height: 15px;
+				position: relative;
+				top: 4px;
+			}
+		}
 	}
 	.hero_img {
 		display: block;
@@ -43,7 +68,14 @@
 		width: 27.7%;
 		height: 28%;
 		padding: 30px;
+		&:hover {
+			span {
+				background-color: #dfa001;
+			}
+		}
+
 		span {
+			transition: all 0.3s ease-in-out;
 			width: 48px;
 			height: 48px;
 			position: absolute;
@@ -71,6 +103,16 @@
 		right: 36%;
 	}
 	@media (max-width: 1110px) {
+		.inner {
+			.arrow-bottom {
+				position: absolute;
+				left: 15px;
+				bottom: 8%;
+				width: 15px;
+				height: 70px;
+			}
+		}
+
 		.content {
 			max-width: 550px;
 			left: 15px;
@@ -92,6 +134,19 @@
 			}
 		}
 	}
+
+	@media (max-width: 992px) {
+		.inner {
+			.arrow-bottom {
+				display: none;
+			}
+
+			.logo-block {
+				display: none;
+			}
+		}
+	}
+
 	@media (max-width: 798px) {
 		height: 360px;
 		.inner {
@@ -123,7 +178,8 @@
 	}
 }
 .catalog__sections {
-	margin: 100px auto;
+	padding-top: 50px;
+	margin: 50px auto 100px auto;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 30px;
@@ -157,6 +213,7 @@
 		}
 		.subtitle {
 			display: block;
+			padding-right: 12px;
 		}
 		.youtube {
 			position: absolute;
@@ -173,7 +230,8 @@
 		}
 	}
 	@media (max-width: 1110px) {
-		margin: 70px auto;
+		padding-top: 35px;
+		margin: 35px auto 70px auto;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 20px;
 		.section.mobcolspan-2 {
@@ -299,9 +357,11 @@
 			line-height: 1.2;
 			margin-bottom: 30px;
 			position: relative;
+			left: 1px;
+
 			svg {
 				position: absolute;
-				left: -14px;
+				left: -11px;
 				top: -6px;
 			}
 		}
@@ -847,6 +907,8 @@
 .collections {
 	margin: 100px auto;
 	position: relative;
+	overflow: hidden;
+
 	.slider-arrows {
 		position: absolute;
 		right: 15px;
@@ -982,7 +1044,7 @@
 .info__toggler {
 	display: flex;
 	.body {
-		width: 100%;
+		flex: 1 auto;
 		height: clamp(300px, 80vw, 900px);
 		.item {
 			display: none;
@@ -1044,11 +1106,13 @@
 			text-align: left;
 			.icon {
 				margin-bottom: 20px;
+				display: block;
 			}
 			.name {
 				font-weight: 700;
 				font-size: 26px;
 				text-align-last: left;
+				max-width: 190px;
 			}
 			&:hover {
 				background: #35353b;
@@ -1059,12 +1123,12 @@
 				background: #35353b;
 				border: 1px solid #35353b;
 				opacity: 1;
+				border-bottom: 1px solid #fff;
 			}
 		}
 	}
 	@media (max-width: 1440px) {
 		.toggler {
-			width: 300px;
 			.item {
 				padding: 40px;
 				.icon {
@@ -1079,8 +1143,16 @@
 			}
 		}
 	}
+
+	@media (max-width: 992px) {
+		.toggler {
+			width: 300px;
+		}
+	}
+
 	@media (max-width: 768px) {
 		flex-direction: column;
+
 		.body {
 			height: auto;
 			.item {
@@ -1098,9 +1170,11 @@
 		.toggler {
 			width: 100%;
 			height: auto;
+
 			display: flex;
 			.item {
 				width: 33.3333%;
+
 				height: auto;
 				justify-content: center;
 				padding: 30px;

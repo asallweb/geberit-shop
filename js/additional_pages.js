@@ -59,7 +59,6 @@ $(function () {
 					});
 			};
 
-			// wait for the ui.handle to set its position
 			setTimeout(delay, 5);
 		},
 	});
@@ -92,6 +91,8 @@ $(".more").click(function () {
 		$(this).html("Показать ещё");
 	}
 });
+
+//scroll links
 
 $("a").on("click", function (event) {
 	event.preventDefault();

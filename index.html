@@ -59,7 +59,7 @@
 					<div class="menu">
 						<ul>
 							<li class="main">
-								<span href=""
+								<span
 									>Наши магазины
 									<svg width="10" height="6"><use xlink:href="./images/icons/icons.svg#chevron"></use></svg>
 								</span>
@@ -71,7 +71,7 @@
 								</div>
 							</li>
 							<li class="main">
-								<span href=""
+								<span
 									>Сервис <svg width="10" height="6"><use xlink:href="./images/icons/icons.svg#chevron"></use></svg>
 								</span>
 								<div class="acc-list">
@@ -82,7 +82,7 @@
 								</div>
 							</li>
 							<li class="main">
-								<span href=""
+								<span
 									>Контакты
 									<svg width="10" height="6">
 										<use xlink:href="./images/icons/icons.svg#chevron"></use>
@@ -98,10 +98,10 @@
 						</ul>
 					</div>
 					<div class="phones">
-						<a href="tel:+7 (495) 268-04-06" class="active">+7 (495) 268-04-06 </a><svg width="10" height="6"><use xlink:href="./images/icons/icons.svg#chevron"></use></svg>
+						<a href="tel:+74952680406" class="active">+7 (495) 268-04-06 </a><svg width="10" height="6"><use xlink:href="./images/icons/icons.svg#chevron"></use></svg>
 						<div class="phones-list">
-							<a href="tel:+7 (495) 268-04-06" class="active">+7 (495) 268-04-06 </a>
-							<a href="tel:+7 (495) 268-04-06" class="active">+7 (495) 268-04-06 </a>
+							<a href="tel:+74952680406" class="active">+7 (495) 268-04-06 </a>
+							<a href="tel:+74952680406" class="active">+7 (495) 268-04-06 </a>
 						</div>
 					</div>
 					<div class="phones-mobile">
@@ -121,7 +121,7 @@
 					<a href="" class="logo"><img src="./images/icons/logo_bottom.png" alt="" /></a>
 					<button class="catalog btn-lg btn-blue">Каталог товаров</button>
 					<div class="search">
-						<form action="">
+						<form>
 							<input type="text" placeholder="Поиск" />
 							<input type="submit" value="" />
 						</form>
@@ -144,8 +144,15 @@
 		<main class="site-main">
 			<section class="hero">
 				<div class="inner">
-					<img src="./images/content/image_1.png" class="hero_img desktop" />
-					<img src="./images/content/image_1-mobile.png" class="hero_img mobile" />
+					<a class="arrow-bottom" href="#bottom">
+						<svg width="14" height="70"><use xlink:href="./images/icons/icons.svg#arrow-bottom"></use></svg>
+					</a>
+					<div class="logo-block">
+						<img src="./images/icons/geberit_logo.png" alt="logo" />
+						- благополучие в вашей ванной комнате
+					</div>
+					<img src="./images/content/image_1.png" class="hero_img desktop" alt="image_1" />
+					<img src="./images/content/image_1-mobile.png" class="hero_img mobile" alt="image_1_mobile" />
 					<div class="content">
 						<h1 class="title">Официальный дилер продукции Geberit Group</h1>
 						<div class="description">GEBERIT известна по всему миру и является европейским лидером в производстве встраиваемых монтажных систем — производит более половины всех установленных бачков скрытого монтажа.</div>
@@ -166,7 +173,7 @@
 					></a>
 				</div>
 			</section>
-			<section class="catalog__sections container">
+			<section id="bottom" class="catalog__sections container">
 				<a href="#" class="section colspan-2">
 					<svg width="51" height="51" class="icon"><use xlink:href="./images/icons/icons.svg#catalog_section-icon"></use></svg>
 					<span class="title">Клавиши смыва Geberit</span>
@@ -738,22 +745,22 @@
 				</div>
 				<div class="toggler">
 					<button class="item active" data-bannerid="1">
-						<div class="icon">
+						<span class="icon">
 							<svg width="90" height="90"><use xlink:href="./images/icons/icons.svg#info__toggler-1"></use></svg>
-						</div>
-						<div class="name">О компании Geberit</div>
+						</span>
+						<span class="name">О компании Geberit</span>
 					</button>
 					<button class="item" data-bannerid="2">
-						<div class="icon">
+						<span class="icon">
 							<svg width="90" height="90"><use xlink:href="./images/icons/icons.svg#info__toggler-2"></use></svg>
-						</div>
-						<div class="name">Официальные диситибьюторы</div>
+						</span>
+						<span class="name">Официальные диситибьюторы</span>
 					</button>
 					<button class="item" data-bannerid="3">
-						<div class="icon">
+						<span class="icon">
 							<svg width="91" height="91"><use xlink:href="./images/icons/icons.svg#info__toggler-3"></use></svg>
-						</div>
-						<div class="name">Где купить?</div>
+						</span>
+						<span class="name">Где купить?</span>
 					</button>
 				</div>
 			</section>
