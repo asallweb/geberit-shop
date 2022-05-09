@@ -9,7 +9,7 @@ $(".upper-block").click(function () {
 
 	setTimeout(function () {
 		$("#min-label")
-			.html("$" + $("#range").slider("values", 0))
+			.html($("#range").slider("values", 0))
 			.position({
 				my: "center bottom",
 				at: "center top",
@@ -18,7 +18,7 @@ $(".upper-block").click(function () {
 			});
 
 		$("#max-label")
-			.html("$" + $("#range").slider("values", 1))
+			.html($("#range").slider("values", 1))
 			.position({
 				my: "center bottom",
 				at: "center top",
@@ -47,6 +47,7 @@ $(function () {
 					.find(".ui-slider-handle")
 					.each(function (index) {
 						var label = index == 0 ? "#min-label" : "#max-label"; //change selector
+						console.log(index);
 						//assign value
 						$(label)
 							.html(ui.values[index])
@@ -66,6 +67,22 @@ $(function () {
 	$("#min, #max").keypress(function (event) {
 		if (event.keyCode == 13 && parseInt($("#min").val()) < parseInt($("#max").val())) {
 			$("#range").slider({ values: [$("#min").val(), $("#max").val()] });
+
+			$("#range")
+				.find(".ui-slider-handle")
+				.each(function (index) {
+					var label = index == 0 ? "#min-label" : "#max-label"; //change selector
+					console.log(index);
+					//assign value
+					$(label)
+						.html($("#range").slider("values")[index])
+						.position({
+							my: "center bottom",
+							at: "center top",
+							of: $(this), // current span which is iterated..
+							offset: "0, 10",
+						});
+				});
 		}
 	});
 });
@@ -253,82 +270,91 @@ $(".sort").click(function () {
 
 //tabs
 
-$(".container").each(function () {
-	let ths = $(this);
-	ths.find(".tab-item").not(":first").hide();
-	ths
-		.find(".tab-buttons .scroll-wrapper button")
-		.click(function () {
-			ths.find(".tab-buttons .scroll-wrapper button").removeClass("active").eq($(this).index()).addClass("active");
-			ths.find(".tab-item").hide().eq($(this).index()).fadeIn();
+function tabsInit() {
+	$(".container").each(function () {
+		let ths = $(this);
+		ths.find(".tab-item").not(":first").hide();
+		ths
+			.find(".tab-buttons .scroll-wrapper button")
+			.click(function () {
+				ths.find(".tab-buttons .scroll-wrapper button").removeClass("active").eq($(this).index()).addClass("active");
+				ths.find(".tab-item").hide().eq($(this).index()).fadeIn();
 
-			$(".bonus__slider").slick("unslick");
-			$(".item_product_list .images").slick("unslick");
-			$(".bonus__slider").slick({
-				infinite: false,
-				slidesToShow: 4,
-				slidesToScroll: 1,
-				dots: false,
-				arrows: true,
-				responsive: [
-					{
-						breakpoint: 1250,
-						settings: {
-							arrows: true,
-							centerMode: false,
-							slidesToShow: 3,
+				$(".bonus__slider").slick("unslick");
+				$(".item_product_list .images").slick("unslick");
+				$(".bonus__slider").slick({
+					infinite: false,
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					dots: false,
+					arrows: true,
+					responsive: [
+						{
+							breakpoint: 1250,
+							settings: {
+								arrows: true,
+								centerMode: false,
+								slidesToShow: 3,
+							},
 						},
-					},
-					{
-						breakpoint: 768,
-						settings: {
-							arrows: true,
-							centerMode: false,
-							slidesToShow: 2,
+						{
+							breakpoint: 768,
+							settings: {
+								arrows: true,
+								centerMode: false,
+								slidesToShow: 2,
+							},
 						},
-					},
-					{
-						breakpoint: 576,
-						settings: {
-							arrows: true,
-							centerMode: false,
-							slidesToShow: 1,
+						{
+							breakpoint: 576,
+							settings: {
+								arrows: true,
+								centerMode: false,
+								slidesToShow: 1,
+							},
 						},
-					},
-				],
-			});
-			$(".item_product_list .images").slick({
-				dots: true,
-				arrows: false,
-				fade: true,
-				touchMove: false,
-				autoplay: false,
-				autoplaySpeed: 1000,
-				speed: 500,
-				cssEase: "linear",
-			});
-			$(".add__slider").slick("unslick");
-			$(".add__slider").slick({
-				infinite: false,
-				slidesToShow: 5,
-				slidesToScroll: 1,
-				dots: false,
-				arrows: true,
-				variableWidth: true,
-				responsive: [
-					{
-						breakpoint: 1080,
-						settings: {
-							arrows: true,
-							centerMode: false,
-							slidesToShow: 3,
+					],
+				});
+				$(".item_product_list .images").slick({
+					dots: true,
+					arrows: false,
+					fade: true,
+					touchMove: false,
+					autoplay: false,
+					autoplaySpeed: 1000,
+					speed: 500,
+					cssEase: "linear",
+				});
+				$(".add__slider").slick("unslick");
+				$(".add__slider").slick({
+					infinite: false,
+					slidesToShow: 5,
+					slidesToScroll: 1,
+					dots: false,
+					arrows: true,
+					variableWidth: true,
+					responsive: [
+						{
+							breakpoint: 1080,
+							settings: {
+								arrows: true,
+								centerMode: false,
+								slidesToShow: 3,
+							},
 						},
-					},
-				],
-			});
-		})
-		.eq(0)
-		.addClass("active");
+					],
+				});
+			})
+			.eq(0)
+			.addClass("active");
+	});
+}
+
+tabsInit();
+
+$(".show__popup-btn").click(function () {
+	tabsInit();
+	console.log(1);
 });
 
 //message fixed btn
@@ -365,4 +391,10 @@ $(".basket__item").each(function () {
 				$(this).parent().find(".minus").addClass("unactive");
 			}
 		});
+});
+
+// our shops acc
+
+$(".our-shops").click(function () {
+	$(".shops").slideToggle(300, function () {});
 });

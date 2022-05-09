@@ -1,4 +1,96 @@
 .header {
+	.shops {
+		-webkit-box-shadow: 0px 19px 11px -14px rgba(0, 0, 0, 0.2);
+		box-shadow: 0px 19px 11px -14px rgba(0, 0, 0, 0.2);
+		padding: 40px 0;
+		position: absolute;
+		width: 100%;
+		z-index: 20;
+		background-color: var(--color-light);
+		top: 97px;
+		display: none;
+
+		@media (max-width: 1080px) {
+			display: none !important;
+		}
+		.container {
+			display: flex;
+			grid-gap: 10px;
+			.main-item {
+				border: 1px solid var(--color-border);
+				background-color: var(--color-background);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 39px 0;
+				width: 25%;
+
+				.logo-wrapper {
+					height: 51px;
+
+					img {
+						object-fit: cover;
+						height: 100%;
+					}
+				}
+
+				.subtitle {
+					text-align: center;
+					margin-top: 15px;
+					max-width: 185px;
+				}
+
+				.btn-blue {
+					margin-top: 30px;
+					padding: 10px 0;
+					max-width: 185px;
+					width: 100%;
+					text-align: center;
+				}
+
+				.link {
+					margin-top: 15px;
+					font-weight: 700;
+					color: var(--color-accent);
+				}
+			}
+
+			.items-wrapper {
+				height: 100%;
+				grid-template-columns: repeat(5, 1fr);
+				display: grid;
+				grid-gap: 10px;
+				width: 70%;
+				.item {
+					border: 1px solid var(--color-border);
+					min-height: 142px;
+					display: flex;
+					justify-content: space-between;
+					flex-direction: column;
+					padding: 30px 20px 20px 20px;
+
+					.img-wrapper {
+						height: 15px;
+						img {
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+
+					a {
+						color: var(--color-accent);
+						font-weight: 700;
+						svg {
+							position: relative;
+							top: 3px;
+						}
+					}
+				}
+			}
+		}
+	}
+
 	&__supertop {
 		color: var(--color-dark);
 		background-color: rgba(254, 197, 51, 0.15);
@@ -38,6 +130,9 @@
 				font-size: 14px;
 				margin-right: 60px;
 				width: 125px;
+				background-color: transparent;
+				padding: 0;
+				color: #000;
 				svg {
 					margin-right: 6px;
 				}
@@ -143,6 +238,8 @@
 				height: 100%;
 				width: 55px;
 				display: flex;
+				color: #000;
+				background-color: #fff;
 				align-items: center;
 				justify-content: center;
 				border-left: 1px solid var(--color-border);

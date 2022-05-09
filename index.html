@@ -51,24 +51,18 @@
 						Cеть экспертных<br />магазинов сантехники
 					</a>
 					<div class="city">
-						<a href="" class="active">
+						<button href="" class="active show__popup-btn" data-popup="regionPopup">
 							<svg width="18" height="18"><use xlink:href="./images/icons/icons.svg#map_pin"></use></svg>
 							Москва
-						</a>
+						</button>
 					</div>
 					<div class="menu">
 						<ul>
-							<li class="main">
+							<li class="main our-shops">
 								<span
 									>Наши магазины
 									<svg width="10" height="6"><use xlink:href="./images/icons/icons.svg#chevron"></use></svg>
 								</span>
-								<div class="acc-list">
-									<span>Гарантия</span>
-									<span>Возврат товаров</span>
-									<span>Монтаж</span>
-									<span>Подъем товаров</span>
-								</div>
 							</li>
 							<li class="main">
 								<span
@@ -110,9 +104,9 @@
 						></a>
 					</div>
 					<div class="account">
-						<a href="" class="profile"
-							><svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#account_avatar"></use></svg
-						></a>
+						<button href="" class="profile show__popup-btn" data-popup="registerPopup">
+							<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#account_avatar"></use></svg>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -140,7 +134,102 @@
 					</div>
 				</div>
 			</div>
+			<div class="shops">
+				<div class="container">
+					<div class="main-item">
+						<div class="logo-wrapper">
+							<img src="./images/icons/logo.png" alt="logo" />
+						</div>
+						<span class="subtitle">Cеть экспертных магазинов сантехники</span>
+						<a class="btn-blue" href="#">Каталог всех товаров</a>
+						<a class="link" href="#">expert-santehniki.ru</a>
+					</div>
+					<div class="items-wrapper">
+						<div class="item">
+							<div class="img-wrapper">
+								<img src="./images/icons/logo_bottom.png" alt="" />
+							</div>
+							<a href=""
+								>В магазин
+								<svg width="16" height="16">
+									<use xlink:href="./images/icons/icons.svg#top_right_arrow_short"></use></svg
+							></a>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<img src="./images/icons/logo_aquation.png" alt="" />
+							</div>
+							<a href=""
+								>В магазин
+								<svg width="16" height="16">
+									<use xlink:href="./images/icons/icons.svg#top_right_arrow_short"></use></svg
+							></a>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<img src="./images/icons/logo_bottom.png" alt="" />
+							</div>
+							<a href=""
+								>В магазин
+								<svg width="16" height="16">
+									<use xlink:href="./images/icons/icons.svg#top_right_arrow_short"></use></svg
+							></a>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<img src="./images/icons/logo_aquation.png" alt="" />
+							</div>
+							<a href=""
+								>В магазин
+								<svg width="16" height="16">
+									<use xlink:href="./images/icons/icons.svg#top_right_arrow_short"></use></svg
+							></a>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<img src="./images/icons/logo_bottom.png" alt="" />
+							</div>
+							<a href=""
+								>В магазин
+								<svg width="16" height="16">
+									<use xlink:href="./images/icons/icons.svg#top_right_arrow_short"></use></svg
+							></a>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<img src="./images/icons/logo_aquation.png" alt="" />
+							</div>
+							<a href=""
+								>В магазин
+								<svg width="16" height="16">
+									<use xlink:href="./images/icons/icons.svg#top_right_arrow_short"></use></svg
+							></a>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<img src="./images/icons/logo_bottom.png" alt="" />
+							</div>
+							<a href=""
+								>В магазин
+								<svg width="16" height="16">
+									<use xlink:href="./images/icons/icons.svg#top_right_arrow_short"></use></svg
+							></a>
+						</div>
+						<div class="item">
+							<div class="img-wrapper">
+								<img src="./images/icons/logo_aquation.png" alt="" />
+							</div>
+							<a href=""
+								>В магазин
+								<svg width="16" height="16">
+									<use xlink:href="./images/icons/icons.svg#top_right_arrow_short"></use></svg
+							></a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</header>
+
 		<main class="site-main">
 			<section class="hero">
 				<div class="inner">
@@ -255,7 +344,9 @@
 				</div>
 				<div class="products absoluteCenter">
 					<div class="item_product_list">
-						<div class="marker new">NEW</div>
+						<div class="markers-wrapper">
+							<div class="marker new">NEW</div>
+						</div>
 						<div class="images-wrapper">
 							<div class="images">
 								<div><img src="./images/content/image_3.png" alt="" /></div>
@@ -284,7 +375,9 @@
 						</div>
 					</div>
 					<div class="item_product_list">
-						<div class="marker new">NEW</div>
+						<div class="markers-wrapper">
+							<div class="marker new">NEW</div>
+						</div>
 						<div class="images-wrapper">
 							<div class="images">
 								<div><img src="./images/content/image_3.png" alt="" /></div>
@@ -313,7 +406,9 @@
 						</div>
 					</div>
 					<div class="item_product_list">
-						<div class="marker new">NEW</div>
+						<div class="markers-wrapper">
+							<div class="marker new">NEW</div>
+						</div>
 						<div class="images-wrapper">
 							<div class="images">
 								<div><img src="./images/content/image_3.png" alt="" /></div>
@@ -353,11 +448,16 @@
 				</div>
 				<div class="slider">
 					<div class="item_product_list">
-						<div class="marker new">NEW</div>
-						<div class="images">
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
+						<div class="markers-wrapper">
+							<div class="marker new">NEW</div>
+						</div>
+						<div class="images-wrapper">
+							<div class="images">
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+							</div>
+							<button class="quick-view">Быстрый просмотр</button>
 						</div>
 						<a href="#" class="title">Раковина 60 см Geberit myDay 245460600 без отверстия перелива</a>
 						<div class="availability available">
@@ -379,63 +479,16 @@
 						</div>
 					</div>
 					<div class="item_product_list">
-						<div class="marker new">NEW</div>
-						<div class="images">
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
+						<div class="markers-wrapper">
+							<div class="marker new">NEW</div>
 						</div>
-						<a href="#" class="title">60 см Geberit myDay 245460600 без отверстия перелива</a>
-						<div class="availability available">
-							<div class="dot"></div>
-							В наличии
-						</div>
-						<div class="price">
-							<div class="current">15 088 руб.</div>
-							<div class="old">31 088 руб.</div>
-						</div>
-						<div class="buttons">
-							<button class="add_to_busket btn btn-blue">В корзину</button>
-							<button class="compare">
-								<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#compare"></use></svg>
-							</button>
-							<button class="favorite">
-								<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#favorite"></use></svg>
-							</button>
-						</div>
-					</div>
-					<div class="item_product_list">
-						<div class="marker new">NEW</div>
-						<div class="images">
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-						</div>
-						<a href="#" class="title">60 см Geberit myDay 245460600 без отверстия перелива</a>
-						<div class="availability available">
-							<div class="dot"></div>
-							В наличии
-						</div>
-						<div class="price">
-							<div class="current">15 088 руб.</div>
-							<div class="old">31 088 руб.</div>
-						</div>
-						<div class="buttons">
-							<button class="add_to_busket btn btn-blue">В корзину</button>
-							<button class="compare">
-								<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#compare"></use></svg>
-							</button>
-							<button class="favorite">
-								<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#favorite"></use></svg>
-							</button>
-						</div>
-					</div>
-					<div class="item_product_list">
-						<div class="marker new">NEW</div>
-						<div class="images">
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
+						<div class="images-wrapper">
+							<div class="images">
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+							</div>
+							<button class="quick-view">Быстрый просмотр</button>
 						</div>
 						<a href="#" class="title">Раковина 60 см Geberit myDay 245460600 без отверстия перелива</a>
 						<div class="availability available">
@@ -457,13 +510,18 @@
 						</div>
 					</div>
 					<div class="item_product_list">
-						<div class="marker new">NEW</div>
-						<div class="images">
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
+						<div class="markers-wrapper">
+							<div class="marker new">NEW</div>
 						</div>
-						<a href="#" class="title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+						<div class="images-wrapper">
+							<div class="images">
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+							</div>
+							<button class="quick-view">Быстрый просмотр</button>
+						</div>
+						<a href="#" class="title">Раковина 60 см Geberit myDay 245460600 без отверстия перелива</a>
 						<div class="availability available">
 							<div class="dot"></div>
 							В наличии
@@ -483,13 +541,80 @@
 						</div>
 					</div>
 					<div class="item_product_list">
-						<div class="marker new">NEW</div>
-						<div class="images">
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
-							<div><img src="./images/content/image_3.png" alt="" /></div>
+						<div class="markers-wrapper">
+							<div class="marker new">NEW</div>
 						</div>
-						<a href="#" class="title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+						<div class="images-wrapper">
+							<div class="images">
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+							</div>
+							<button class="quick-view">Быстрый просмотр</button>
+						</div>
+						<a href="#" class="title">Раковина 60 см Geberit myDay 245460600 без отверстия перелива</a>
+						<div class="availability available">
+							<div class="dot"></div>
+							В наличии
+						</div>
+						<div class="price">
+							<div class="current">15 088 руб.</div>
+							<div class="old">31 088 руб.</div>
+						</div>
+						<div class="buttons">
+							<button class="add_to_busket btn btn-blue">В корзину</button>
+							<button class="compare">
+								<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#compare"></use></svg>
+							</button>
+							<button class="favorite">
+								<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#favorite"></use></svg>
+							</button>
+						</div>
+					</div>
+					<div class="item_product_list">
+						<div class="markers-wrapper">
+							<div class="marker new">NEW</div>
+						</div>
+						<div class="images-wrapper">
+							<div class="images">
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+							</div>
+							<button class="quick-view">Быстрый просмотр</button>
+						</div>
+						<a href="#" class="title">Раковина 60 см Geberit myDay 245460600 без отверстия перелива</a>
+						<div class="availability available">
+							<div class="dot"></div>
+							В наличии
+						</div>
+						<div class="price">
+							<div class="current">15 088 руб.</div>
+							<div class="old">31 088 руб.</div>
+						</div>
+						<div class="buttons">
+							<button class="add_to_busket btn btn-blue">В корзину</button>
+							<button class="compare">
+								<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#compare"></use></svg>
+							</button>
+							<button class="favorite">
+								<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#favorite"></use></svg>
+							</button>
+						</div>
+					</div>
+					<div class="item_product_list">
+						<div class="markers-wrapper">
+							<div class="marker new">NEW</div>
+						</div>
+						<div class="images-wrapper">
+							<div class="images">
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+								<div><img src="./images/content/image_3.png" alt="" /></div>
+							</div>
+							<button class="quick-view">Быстрый просмотр</button>
+						</div>
+						<a href="#" class="title">Раковина 60 см Geberit myDay 245460600 без отверстия перелива</a>
 						<div class="availability available">
 							<div class="dot"></div>
 							В наличии
@@ -883,11 +1008,158 @@
 				</div>
 			</div>
 		</footer>
-		<div class="popup" id="firstPopup">
+		<div class="popup" id="registerPopup">
 			<div class="popup__inner">
 				<div class="popup__content animate__animated" data-animatedin="animate__fadeInDown" data-animatedout="animate__fadeOutDown">
-					<button class="popup__close close-popup">X</button>
-					<h1>Выберите тип предпринимательской деятельности:</h1>
+					<button class="popup__close close-popup">╳</button>
+					<div class="container">
+						<div class="tab-buttons">
+							<div class="scroll-wrapper">
+								<button class="active">Вход</button>
+								<button>Регистрация</button>
+							</div>
+						</div>
+						<div class="tab-item login">
+							<span class="info">Авторизуйтесь, если вы уже зарегистрированы в нашем магазине.</span>
+							<form action="">
+								<div class="form__input-wrapper">
+									<span>Телефон или E-mail*</span>
+									<span class="step-input-wrapper your-name"><input type="text" name="Ваше имя" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input form-block__input_name" aria-required="true" aria-invalid="false" placeholder="Телефон или E-mail" /></span>
+									<span class="error">Это поле необходимо заполнить.</span>
+								</div>
+								<div class="form__input-wrapper">
+									<span>Пароль*</span>
+									<span class="step-input-wrapper your-name"><input type="text" name="Ваше имя" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input form-block__input_name" aria-required="true" aria-invalid="false" placeholder="Пароль" /></span>
+									<span class="error">Это поле необходимо заполнить.</span>
+								</div>
+								<input type="submit" value="Войти" />
+							</form>
+						</div>
+						<div class="tab-item register">
+							<form action="">
+								<div class="form__input-wrapper name">
+									<span>Ваше имя*</span>
+									<span class="step-input-wrapper"><input type="text" name="Ваше имя" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input form-block__input_name" aria-required="true" aria-invalid="false" placeholder="Ваше имя" /></span>
+									<span class="error">Это поле необходимо заполнить.</span>
+								</div>
+								<div class="form__input-wrapper second-name">
+									<span>Ваша фамилия*</span>
+									<span class="step-input-wrapper"><input type="text" name="Ваша фамилия" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input form-block__input_name" aria-required="true" aria-invalid="false" placeholder="Ваша фамилия" /></span>
+									<span class="error">Это поле необходимо заполнить.</span>
+								</div>
+								<div class="form__input-wrapper">
+									<span>Телефон*</span>
+									<span class="step-input-wrapper"><input type="tel" name="Телефон" value="" size="40" class="wpcf7-validates-as-tel wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input form-block__input_name" aria-required="true" aria-invalid="false" placeholder="Телефон" /></span>
+									<span class="error">Это поле необходимо заполнить.</span>
+								</div>
+								<div class="form__input-wrapper">
+									<span>E-mail*</span>
+									<span class="step-input-wrapper"><input type="email" name="E-mail" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input form-block__input_name" aria-required="true" aria-invalid="false" placeholder="E-mail" /></span>
+									<span class="error">Это поле необходимо заполнить.</span>
+								</div>
+								<div class="form__input-wrapper">
+									<span>Пароль*</span>
+									<span class="step-input-wrapper"><input type="text" name="Пароль" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input form-block__input_name" aria-required="true" aria-invalid="false" placeholder="Пароль" /></span>
+									<span class="error">Это поле необходимо заполнить.</span>
+								</div>
+								<div class="form__input-wrapper">
+									<span>Подтверждение пароля*</span>
+									<span class="step-input-wrapper"><input type="text" name="Подтверждение пароля" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input form-block__input_name" aria-required="true" aria-invalid="false" placeholder="Подтверждение пароля" /></span>
+									<span class="error">Это поле необходимо заполнить.</span>
+								</div>
+								<div class="input-wrapper confirmation">
+									<input type="checkbox" id="confirmation" name="confirmation" />
+									<label for="confirmation"></label>
+									<div class="confirmation__text"><span> Регистрируясь, я принимаю </span><a href="">условия пользовательского соглашения</a></div>
+								</div>
+								<input type="submit" value="Регистрация" />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup" id="regionPopup">
+			<div class="popup__inner">
+				<div class="popup__content animate__animated" data-animatedin="animate__fadeInDown" data-animatedout="animate__fadeOutDown">
+					<button class="popup__close close-popup">╳</button>
+					<h2>Выбор региона</h2>
+					<span class="subtitle">Выберите город из списка или введите для поиска</span>
+					<input class="search" type="text" />
+					<div class="city-list">
+						<span class="city-item delivery stock">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Москва
+						</span>
+						<span class="city-item delivery">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Санкт-Петербург
+						</span>
+						<span class="city-item stock">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Екатеринбург</span
+						>
+						<span class="city-item">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Новосибирск</span
+						>
+						<span class="city-item">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Краснодар</span
+						>
+						<span class="city-item">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Воронеж</span
+						>
+						<span class="city-item">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Казань</span
+						>
+						<span class="city-item">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Красноярск</span
+						>
+						<span class="city-item">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Нижний Новгород</span
+						>
+						<span class="city-item">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Пермь</span
+						>
+						<span class="city-item">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Самара</span
+						>
+						<span class="city-item">
+							<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg>
+							<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>
+							Челябинск</span
+						>
+					</div>
+					<div class="info-block">
+						<div class="link"><a href="#">Прочитайте нашу инструкцию</a> по оформление заказов с доставкой транспортной компанией</div>
+						<div class="wrapper">
+							<div class="info-item">
+								<svg width="12" height="14" class="stock-icon"><use xlink:href="./images/icons/icons.svg#stock"></use></svg> В этом городе есть склад продукции
+							</div>
+							<div class="info-item">
+								<svg width="16" height="16" class="delivery-icon"><use xlink:href="./images/icons/icons.svg#delivery"></use></svg>В этих городах мы доставляем своими машинами
+							</div>
+						</div>
+						<p>Доставка заказа до транспортной компании бесплатная от 50 000 рублей. Стоимость доставки заказа транспортной компании и время доставки в ваш город указаны на странице товара после выбора города. Вы можете вернуть товар в течение 7 дней без объяснения причины.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -904,5 +1176,6 @@
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/jquery.viewportchecker.js"></script>
 	<script src="js/popup.js"></script>
+	<script src="js/additional_pages.js"></script>
 	<script src="js/main.js"></script>
 </html>

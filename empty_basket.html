@@ -32,7 +32,7 @@
 				document.querySelector("body").classList.remove("overflowed");
 			});
 		</script>
-	</head>	
+	</head>
 	<body class="overflowed">
 		<div class="pre-loader">
 			<div class="loader pulse">
@@ -233,193 +233,227 @@
 		<div class="breadcrumbs-wrapper">
 			<div class="container">
 				<div class="breadcrumbs">
-					<a class="breadcrumbs__link black" href="#">Вернуться к покупкам</a>
+					<a class="breadcrumbs__link black" href="#">Вернуться к покупкам </a>
 				</div>
 			</div>
 		</div>
 
-		<section class="order">
+		<section class="basket basket_empty">
 			<div class="container">
-				<h2 class="order__title">Оформление заказа</h2>
-				<div class="order-wrapper">
-					<div class="order__left-block">
-						<div class="tab-buttons">
-							<div class="scroll-wrapper">
-								<button class="active">Экспресс оформление</button>
-								<button>Оформить самостоятельно</button>
-							</div>
-						</div>
-						<div class="order__page tab-item">
-							<h3>Мы ценим ваше время!</h3>
-							<span class="subtitle"><b>Введите только номер телефона.</b> Адрес, удобную дату доставки и способ оплаты вы сможете согласовать с менеджером по телефону.</span>
-							<form action="">
-								<div class="form__input-wrapper not-valid">
-								<input class="wpcf7-validates-as-tel" type="tel" placeholder="Номер телефона" />
-								<span class="error">Это поле необходимо заполнить.</span>
-								</div>
-								<input type="submit" value="Отправить" />
-							</form>
-						</div>
-						<div class="order__page-detail tab-item">
-							<div class="account-check">Уже есть аккаунт? <a>Авторизоваться</a></div>
-							<div class="step">
-								<h2 class="order__step-title"><span>1</span> Выберите способ получения заказа</h2>
-								<div class="cards-wrapper">
-									<div class="order__card active">
-										<div class="head-block">
-											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#delivery-car"></use></svg>
-											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
-										</div>
-										<span>Самовывоз со склада в Москве</span>
-									</div>
-									<div class="order__card">
-										<div class="head-block">
-											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#delivery-van"></use></svg>
-											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
-										</div>
-										<span>Доставка в города России транспортной компанией</span>
-									</div>
-									<div class="order__card">
-										<div class="head-block">
-											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#delivery-moscow"></use></svg>
-											<div class="choosed">
-												<svg class="" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
-											</div>
-										</div>
-										<span>Доставка по Москве</span>
-									</div>
-								</div>
-								<div class="info">
-									<div class="bold">
-										Стоимость доставки:
-										<span class="price">Бесплатно</span>
-									</div>
-									<div>Вы можете самостоятельно забрать заказ из одного из наших <a href="#">магазинов.</a></div>
-								</div>
-							</div>
-							<div class="step">
-								<h2 class="order__step-title"><span>2</span> Контактные данные</h2>
+				<h2 class="basket__title">Корзина<span></span></h2>
+				<h3 class="empty-title">Ваша корзина пока пуста</h3>
+				<a class="btn-blue centered" href="#">Перейти к покупкам</a>
+				<span class="info">Индивидуальный подбор товара по телефону (бесплатно по России):</span>
+				<a class="tel" href="tel:+88007770896">8 (800) 777-08-96</a>
+			</div>
+		</section>
 
-								<form action="/contacts/#wpcf7-f11-o1" method="post" class="step-form" novalidate="novalidate" data-status="init">
-									<div class="form__input-wrapper not-valid">
-										<span>Ваше имя*</span>
-										<span class="step-input-wrapper your-name"><input type="text" name="Ваше имя" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input form-block__input_name" aria-required="true" aria-invalid="false" placeholder="Ваше имя" /></span>
-										<span class="error">Это поле необходимо заполнить.</span>
-									</div>
-									<div class="form__input-wrapper">
-										<span>Текст*</span>
-										<span class="step-input-wrapper text"><input type="text" name="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required form-block__input form-block__input_tel" aria-required="true" aria-invalid="false" placeholder="Текст" /></span>
-										<span class="error">Это поле необходимо заполнить.</span>
-									</div>
-									<div class="form__input-wrapper">
-										<span>Ваш E-mail*</span>
-										<span class="step-input-wrapper email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-block__input form-block__input_tel" aria-required="true" aria-invalid="false" placeholder="Ваш E-mail" /></span>
-										<span class="error">Это поле необходимо заполнить.</span>
-									</div>
-									<div class="form__input-wrapper textarea not-valid">
-										<span>Комментарий к заказу*</span>
-										<span class="step-input-wrapper textarea">
-											<textarea name="textarea" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-block__input form-block__input_tel" aria-required="true" aria-invalid="false" placeholder="Комментарий к заказу*" /></textarea>
-											<span class="error">Это поле необходимо заполнить.</span>
-										</span>
-									</div>
-								</form>
+		<section class="bonus">
+			<div class="container">
+				<h2 class="bonus__title">Рекомендуем</h2>
+				<div class="bonus__slider tab-item">
+					<div class="item_product_list-wrapper">
+						<div class="item_product_list">
+							<div class="markers-wrapper">
+								<div class="marker new">NEW</div>
+							</div>
+							<div class="images-wrapper">
+								<div class="images">
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+								</div>
+								<button class="quick-view">Быстрый просмотр</button>
+							</div>
+							<a href="#" class="title">60 см Geberit myDay 245460600 без отверстия перелива</a>
 
+							<div class="availability available">
+								<div class="dot"></div>
+								В наличии
 							</div>
-							
-							<div class="step">
-								<h2 class="order__step-title"><span>3</span> Выберите способ оплаты</h2>
-								<div class="cards-wrapper">
-									<div class="order__card active">
-										<div class="head-block">
-											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#pay-card"></use></svg>
-											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
-										</div>
-										<span>Банковской картой</span>
-									</div>
-									<div class="order__card">
-										<div class="head-block">
-											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#pay-paper"></use></svg>
-											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
-										</div>
-										<span>Наличный расчет</span>
-									</div>
-									<div class="order__card">
-										<div class="head-block">
-											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#pay-crypto"></use></svg>
-											<div class="choosed">
-												<svg class="" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
-											</div>
-										</div>
-										<span>Безналичный расчёт</span>
-									</div>
-								</div>
+							<div class="price">
+								<div class="current">15 088 руб.</div>
+								<div class="old">31 088 руб.</div>
 							</div>
-							
-							<div class="step">
-								<h2 class="order__step-title"><span>4</span> Сервис и услуги</h2>
-								<div class="cards-wrapper">
-									<div class="order__card active">
-										<div class="head-block">
-											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#service-floor"></use></svg>
-											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
-										</div>
-										<span>Нужен подъем на этаж</span>
-									</div>
-									<div class="order__card">
-										<div class="head-block">
-											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#service-montage"></use></svg>
-											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
-										</div>
-										<span>Нужен монтаж</span>
-									</div>
-								</div>
-							</div>
-							
-							<div class="step">
-								<h2 class="order__step-title"><span>5</span> Итого: 79 699 ₽</h2>
+							<div class="buttons">
+								<button class="add_to_busket btn btn-blue">В корзину</button>
+								<button class="compare">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#compare"></use></svg>
+								</button>
+								<button class="favorite">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#favorite"></use></svg>
+								</button>
 							</div>
 						</div>
 					</div>
-					<div class="basket__right-block">
-						<h3>Ваш заказ:</h3>
-						<div class="info">
-							<div>
-								<span>Товаров:</span>
-								<span class="num">3 ед.</span>
+					<div class="item_product_list-wrapper">
+						<div class="item_product_list">
+							<div class="markers-wrapper">
+								<div class="marker new">NEW</div>
 							</div>
-							<div>
-								<span>На сумму:</span>
-								<span class="num">79 699 руб</span>
+							<div class="images-wrapper">
+								<div class="images">
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+								</div>
+								<button class="quick-view">Быстрый просмотр</button>
 							</div>
-							<div>
-								<span>Скидка:</span>
-								<span class="num">0 руб</span>
+							<a href="#" class="title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+
+							<div class="availability available">
+								<div class="dot"></div>
+								В наличии
+							</div>
+							<div class="price">
+								<div class="current">15 088 руб.</div>
+								<div class="old">31 088 руб.</div>
+							</div>
+							<div class="buttons">
+								<button class="add_to_busket btn btn-blue">В корзину</button>
+								<button class="compare">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#compare"></use></svg>
+								</button>
+								<button class="favorite">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#favorite"></use></svg>
+								</button>
 							</div>
 						</div>
-						<div class="info">
-							<div>
-								<span>Стоимость доставки:</span>
-								<span class="num">3 ед.</span>
+					</div>
+					<div class="item_product_list-wrapper">
+						<div class="item_product_list">
+							<div class="markers-wrapper">
+								<div class="marker new">NEW</div>
 							</div>
-							<div>
-								<span>Подъем:</span>
-								<span class="num">79 699 руб</span>
+							<div class="images-wrapper">
+								<div class="images">
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+								</div>
+								<button class="quick-view">Быстрый просмотр</button>
 							</div>
-							<div>
-								<span>Монтаж:</span>
-								<span class="num">0 руб</span>
+							<a href="#" class="title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+
+							<div class="availability available">
+								<div class="dot"></div>
+								В наличии
+							</div>
+							<div class="price">
+								<div class="current">15 088 руб.</div>
+								<div class="old">31 088 руб.</div>
+							</div>
+							<div class="buttons">
+								<button class="add_to_busket btn btn-blue">В корзину</button>
+								<button class="compare">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#compare"></use></svg>
+								</button>
+								<button class="favorite">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#favorite"></use></svg>
+								</button>
 							</div>
 						</div>
-						<div class="foot-block">
-							<div class="total">
-								<span>Итого:</span>
-								<span class="num">79 699 руб</span>
+					</div>
+					<div class="item_product_list-wrapper">
+						<div class="item_product_list">
+							<div class="markers-wrapper">
+								<div class="marker new">NEW</div>
 							</div>
-							<button class="btn-blue">Перейти к оформлению</button>
-							<button class="light">
-								<svg width="16" height="16"><use xlink:href="./images/icons/icons.svg#shopping-cart"></use></svg>Купить в рассрочку
-							</button>
+							<div class="images-wrapper">
+								<div class="images">
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+								</div>
+								<button class="quick-view">Быстрый просмотр</button>
+							</div>
+							<a href="#" class="title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+
+							<div class="availability available">
+								<div class="dot"></div>
+								В наличии
+							</div>
+							<div class="price">
+								<div class="current">15 088 руб.</div>
+								<div class="old">31 088 руб.</div>
+							</div>
+							<div class="buttons">
+								<button class="add_to_busket btn btn-blue">В корзину</button>
+								<button class="compare">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#compare"></use></svg>
+								</button>
+								<button class="favorite">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#favorite"></use></svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="item_product_list-wrapper">
+						<div class="item_product_list">
+							<div class="markers-wrapper">
+								<div class="marker new">NEW</div>
+							</div>
+							<div class="images-wrapper">
+								<div class="images">
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+								</div>
+								<button class="quick-view">Быстрый просмотр</button>
+							</div>
+							<a href="#" class="title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+
+							<div class="availability available">
+								<div class="dot"></div>
+								В наличии
+							</div>
+							<div class="price">
+								<div class="current">15 088 руб.</div>
+								<div class="old">31 088 руб.</div>
+							</div>
+							<div class="buttons">
+								<button class="add_to_busket btn btn-blue">В корзину</button>
+								<button class="compare">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#compare"></use></svg>
+								</button>
+								<button class="favorite">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#favorite"></use></svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="item_product_list-wrapper">
+						<div class="item_product_list">
+							<div class="markers-wrapper">
+								<div class="marker new">NEW</div>
+							</div>
+							<div class="images-wrapper">
+								<div class="images">
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+									<div><img src="./images/content/imageproduct2.jpg" alt="" /></div>
+								</div>
+								<button class="quick-view">Быстрый просмотр</button>
+							</div>
+							<a href="#" class="title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+
+							<div class="availability available">
+								<div class="dot"></div>
+								В наличии
+							</div>
+							<div class="price">
+								<div class="current">15 088 руб.</div>
+								<div class="old">31 088 руб.</div>
+							</div>
+							<div class="buttons">
+								<button class="add_to_busket btn btn-blue">В корзину</button>
+								<button class="compare">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#compare"></use></svg>
+								</button>
+								<button class="favorite">
+									<svg width="24" height="24"><use xlink:href="./images/icons/icons.svg#favorite"></use></svg>
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>

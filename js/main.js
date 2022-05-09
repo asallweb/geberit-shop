@@ -81,13 +81,13 @@ $(document).ready(function () {
 				},
 			},
 			{
-				breakpoint: 768,
+				breakpoint: 1080,
 				settings: {
 					slidesToShow: 2,
 				},
 			},
 			{
-				breakpoint: 460,
+				breakpoint: 576,
 				settings: {
 					slidesToShow: 1,
 				},
@@ -220,3 +220,14 @@ $("a").on("click", function (event) {
 		top = $(id).offset().top;
 	$("body,html").animate({ scrollTop: top }, 500);
 });
+
+//product card hover
+
+$(".item_product_list").mouseenter(function () {
+	$(".item_product_list").removeClass("unpper-z-index");
+	$(this).addClass("unpper-z-index");
+});
+
+setTimeout(function () {
+	$(".item_product_list-wrapper").height($(".item_product_list-wrapper").height());
+}, 300);
