@@ -1,19 +1,20 @@
-input, textarea{
+input,
+textarea {
 	font-size: var(--font-size-form);
 	background: var(--color-light);
 	text-align: left;
-  display: block;
+	display: block;
 	width: 100%;
 	border: none;
 	outline: none;
-	padding:18px 20px;
+	padding: 18px 20px;
 	margin: 15px 0;
 	border-radius: 4px;
 }
-textarea{
+textarea {
 	height: 100px;
 }
-input[type="submit"]{
+input[type="submit"] {
 	background: var(--color-dark);
 	color: var(--color-light);
 	display: flex;
@@ -21,42 +22,40 @@ input[type="submit"]{
 	justify-content: center;
 	text-align: center;
 	cursor: pointer;
-	&:hover{
-		background: var(--color-light);
-		color: var(--color-dark);
-	}
+	// &:hover{
+	// 	background: var(--color-light);
+	// 	color: var(--color-dark);
+	// }
 }
 ::placeholder {
 	color: var(--color-light-grey);
-  opacity: 1;
+	opacity: 1;
 }
-:-ms-input-placeholder { 
+:-ms-input-placeholder {
 	color: var(--color-light-grey);
 }
 ::-ms-input-placeholder {
 	color: var(--color-light-grey);
 }
 
-
-
- /* Customize the label (the container__radio) */
- /* 
+/* Customize the label (the container__radio) */
+/* 
 	<label class="container__radio"> Text
 		<input type="radio" name="radio">
 		<span class="radiobtn"></span>
 	</label>
  */
- .container__radio {
-  display: block;
-  position: relative;
-  padding-left: 26px;
-  cursor: pointer;
-  font-size: 14px;
+.container__radio {
+	display: block;
+	position: relative;
+	padding-left: 26px;
+	cursor: pointer;
+	font-size: 14px;
 	font-weight: bold;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	input {
 		position: absolute;
 		opacity: 0;
@@ -72,7 +71,7 @@ input[type="submit"]{
 		width: 16px;
 		background-color: #fff;
 		border-radius: 50%;
-		border: 2px solid #31343E;
+		border: 2px solid #31343e;
 		&:after {
 			content: "";
 			position: absolute;
@@ -82,7 +81,7 @@ input[type="submit"]{
 			width: 8px;
 			height: 8px;
 			border-radius: 50%;
-			background: #31343E;
+			background: #31343e;
 		}
 	}
 	&:hover input ~ .radiobtn {
@@ -96,24 +95,24 @@ input[type="submit"]{
 	}
 }
 
- /* Customize the checkbox */
- /*
+/* Customize the checkbox */
+/*
 	<label class="checkbox__container">1+
 		<input type="checkbox" checked="checked">
 		<span class="checkmark"></span>
 	</label>
  */
-.checkbox__container{
-  display: block;
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  font-size: 14px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.checkbox__container {
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	font-size: 14px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	input {
 		position: absolute;
 		opacity: 0;
@@ -166,7 +165,7 @@ input[type="submit"]{
 	</select>
 </div>*/
 .custom-select {
-  position: relative;
+	position: relative;
 	font-weight: bold;
 	font-size: 18px;
 	width: 260px;
@@ -187,18 +186,19 @@ input[type="submit"]{
 			height: 7px;
 			background: url("../images/icons/select.svg") 0 0 no-repeat;
 		}
-	}	
+	}
 	.select-selected.select-arrow-active {
 		border-radius: 5px 5px 0 0;
-		border: 1px solid #31343E;
+		border: 1px solid #31343e;
 		border-bottom: none;
 		&:after {
 			border-color: transparent transparent #fff transparent;
 			top: 20px;
 		}
 	}
-	.select-items div, .select-selected {
-		color: #31343E;
+	.select-items div,
+	.select-selected {
+		color: #31343e;
 		padding: 10px 16px;
 		border: 1px solid transparent;
 		cursor: pointer;
@@ -211,13 +211,14 @@ input[type="submit"]{
 		right: 0;
 		z-index: 99;
 		border-radius: 0 0 5px 5px;
-		border: 1px solid #31343E;
+		border: 1px solid #31343e;
 		border-top: none;
 	}
 	.select-hide {
 		display: none;
 	}
-	.select-items div:hover, .same-as-selected {
+	.select-items div:hover,
+	.same-as-selected {
 		background-color: rgba(49, 52, 62, 0.07);
-	} 
+	}
 }

@@ -538,6 +538,7 @@
 	&:hover {
 		z-index: 20;
 		position: absolute;
+
 		.characteristic {
 			height: 195px;
 		}
@@ -816,12 +817,17 @@
 				max-width: 68%;
 				margin: 0 auto 54px;
 			}
-			img {
-				display: block;
-				line-height: 0;
+			.image {
+				height: 640px;
 				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				max-width: 1071px;
+				img {
+					display: block;
+					line-height: 0;
+					height: 100%;
+					width: 100%;
+					object-fit: cover;
+				}
 			}
 		}
 		.buttons {
@@ -840,6 +846,7 @@
 				backdrop-filter: blur(34px);
 				margin: 26px 0;
 				position: relative;
+				z-index: 10;
 				span {
 					font-size: 26px;
 					max-width: 70%;
@@ -900,6 +907,9 @@
 				.text {
 					max-width: 100%;
 					margin-bottom: 110px;
+				}
+				.image {
+					height: 400px;
 				}
 			}
 			.buttons {

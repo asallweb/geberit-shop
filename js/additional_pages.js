@@ -261,11 +261,41 @@ $(".price-wrapper .count").click(function () {
 	$(".count svg").toggleClass("active");
 });
 
+$(document).mouseup(function (e) {
+	// событие клика по веб-документу
+	if ($(".count svg").hasClass("active")) {
+		var div = $(".count-acc"); // тут указываем ID элемента
+		if (
+			!div.parent().is(e.target) && // если клик был не по нашему блоку
+			div.parent().has(e.target).length === 0
+		) {
+			// и не по его дочерним элементам
+			div.slideUp(300, function () {}); // скрываем его
+			$(".count svg").removeClass("active");
+		}
+	}
+});
+
 //sorting acc
 
 $(".sort").click(function () {
 	$(this).toggleClass("active");
 	$(".sort-acc").slideToggle(300, function () {});
+});
+
+$(document).mouseup(function (e) {
+	// событие клика по веб-документу
+	if ($(".sort").hasClass("active")) {
+		var div = $(".sort-acc"); // тут указываем ID элемента
+		if (
+			!div.parent().is(e.target) && // если клик был не по нашему блоку
+			div.parent().has(e.target).length === 0
+		) {
+			// и не по его дочерним элементам
+			div.slideUp(300, function () {}); // скрываем его
+			$(".sort").removeClass("active");
+		}
+	}
 });
 
 //tabs
@@ -397,4 +427,43 @@ $(".basket__item").each(function () {
 
 $(".our-shops").click(function () {
 	$(".shops").slideToggle(300, function () {});
+});
+
+$(document).mouseup(function (e) {
+	// событие клика по веб-документу
+	var div = $(".shops"); // тут указываем ID элемента
+	if (
+		!div.parent().find(".our-shops").is(e.target) && // если клик был не по нашему блоку
+		div.parent().find(".our-shops").has(e.target).length === 0
+	) {
+		// и не по его дочерним элементам
+		div.slideUp(300, function () {}); // скрываем его
+	}
+});
+
+//katalog menu
+
+$(".katalog-btn").click(function () {
+	$(".katalog").toggleClass("active");
+});
+
+//dropdown search
+
+$(".scroll-wrapper .content-wrapper").each(function () {
+	if ($(this).height() > 120) {
+		$(this).parent().find(".show-more").addClass("button-visibility");
+		$(this).parent().find(".content-wrapper").removeClass("show-scroll");
+	}
+});
+
+$(".search-dropdown .scroll-wrapper .show-more").click(function () {
+	$(this).parent().find(".content-wrapper").toggleClass("show-scroll");
+});
+
+$(".show-more").click(function () {
+	if ($(this).html() == "Смотреть ещё") {
+		$(this).html("Скрыть");
+	} else {
+		$(this).html("Смотреть ещё");
+	}
 });

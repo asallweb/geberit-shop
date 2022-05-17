@@ -144,10 +144,33 @@ function info__toggler() {
 //menu acc
 
 $(".menu ul li.main").click(function () {
+	// $(".menu ul li.main").removeClass("active");
+	// $(".menu ul li.main")
+	// 	.find(".acc-list")
+	// 	.slideUp(300, function () {});
+
 	$(this).toggleClass("active");
 	$(this)
 		.find(".acc-list")
 		.slideToggle(300, function () {});
+});
+
+$(document).mouseup(function (e) {
+	// событие клика по веб-документу
+
+	$(".menu ul li.main").each(function () {
+		if ($(this).hasClass("active")) {
+			var div = $(this); // тут указываем ID элемента
+			if (
+				!div.is(e.target) && // если клик был не по нашему блоку
+				div.has(e.target).length === 0
+			) {
+				// и не по его дочерним элементам
+				div.find(".acc-list").slideUp(300, function () {}); // скрываем его
+				$(".menu ul li.main").removeClass("active");
+			}
+		}
+	});
 });
 
 //phones acc
@@ -158,6 +181,22 @@ $(".phones svg").click(function () {
 		.parent()
 		.find(".phones-list")
 		.slideToggle(300, function () {});
+});
+
+$(document).mouseup(function (e) {
+	// событие клика по веб-документу
+	var div = $(".phones svg"); // тут указываем ID элемента
+	if (
+		!div.is(e.target) && // если клик был не по нашему блоку
+		div.has(e.target).length === 0
+	) {
+		// и не по его дочерним элементам
+		div
+			.parent()
+			.find(".phones-list")
+			.slideUp(300, function () {}); // скрываем его
+		div.removeClass("active");
+	}
 });
 
 //big main slider reinit
@@ -231,3 +270,25 @@ $(".item_product_list").mouseenter(function () {
 setTimeout(function () {
 	$(".item_product_list-wrapper").height($(".item_product_list-wrapper").height());
 }, 300);
+
+//popular products hover
+
+function popularProductsInit() {
+	$(".popular__sections .media").each(function () {
+		let ths = $(this);
+		ths.find(".text").not(":first").hide();
+		ths.find(".image").not(":first").hide();
+		ths
+			.find(".buttons .item")
+			.mouseenter(function () {
+				console.log("mouseenter");
+				ths.find(".buttons .item").removeClass("active").eq($(this).index()).addClass("active");
+				ths.parent().find(".text").hide().eq($(this).index()).show();
+				ths.parent().find(".image").hide().eq($(this).index()).show();
+			})
+			.eq(0)
+			.addClass("active");
+	});
+}
+
+popularProductsInit();
