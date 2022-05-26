@@ -181,18 +181,36 @@ $(".body-filters-on").click(function () {
 
 $(".add__slider").slick({
 	infinite: false,
-	slidesToShow: 5,
+	slidesToShow: 6,
 	slidesToScroll: 1,
 	dots: false,
 	arrows: true,
-	variableWidth: true,
 	responsive: [
+		{
+			breakpoint: 1600,
+			settings: {
+				slidesToShow: 5,
+			},
+		},
+		{
+			breakpoint: 1400,
+			settings: {
+				slidesToShow: 4,
+			},
+		},
 		{
 			breakpoint: 1080,
 			settings: {
 				arrows: true,
 				centerMode: false,
 				slidesToShow: 3,
+			},
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				variableWidth: true,
+				arrows: false,
 			},
 		},
 	],
@@ -202,11 +220,19 @@ $(".add__slider").slick({
 
 $(".bonus__slider").slick({
 	infinite: false,
-	slidesToShow: 4,
+	slidesToShow: 5,
 	slidesToScroll: 1,
 	dots: false,
 	arrows: true,
 	responsive: [
+		{
+			breakpoint: 1600,
+			settings: {
+				arrows: true,
+				centerMode: false,
+				slidesToShow: 4,
+			},
+		},
 		{
 			breakpoint: 1250,
 			settings: {
@@ -238,17 +264,14 @@ $(".bonus__slider").slick({
 
 $(".geberit-slider").slick({
 	infinite: true,
-	slidesToShow: 4,
-	slidesToScroll: 1,
+	slidesToShow: 5,
 	dots: false,
 	arrows: true,
 	responsive: [
 		{
-			breakpoint: 1250,
+			breakpoint: 1600,
 			settings: {
-				arrows: false,
-				slidesToShow: 3,
-				variableWidth: true,
+				slidesToShow: 4,
 			},
 		},
 	],
