@@ -40,10 +40,8 @@ $(document).ready(function () {
 		speed: 500,
 		cssEase: "linear",
 		appendArrows: ".new__products .slider-arrows",
-		prevArrow:
-			"<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-		nextArrow:
-			"<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		responsive: [
 			{
 				breakpoint: 1080,
@@ -68,51 +66,57 @@ $(document).ready(function () {
 	});
 
 	$(".bestseller .slider").slick({
+		infinite: false,
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		dots: false,
 		arrows: true,
 		appendArrows: ".bestseller .slider-arrows",
-		prevArrow:
-			"<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-		nextArrow:
-			"<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		responsive: [
 			{
 				breakpoint: 1600,
 				settings: {
+					arrows: true,
+					centerMode: false,
 					slidesToShow: 4,
 				},
 			},
 			{
-				breakpoint: 1220,
+				breakpoint: 1250,
 				settings: {
+					arrows: true,
+					centerMode: false,
 					slidesToShow: 3,
 				},
 			},
 			{
-				breakpoint: 1080,
+				breakpoint: 768,
 				settings: {
+					arrows: true,
+					centerMode: false,
 					slidesToShow: 2,
 				},
 			},
 			{
 				breakpoint: 576,
 				settings: {
+					arrows: true,
+					centerMode: false,
 					slidesToShow: 1,
 				},
 			},
 		],
 	});
+
 	$(".collections .slider-for").slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: true,
 		appendArrows: ".collections .slider-arrows",
-		prevArrow:
-			"<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-		nextArrow:
-			"<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		fade: true,
 		asNavFor: ".collections .slider-nav",
 	});
@@ -238,10 +242,8 @@ $(window).resize(function () {
 			cssEase: "linear",
 			slidesToShow: 1,
 			appendArrows: ".new__products .slider-arrows",
-			prevArrow:
-				"<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-			nextArrow:
-				"<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+			prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+			nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		});
 	} else if (window.innerWidth > 1080) {
 		$(".new__products .image").slick("unslick");
@@ -262,17 +264,15 @@ $(window).resize(function () {
 			speed: 500,
 			cssEase: "linear",
 			appendArrows: ".new__products .slider-arrows",
-			prevArrow:
-				"<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-			nextArrow:
-				"<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+			prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+			nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		});
 	}
 });
 
 //scroll links
 
-$("a").on("click", function (event) {
+$(".anchor").on("click", function (event) {
 	event.preventDefault();
 	var id = $(this).attr("href"),
 		top = $(id).offset().top;
@@ -287,9 +287,7 @@ $(".item_product_list").mouseenter(function () {
 });
 
 setTimeout(function () {
-	$(".item_product_list-wrapper").height(
-		$(".item_product_list-wrapper").height()
-	);
+	$(".item_product_list-wrapper").height($(".item_product_list-wrapper").height());
 }, 300);
 
 //popular products hover
@@ -303,11 +301,7 @@ function popularProductsInit() {
 			.find(".buttons .item")
 			.mouseenter(function () {
 				console.log("mouseenter");
-				ths
-					.find(".buttons .item")
-					.removeClass("active")
-					.eq($(this).index())
-					.addClass("active");
+				ths.find(".buttons .item").removeClass("active").eq($(this).index()).addClass("active");
 				ths.parent().find(".text").hide().eq($(this).index()).show();
 				ths.parent().find(".image").hide().eq($(this).index()).show();
 			})

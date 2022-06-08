@@ -36,6 +36,12 @@
 	}
 }
 
+label {
+	&:hover {
+		font-weight: 700;
+	}
+}
+
 input[type="checkbox"] {
 	position: absolute;
 	z-index: -1;
@@ -344,6 +350,12 @@ input[type="checkbox"] {
 
 				.lower-block {
 					.lower-block-content {
+						a {
+							&:hover {
+								color: var(--text-links-hover);
+							}
+						}
+
 						&.range {
 							padding: 30px 0 15px 0;
 						}
@@ -473,6 +485,10 @@ input[type="checkbox"] {
 						background-color: var(--color-background);
 						color: var(--color-dark);
 
+						&:hover {
+							opacity: 0.7;
+						}
+
 						.cross {
 							margin-left: 10px;
 							color: var(--black-30);
@@ -558,6 +574,7 @@ input[type="checkbox"] {
 							display: flex;
 							align-items: center;
 							cursor: pointer;
+							transition: all 0.3s ease-in-out;
 
 							svg {
 								margin-right: 7px;
@@ -578,7 +595,7 @@ input[type="checkbox"] {
 							display: flex;
 							align-items: center;
 							cursor: pointer;
-
+							transition: all 0.3s ease-in-out;
 							svg {
 								margin-left: 7px;
 							}
@@ -604,6 +621,7 @@ input[type="checkbox"] {
 							.num {
 								width: 28px;
 								height: 28px;
+								transition: all 0.3s ease-in-out;
 								cursor: pointer;
 								display: inline-flex;
 								align-items: center;
@@ -1178,6 +1196,12 @@ input[type="checkbox"] {
 					height: 6vw;
 					// height: 90px;
 					// width: 90px;
+					transition: opacity 0.3s ease-in-out;
+
+					&:hover {
+						opacity: 0.7;
+						cursor: pointer;
+					}
 
 					@media (max-width: 1600px) {
 						height: 90px;
@@ -1407,7 +1431,12 @@ input[type="checkbox"] {
 							position: relative;
 
 							&:hover {
+								color: var(--black-70);
 								opacity: 1;
+
+								.count-acc {
+									color: var(--black-100);
+								}
 							}
 
 							svg {
@@ -1624,6 +1653,7 @@ input[type="checkbox"] {
 						max-width: 90px;
 						max-height: 70px;
 						width: 70px;
+
 						&.slick-current {
 							border: 1px solid var(--yellow-100);
 						}
@@ -2893,6 +2923,11 @@ input[type="checkbox"] {
 										padding: 0;
 										background-color: transparent;
 										color: var(--black-100);
+										transition: opacity 0.3s ease-in-out;
+
+										&:hover {
+											opacity: 0.7;
+										}
 
 										&.unactive {
 											color: var(--black-30);
@@ -3843,5 +3878,9 @@ input[type="number"] {
 
 	&.active {
 		left: 0;
+	}
+
+	@media (max-width: 1720px) {
+		padding: 40px 40px 40px 20px;
 	}
 }

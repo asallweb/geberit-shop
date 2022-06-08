@@ -1,33 +1,38 @@
-footer.footer{
+footer.footer {
 	background: var(--color-dark);
 	color: var(--black-20);
-	.footer__top{
+	.footer__top {
 		display: flex;
 		justify-content: space-between;
 		padding: 90px 0 80px;
-		border-bottom: 1px solid #35353B;
-		.footer__section{
-			.title{
+		border-bottom: 1px solid #35353b;
+		.footer__section {
+			.title {
 				font-size: 22px;
 				color: #fff;
 				margin-bottom: 30px;
 			}
-			a{
+			a {
 				color: var(--black-20);
+				transition: opacity 0.3s ease-in-out;
+
+				&:hover {
+					opacity: 0.7;
+				}
 			}
-			.links{
+			.links {
 				margin-bottom: 35px;
-				a{
+				a {
 					margin-bottom: 15px;
 					display: block;
-					&.main{
+					&.main {
 						color: #fff;
 						font-weight: bold;
 					}
 				}
 			}
-			.phones{
-				a{
+			.phones {
+				a {
 					margin-bottom: 10px;
 					display: block;
 					font-weight: 700;
@@ -35,160 +40,169 @@ footer.footer{
 					line-height: 1.5;
 				}
 			}
-			.schedule{
+			.schedule {
 				margin-bottom: 35px;
 			}
-			.adress{
+			.adress {
 				margin-bottom: 32px;
 			}
-			.email{
+			.email {
 				color: #fff;
 				display: flex;
 				align-items: center;
-				svg{
+				svg {
 					margin-right: 15px;
 				}
 			}
-			&.catalog__menu{
-				.col{
+			&.catalog__menu {
+				.col {
 					display: grid;
-					grid-template-columns: repeat(2,1fr);
+					grid-template-columns: repeat(2, 1fr);
 					grid-gap: 70px;
 				}
 			}
-			&.payments{
-				border-left: 1px solid #35353B;
+			&.payments {
+				border-left: 1px solid #35353b;
 				padding-left: 75px;
 				padding-top: 60px;
-				svg{
+				svg {
 					display: block;
 					margin: 40px 0;
 				}
 			}
 		}
 	}
-	.footer__bottom{
+	.footer__bottom {
 		color: #fff;
 		padding: 20px 0;
 		display: flex;
-		.title{
+		.title {
 			margin-right: 85px;
 		}
-		a{
+		a {
 			color: #fff;
 			margin: 0 10px;
+			transform: opacity 0.3s ease-in-out;
+
+			&:hover {
+				opacity: 0.7;
+			}
 		}
 	}
 	@media (max-width: 1080px) {
-		.footer__top{
+		.footer__top {
 			flex-direction: column;
 			padding: 60px 0 0;
-			.footer__section{
+			.footer__section {
 				display: grid;
-				grid-template-columns: repeat(3,1fr);
+				grid-template-columns: repeat(3, 1fr);
 				grid-gap: 30px;
 				padding-bottom: 60px;
 				margin-bottom: 60px;
-				border-bottom: 1px solid #35353B;
-				.title{
+				border-bottom: 1px solid #35353b;
+				.title {
 					font-size: 26px;
 					margin-bottom: 0;
 				}
-				.col{
+				.col {
 					grid-column: 2 span / auto;
 					display: grid;
-					grid-template-columns: repeat(2,1fr);
+					grid-template-columns: repeat(2, 1fr);
 					grid-gap: 10px 30px;
 				}
-				.links, .phones, .schedule, .adress, .email{
+				.links,
+				.phones,
+				.schedule,
+				.adress,
+				.email {
 					margin-bottom: 0;
 				}
-				&.catalog__menu{
-					grid-template-columns: repeat(3,1fr);
+				&.catalog__menu {
+					grid-template-columns: repeat(3, 1fr);
 					margin-bottom: 0px;
-					.title{
+					.title {
 						grid-column: 1 span / auto;
 					}
-					.col{
+					.col {
 						grid-gap: 30px;
 					}
 				}
-				&.payments{
+				&.payments {
 					border-left: none;
 					padding: 20px 0;
 					margin-bottom: 0;
 					border-bottom: none;
-					svg{
+					svg {
 						display: inline-block;
 						margin: 0 40px 0 0;
 					}
-					.col{
+					.col {
 						display: block;
 					}
-					.subtitle{
+					.subtitle {
 						font-weight: bold;
 						font-size: 16px;
 					}
 				}
 			}
 		}
-		.footer__bottom{
+		.footer__bottom {
 			display: grid;
-			grid-template-columns: repeat(3,1fr);
+			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 30px;
-			.title{
+			.title {
 				margin-right: 0;
 			}
-			.list{
+			.list {
 				grid-column: 2 span / auto;
 			}
-			a{
+			a {
 				margin: 0 10px 0 0;
 			}
 		}
 	}
 	@media (max-width: 600px) {
-		.footer__top{
+		.footer__top {
 			padding: 30px 0 0;
-			.footer__section{
-				grid-template-columns: repeat(1,1fr);
+			.footer__section {
+				grid-template-columns: repeat(1, 1fr);
 				grid-gap: 10px;
 				padding-bottom: 30px;
 				margin-bottom: 30px;
-				.title{
+				.title {
 					font-size: 22px;
 				}
-				.col{
+				.col {
 					grid-column: 2 span / auto;
-					grid-template-columns: repeat(2,1fr);
+					grid-template-columns: repeat(2, 1fr);
 					grid-gap: 10px;
 				}
-				&.catalog__menu{
-					grid-template-columns: repeat(1,1fr);
-					.title{
+				&.catalog__menu {
+					grid-template-columns: repeat(1, 1fr);
+					.title {
 						grid-column: 1 span / auto;
 					}
-					.col{
+					.col {
 						grid-gap: 10px;
 					}
 				}
-				&.payments{
-					svg{
+				&.payments {
+					svg {
 						margin: 0 20px 0 0;
 					}
 				}
-				.phones{
-					a{
+				.phones {
+					a {
 						font-size: 16px;
 					}
 				}
-				.email{
-					svg{
+				.email {
+					grid-column: span 2 / auto;
+					svg {
 						margin-right: 10px;
-						flex: 1 0 auto;
 					}
 				}
 			}
-		}		
+		}
 	}
 }
