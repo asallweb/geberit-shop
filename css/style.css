@@ -6665,6 +6665,12 @@ input[type="checkbox"] + label::before {
   .geberit .container .geberit-slider .geberit-item {
     max-width: 220px;
   }
+  .geberit .container .geberit-slider .geberit-item .img-wrapper {
+    height: 170px;
+  }
+  .geberit .container .geberit-slider .geberit-item h5 {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 1080px) {

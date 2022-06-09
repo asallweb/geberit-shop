@@ -215,6 +215,13 @@ $(".geberit-slider").slick({
 				slidesToShow: 4,
 			},
 		},
+		{
+			breakpoint: 1400,
+			settings: {
+				variableWidth: true,
+				arrows: false,
+			},
+		},
 	],
 });
 

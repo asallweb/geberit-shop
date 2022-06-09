@@ -2675,6 +2675,12 @@ input[type="checkbox"] {
 			@media (max-width: 768px) {
 				.geberit-item {
 					max-width: 220px;
+					.img-wrapper {
+						height: 170px;
+					}
+					h5 {
+						padding: 20px;
+					}
 				}
 			}
 		}
