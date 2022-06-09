@@ -183,7 +183,7 @@ $(".bonus__slider").slick({
 			},
 		},
 		{
-			breakpoint: 768,
+			breakpoint: 992,
 			settings: {
 				arrows: true,
 				centerMode: false,
@@ -275,10 +275,9 @@ function tabsInit() {
 				ths.find(".tab-item").hide().eq($(this).index()).fadeIn();
 
 				$(".bonus__slider").slick("unslick");
-				$(".item_product_list .images").slick("unslick");
 				$(".bonus__slider").slick({
 					infinite: false,
-					slidesToShow: 4,
+					slidesToShow: 5,
 					slidesToScroll: 1,
 					dots: false,
 					arrows: true,
@@ -292,7 +291,7 @@ function tabsInit() {
 							},
 						},
 						{
-							breakpoint: 768,
+							breakpoint: 992,
 							settings: {
 								arrows: true,
 								centerMode: false,
@@ -309,16 +308,7 @@ function tabsInit() {
 						},
 					],
 				});
-				$(".item_product_list .images").slick({
-					dots: true,
-					arrows: false,
-					fade: true,
-					touchMove: false,
-					autoplay: false,
-					autoplaySpeed: 1000,
-					speed: 500,
-					cssEase: "linear",
-				});
+
 				$(".add__slider").slick("unslick");
 				$(".add__slider").slick({
 					infinite: false,

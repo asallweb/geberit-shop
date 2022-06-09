@@ -551,11 +551,12 @@ input[type="checkbox"] {
 			}
 			.products__items-wrapper {
 				display: grid;
-				grid-template-columns: repeat(3, 1fr);
+				grid-template-columns: repeat(4, 1fr);
 				grid-row: 1 / auto;
 				grid-gap: 30px;
 				margin-left: 30px;
 				padding-bottom: 60px;
+				width: 100%;
 
 				.pagination-wrapper {
 					display: grid;
@@ -695,7 +696,7 @@ input[type="checkbox"] {
 					grid-template-columns: repeat(3, 1fr);
 					grid-gap: 2.37vw;
 					.item_product_list {
-						width: 22.6vw;
+						width: 100%;
 					}
 					.pagination-wrapper {
 						display: grid;
@@ -711,27 +712,27 @@ input[type="checkbox"] {
 		}
 	}
 
-	@media (max-width: 1290px) {
-		.container {
-			.products__main {
-				.products__filters {
-					margin-left: 2.3vw;
-				}
+	// @media (max-width: 1320px) {
+	// 	.container {
+	// 		.products__main {
+	// 			.products__filters {
+	// 				margin-left: 2.3vw;
+	// 			}
 
-				.products__items-wrapper {
-					margin-left: 2.3vw;
-					grid-gap: 2.37vw;
-					.item_product_list-wrapper {
-						.item_product_list {
-							width: 22.6vw;
-						}
-					}
-				}
-			}
-		}
-	}
+	// 			.products__items-wrapper {
+	// 				margin-left: 2.3vw;
+	// 				grid-gap: 30px;
+	// 				.item_product_list-wrapper {
+	// 					.item_product_list {
+	// 						width: 22.6vw;
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
 
-	@media (max-width: 1250px) {
+	@media (max-width: 1340px) {
 		.container {
 			.products__side-panel {
 				height: 100vh;
@@ -879,7 +880,7 @@ input[type="checkbox"] {
 					}
 					.item_product_list-wrapper {
 						.item_product_list {
-							width: 30.6vw;
+							width: 100%;
 						}
 					}
 				}
@@ -903,7 +904,7 @@ input[type="checkbox"] {
 		}
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 992px) {
 		.container {
 			.products__main {
 				.products__filters {
@@ -974,10 +975,10 @@ input[type="checkbox"] {
 				}
 				.products__items-wrapper {
 					grid-template-columns: repeat(2, 1fr);
+					grid-gap: 12px;
 					.item_product_list-wrapper {
-						width: 46.1vw;
 						.item_product_list {
-							width: 46.1vw;
+							width: 100%;
 						}
 					}
 
@@ -1003,10 +1004,14 @@ input[type="checkbox"] {
 					grid-template-columns: repeat(1, 1fr);
 					grid-gap: 15px;
 					.item_product_list-wrapper {
-						width: 89.1vw;
+						width: 92vw;
 						margin: 0 auto;
 						.item_product_list {
-							width: 89.1vw;
+							width: 100%;
+						}
+
+						@media (max-width: 576px) {
+							width: 88.5vw;
 						}
 					}
 					.pagination-wrapper {

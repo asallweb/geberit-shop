@@ -54,16 +54,16 @@ $(document).ready(function () {
 		],
 	});
 
-	$(".item_product_list .images").slick({
-		dots: true,
-		arrows: false,
-		fade: true,
-		touchMove: false,
-		autoplay: false,
-		autoplaySpeed: 1000,
-		speed: 500,
-		cssEase: "linear",
-	});
+	// $(".item_product_list .images").slick({
+	// 	dots: true,
+	// 	arrows: false,
+	// 	fade: true,
+	// 	touchMove: false,
+	// 	autoplay: false,
+	// 	autoplaySpeed: 1000,
+	// 	speed: 500,
+	// 	cssEase: "linear",
+	// });
 
 	$(".bestseller .slider").slick({
 		infinite: false,
@@ -92,7 +92,7 @@ $(document).ready(function () {
 				},
 			},
 			{
-				breakpoint: 768,
+				breakpoint: 992,
 				settings: {
 					arrows: true,
 					centerMode: false,
@@ -151,7 +151,7 @@ $(document).ready(function () {
 $(window).resize(function () {});
 
 function info__toggler() {
-	$(".info__toggler .toggler .item").click(function () {
+	$(".info__toggler .toggler .item").mouseenter(function () {
 		let bannerid = $(this).data("bannerid");
 		$(".info__toggler .toggler .item").removeClass("active");
 		$(this).addClass("active");
@@ -279,10 +279,18 @@ $(".anchor").on("click", function (event) {
 	$("body,html").animate({ scrollTop: top }, 500);
 });
 
+$(".arrow-bottom").on("click", function (event) {
+	event.preventDefault();
+	var id = $(this).attr("href"),
+		top = $(id).offset().top;
+	$("body,html").animate({ scrollTop: top }, 500);
+});
+
 //product card hover
 
 $(".item_product_list").mouseenter(function () {
 	$(".item_product_list").removeClass("unpper-z-index");
+
 	$(this).addClass("unpper-z-index");
 });
 
@@ -311,3 +319,74 @@ function popularProductsInit() {
 }
 
 popularProductsInit();
+
+//images mini slider reinit
+
+// $(window).resize(function () {
+// 	$(".item_product_list .images").slick("unslick");
+// 	$(".item_product_list .images").slick({
+// 		dots: true,
+// 		arrows: false,
+// 		fade: true,
+// 		touchMove: false,
+// 		autoplay: false,
+// 		autoplaySpeed: 1000,
+// 		speed: 500,
+// 		cssEase: "linear",
+// 	});
+// });
+
+//hover slider
+
+(function ($) {
+	$.fn.HvrSlider = function () {
+		return this.each(function () {
+			var el = $(this);
+			if (el.find("img").length > 1) {
+				var hvr = $("<div>", {
+					class: "hvr",
+					append: [
+						$("<div>", {
+							class: "hvr__images",
+							append: $("<div>", {
+								class: "hvr__sectors",
+							}),
+						}),
+						$("<div>", {
+							class: "hvr__dots",
+						}),
+					],
+					insertAfter: el,
+					prepend: el,
+				});
+				var hvrImages = $(".hvr__images", hvr);
+				var hvrImage = $("img", hvr);
+				var hvrSectors = $(".hvr__sectors", hvr);
+				var hvrDots = $(".hvr__dots", hvr);
+				el.prependTo(hvrImages);
+				hvrImage.each(function () {
+					hvrSectors.prepend('<div class="hvr__sector"></div>');
+					hvrDots.append('<div class="hvr__dot"></div>');
+				});
+				$(".hvr__dot:first", hvrDots).addClass("hvr__dot--active");
+				var setActiveEl = function (el) {
+					hvrImage.hide().eq(el.index()).show();
+					$(".hvr__dot", hvrDots).removeClass("hvr__dot--active").eq(el.index()).addClass("hvr__dot--active");
+				};
+				$(".hvr__sector", hvrSectors).hover(function () {
+					setActiveEl($(this));
+				});
+				setActiveEl($(".hvr__sector:first"));
+				hvrSectors.on("touchmove", function (e) {
+					var position = e.originalEvent.changedTouches[0];
+					var target = document.elementFromPoint(position.clientX, position.clientY);
+					if ($(target).is(".hvr__sector")) {
+						setActiveEl($(target));
+					}
+				});
+			}
+		});
+	};
+})(jQuery);
+
+$(".item_product_list .images").HvrSlider();

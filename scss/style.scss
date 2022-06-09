@@ -22,14 +22,9 @@
 }
 .overflowed {
 	overflow: hidden;
-	padding-right: 17px !important;
 	touch-action: none;
 	-ms-touch-action: none;
 	-webkit-overflow-scrolling: touch;
-
-	@media (max-width: 1024px) {
-		padding-right: 0 !important;
-	}
 }
 
 @import "_header";

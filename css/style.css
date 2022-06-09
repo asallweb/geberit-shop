@@ -604,16 +604,9 @@ a, button, input[type="submit"], .btn {
 
 .overflowed {
   overflow: hidden;
-  padding-right: 17px !important;
   touch-action: none;
   -ms-touch-action: none;
   -webkit-overflow-scrolling: touch;
-}
-
-@media (max-width: 1024px) {
-  .overflowed {
-    padding-right: 0 !important;
-  }
 }
 
 .header {
@@ -1361,6 +1354,12 @@ a, button, input[type="submit"], .btn {
   bottom: 10%;
   width: 15px;
   height: 70px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hero .inner .arrow-bottom:hover {
+  opacity: 0.7;
 }
 
 .hero .inner .logo-block {
@@ -1992,6 +1991,7 @@ a, button, input[type="submit"], .btn {
 .item_product_list:hover {
   z-index: 20;
   position: absolute;
+  height: unset;
 }
 
 .item_product_list:hover .characteristic {
@@ -2082,6 +2082,76 @@ a, button, input[type="submit"], .btn {
   position: relative;
 }
 
+.item_product_list .images-wrapper .hvr__images {
+  position: relative;
+}
+
+.item_product_list .images-wrapper .hvr__sectors {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item_product_list .images-wrapper .hvr__sector {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.item_product_list .images-wrapper .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.item_product_list .images-wrapper .images .wrapper {
+  height: 240px;
+}
+
+.item_product_list .images-wrapper .images .wrapper img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.item_product_list .images-wrapper .image {
+  display: block;
+}
+
+.item_product_list .images-wrapper .hvr__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 15px;
+}
+
+.item_product_list .images-wrapper .hvr__dot {
+  width: 33%;
+  height: 1px;
+  margin: 10px 2px 0;
+  background: #d6dbe0;
+}
+
+.item_product_list .images-wrapper .hvr__dot--active {
+  background: var(--blue-100);
+}
+
 .item_product_list .images-wrapper .quick-view {
   position: absolute;
   opacity: 0;
@@ -2103,13 +2173,6 @@ a, button, input[type="submit"], .btn {
 
 .item_product_list .images-wrapper .quick-view:hover {
   opacity: 0.7;
-}
-
-.item_product_list .images-wrapper .images img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .item_product_list .slick-list {
@@ -4236,12 +4299,13 @@ input[type="checkbox"] + label::before {
 .products .container .products__main .products__items-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-row: 1 / auto;
   grid-gap: 30px;
   margin-left: 30px;
   padding-bottom: 60px;
+  width: 100%;
 }
 
 .products .container .products__main .products__items-wrapper .pagination-wrapper {
@@ -4414,7 +4478,7 @@ input[type="checkbox"] + label::before {
     grid-gap: 2.37vw;
   }
   .products .container .products__main .products__items-wrapper .item_product_list {
-    width: 22.6vw;
+    width: 100%;
   }
   .products .container .products__main .products__items-wrapper .pagination-wrapper {
     display: -ms-grid;
@@ -4428,20 +4492,7 @@ input[type="checkbox"] + label::before {
   }
 }
 
-@media (max-width: 1290px) {
-  .products .container .products__main .products__filters {
-    margin-left: 2.3vw;
-  }
-  .products .container .products__main .products__items-wrapper {
-    margin-left: 2.3vw;
-    grid-gap: 2.37vw;
-  }
-  .products .container .products__main .products__items-wrapper .item_product_list-wrapper .item_product_list {
-    width: 22.6vw;
-  }
-}
-
-@media (max-width: 1250px) {
+@media (max-width: 1340px) {
   .products .container .products__side-panel {
     height: 100vh;
     overflow-y: auto;
@@ -4591,7 +4642,7 @@ input[type="checkbox"] + label::before {
             justify-content: center;
   }
   .products .container .products__main .products__items-wrapper .item_product_list-wrapper .item_product_list {
-    width: 30.6vw;
+    width: 100%;
   }
 }
 
@@ -4601,7 +4652,7 @@ input[type="checkbox"] + label::before {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .products .container .products__main .products__filters .prducts__filter-buttons {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -4667,12 +4718,10 @@ input[type="checkbox"] + label::before {
   .products .container .products__main .products__items-wrapper {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-  }
-  .products .container .products__main .products__items-wrapper .item_product_list-wrapper {
-    width: 46.1vw;
+    grid-gap: 12px;
   }
   .products .container .products__main .products__items-wrapper .item_product_list-wrapper .item_product_list {
-    width: 46.1vw;
+    width: 100%;
   }
   .products .container .products__main .products__items-wrapper .pagination-wrapper {
     grid-column: span 2 / auto;
@@ -4692,12 +4741,21 @@ input[type="checkbox"] + label::before {
     grid-gap: 15px;
   }
   .products .container .products__main .products__items-wrapper .item_product_list-wrapper {
-    width: 89.1vw;
+    width: 92vw;
     margin: 0 auto;
   }
   .products .container .products__main .products__items-wrapper .item_product_list-wrapper .item_product_list {
-    width: 89.1vw;
+    width: 100%;
   }
+}
+
+@media (max-width: 576px) and (max-width: 576px) {
+  .products .container .products__main .products__items-wrapper .item_product_list-wrapper {
+    width: 88.5vw;
+  }
+}
+
+@media (max-width: 576px) {
   .products .container .products__main .products__items-wrapper .pagination-wrapper {
     grid-column: span 1 / auto;
   }
