@@ -297,6 +297,12 @@ setTimeout(function () {
 	$(".item_product_list-wrapper").height($(".item_product_list-wrapper").height());
 }, 300);
 
+// $(window).resize(function () {
+// 	$(".item_product_list-wrapper").each(function () {
+// 		$(this).height($(this).find(".item_product_list").height());
+// 	});
+// });
+
 //popular products hover
 
 function popularProductsInit() {

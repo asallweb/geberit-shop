@@ -6840,6 +6840,11 @@ input[type="checkbox"] + label::before {
   top: 25%;
   right: 24px;
   height: 122px;
+  z-index: -1;
+}
+
+.message-acc.upper-z-index {
+  z-index: 20;
 }
 
 .message-acc .item {
@@ -7084,7 +7089,7 @@ input[type="checkbox"] + label::before {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  grid-gap: 30px;
+  grid-gap: 70px;
 }
 
 .basket .container .basket__wrapper .basket__left-block .basket__item .content-wrapper .title-block .right-block .count-block {
@@ -7153,9 +7158,9 @@ input[type="checkbox"] + label::before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .basket .container .basket__wrapper .basket__left-block .basket__item .content-wrapper .foot-block .markers-block {

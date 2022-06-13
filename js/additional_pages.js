@@ -378,6 +378,7 @@ $(".show__popup-btn").click(function () {
 $(".message-btn").click(function () {
 	$(".message-acc .item").toggleClass("hidden");
 	$(".message-btn").toggleClass("active");
+	$(".message-acc").toggleClass("upper-z-index");
 });
 
 //counter basket
