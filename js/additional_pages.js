@@ -4,7 +4,6 @@ $(".upper-block").click(function () {
 	$(this)
 		.next()
 		.slideToggle(300, function () {});
-
 	$(this).find($(".circle-plus")).toggleClass("opened");
 
 	setTimeout(function () {
@@ -128,7 +127,7 @@ $(".add__slider").slick({
 	arrows: true,
 	responsive: [
 		{
-			breakpoint: 1600,
+			breakpoint: 1700,
 			settings: {
 				slidesToShow: 5,
 			},
@@ -167,7 +166,7 @@ $(".bonus__slider").slick({
 	arrows: true,
 	responsive: [
 		{
-			breakpoint: 1600,
+			breakpoint: 1700,
 			settings: {
 				arrows: true,
 				centerMode: false,
@@ -175,7 +174,7 @@ $(".bonus__slider").slick({
 			},
 		},
 		{
-			breakpoint: 1250,
+			breakpoint: 1400,
 			settings: {
 				arrows: true,
 				centerMode: false,
@@ -216,7 +215,7 @@ $(".geberit-slider").slick({
 			},
 		},
 		{
-			breakpoint: 1400,
+			breakpoint: 1440,
 			settings: {
 				variableWidth: true,
 				arrows: false,
@@ -290,7 +289,15 @@ function tabsInit() {
 					arrows: true,
 					responsive: [
 						{
-							breakpoint: 1250,
+							breakpoint: 1700,
+							settings: {
+								arrows: true,
+								centerMode: false,
+								slidesToShow: 4,
+							},
+						},
+						{
+							breakpoint: 1400,
 							settings: {
 								arrows: true,
 								centerMode: false,
@@ -319,18 +326,36 @@ function tabsInit() {
 				$(".add__slider").slick("unslick");
 				$(".add__slider").slick({
 					infinite: false,
-					slidesToShow: 5,
+					slidesToShow: 6,
 					slidesToScroll: 1,
 					dots: false,
 					arrows: true,
-					variableWidth: true,
 					responsive: [
+						{
+							breakpoint: 1700,
+							settings: {
+								slidesToShow: 5,
+							},
+						},
+						{
+							breakpoint: 1400,
+							settings: {
+								slidesToShow: 4,
+							},
+						},
 						{
 							breakpoint: 1080,
 							settings: {
 								arrows: true,
 								centerMode: false,
 								slidesToShow: 3,
+							},
+						},
+						{
+							breakpoint: 768,
+							settings: {
+								variableWidth: true,
+								arrows: false,
 							},
 						},
 					],
@@ -427,4 +452,25 @@ $(".show-more").click(function () {
 	} else {
 		$(this).html("Смотреть ещё");
 	}
+});
+
+//search
+
+$(document).ready(function () {
+	$(".search").on("keyup", function () {
+		var value = $(this).val().toLowerCase();
+
+		$(".input-scroll-wrapper .input-wrapper")
+			.show()
+			.filter(function () {
+				return $(this).find("label").text().toLowerCase().indexOf(value) === -1;
+			})
+			.hide();
+
+		if ($(this).parent().find(".input-scroll-wrapper").height() < 143) {
+			$(this).parent().find(".more").removeClass("button-visibility");
+		} else {
+			$(this).parent().find(".more").addClass("button-visibility");
+		}
+	});
 });

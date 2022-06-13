@@ -290,7 +290,6 @@ $(".arrow-bottom").on("click", function (event) {
 
 $(".item_product_list").mouseenter(function () {
 	$(".item_product_list").removeClass("unpper-z-index");
-
 	$(this).addClass("unpper-z-index");
 });
 
