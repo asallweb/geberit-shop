@@ -280,6 +280,15 @@ function tabsInit() {
 				ths.find(".tab-buttons .scroll-wrapper button").removeClass("active").eq($(this).index()).addClass("active");
 				ths.find(".tab-item").hide().eq($(this).index()).fadeIn();
 
+				$(".description__lines-wrapper").each(function () {
+					if ($(this).height() > 325) {
+						$(this).parent().find(".show-more-char").addClass("button-visibility");
+						$(this).parent().find(".description__lines-wrapper").removeClass("visible");
+					}
+				});
+
+				$(".show-more-char").html("Все характеристики");
+
 				$(".bonus__slider").slick("unslick");
 				$(".bonus__slider").slick({
 					infinite: false,
@@ -474,4 +483,25 @@ $(document).ready(function () {
 			$(this).parent().find(".more").addClass("button-visibility");
 		}
 	});
+});
+
+//dropdown characteristic
+
+$(".description__lines-wrapper").each(function () {
+	if ($(this).height() > 325) {
+		$(this).parent().find(".show-more-char").addClass("button-visibility");
+		$(this).parent().find(".description__lines-wrapper").removeClass("visible");
+	}
+});
+
+$(".show-more-char").click(function () {
+	$(this).parent().find(".description__lines-wrapper").toggleClass("visible");
+});
+
+$(".show-more-char").click(function () {
+	if ($(this).html() == "Все характеристики") {
+		$(this).html("Скрыть");
+	} else {
+		$(this).html("Все характеристики");
+	}
 });
