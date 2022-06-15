@@ -6013,13 +6013,19 @@ input[type="checkbox"] + label::before {
   }
 }
 
+@media (max-width: 768px) {
+  .tab-buttons {
+    margin-right: -20px;
+  }
+}
+
 .tab-buttons.no-margin {
   margin-right: 0;
 }
 
 @media (max-width: 576px) {
   .tab-buttons.no-margin {
-    margin-right: -30px;
+    margin-right: -20px;
   }
 }
 
@@ -6866,6 +6872,12 @@ input[type="checkbox"] + label::before {
 @media (max-width: 1200px) {
   .geberit .container .geberit-slider {
     margin: 0 -30px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .geberit .container .geberit-slider {
+    margin: 0 -20px 0 0;
   }
 }
 
