@@ -84,7 +84,7 @@ $(document).ready(function () {
 				},
 			},
 			{
-				breakpoint: 1250,
+				breakpoint: 1400,
 				settings: {
 					arrows: true,
 					centerMode: false,

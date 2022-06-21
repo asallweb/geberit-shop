@@ -37,8 +37,9 @@
 }
 
 label {
+	transition: color 0.3s ease-in-out;
 	&:hover {
-		font-weight: 700;
+		color: var(--black-60);
 	}
 }
 
@@ -1321,7 +1322,8 @@ input[type="checkbox"] {
 
 				.info__code {
 					width: 100%;
-					margin: 0 9px 0 0;
+					margin: -13px 9px 10px 0;
+					display: inline-block;
 				}
 			}
 
@@ -1336,6 +1338,7 @@ input[type="checkbox"] {
 				}
 
 				.info__code {
+					margin: 0 9px 0 0;
 					width: unset;
 					margin-right: auto;
 				}
@@ -4139,7 +4142,7 @@ input[type="number"] {
 	padding: 40px 40px 40px calc((100vw - var(--main-container-width)) / 2 + 20px);
 	overflow: scroll;
 	height: calc(100vh - 193px);
-	left: -100%;
+	left: -101%;
 	transition: all 0.5s ease-in-out;
 
 	.item {
