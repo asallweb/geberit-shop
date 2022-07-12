@@ -22,24 +22,23 @@ $(document).ready(function () {
 
 	//additional slider
 
-	$(".new__products .image").slick({
+	$(".page-block_new-products__image-big").slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		fade: true,
 	});
 
 	//additional slider
-
-	$(".new__products .products").slick({
+	$(".page-block_new-products__products").slick({
 		dots: false,
 		arrows: true,
 		fade: true,
 		autoplay: false,
 		autoplaySpeed: 1000,
-		asNavFor: ".new__products .image",
+		asNavFor: ".page-block_new-products__image-big",
 		speed: 500,
 		cssEase: "linear",
-		appendArrows: ".new__products .slider-arrows",
+		appendArrows: ".page-block_new-products .slider-arrows",
 		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		responsive: [
@@ -54,24 +53,13 @@ $(document).ready(function () {
 		],
 	});
 
-	// $(".item_product_list .images").slick({
-	// 	dots: true,
-	// 	arrows: false,
-	// 	fade: true,
-	// 	touchMove: false,
-	// 	autoplay: false,
-	// 	autoplaySpeed: 1000,
-	// 	speed: 500,
-	// 	cssEase: "linear",
-	// });
-
-	$(".bestseller .slider").slick({
+	$(".page-block_bestseller__slider").slick({
 		infinite: false,
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		dots: false,
 		arrows: true,
-		appendArrows: ".bestseller .slider-arrows",
+		appendArrows: ".page-block_bestseller__slider .slider-arrows",
 		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		responsive: [
@@ -110,20 +98,20 @@ $(document).ready(function () {
 		],
 	});
 
-	$(".collections .slider-for").slick({
+	$(".page-block_collections .slider-for").slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: true,
-		appendArrows: ".collections .slider-arrows",
+		appendArrows: ".page-block_collections .slider-arrows",
 		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		fade: true,
-		asNavFor: ".collections .slider-nav",
+		asNavFor: ".page-block_collections .slider-nav",
 	});
-	$(".collections .slider-nav").slick({
+	$(".page-block_collections .slider-nav").slick({
 		slidesToShow: 6,
 		slidesToScroll: 1,
-		asNavFor: ".collections .slider-for",
+		asNavFor: ".page-block_collections .slider-for",
 		dots: false,
 		arrows: false,
 		centerMode: false,
@@ -148,26 +136,20 @@ $(document).ready(function () {
 	});
 	info__toggler();
 });
-$(window).resize(function () {});
 
 function info__toggler() {
-	$(".info__toggler .toggler .item").mouseenter(function () {
+	$(".page-block_info-toggler .toggler .item").mouseenter(function () {
 		let bannerid = $(this).data("bannerid");
-		$(".info__toggler .toggler .item").removeClass("active");
+		$(".page-block_info-toggler .toggler .item").removeClass("active");
 		$(this).addClass("active");
-		$(".info__toggler .body .item").hide();
-		$(".info__toggler .body .item#bannerid-" + bannerid).show();
+		$(".page-block_info-toggler .body .item").hide();
+		$(".page-block_info-toggler .body .item#bannerid-" + bannerid).show();
 	});
 }
 
 //menu acc
 
 $(".menu ul li.main").click(function () {
-	// $(".menu ul li.main").removeClass("active");
-	// $(".menu ul li.main")
-	// 	.find(".acc-list")
-	// 	.slideUp(300, function () {});
-
 	$(this).toggleClass("active");
 	$(this)
 		.find(".acc-list")
@@ -176,7 +158,6 @@ $(".menu ul li.main").click(function () {
 
 $(document).mouseup(function (e) {
 	// событие клика по веб-документу
-
 	$(".menu ul li.main").each(function () {
 		if ($(this).hasClass("active")) {
 			var div = $(this); // тут указываем ID элемента
@@ -193,7 +174,6 @@ $(document).mouseup(function (e) {
 });
 
 //phones acc
-
 $(".phones svg").click(function () {
 	$(this).toggleClass("active");
 	$(this)
@@ -219,51 +199,54 @@ $(document).mouseup(function (e) {
 });
 
 //big main slider reinit
-
 $(window).resize(function () {
 	if (window.innerWidth <= 1080) {
-		$(".new__products .image").slick("unslick");
-		$(".new__products .products").slick("unslick");
+		$(".page-block_new-products__image-big").slick("unslick");
+		$(".page-block_new-products__products").slick("unslick");
 
-		$(".new__products .image").slick({
+		$(".page-block_new-products__image-big").slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			fade: true,
 		});
-		$(".new__products .products").slick({
+
+		$(".page-block_new-products__products").slick({
 			dots: false,
 			arrows: true,
 			fade: false,
 			autoplay: false,
 			autoplaySpeed: 1000,
-			asNavFor: ".new__products .image",
+			asNavFor: ".page-block_new-products__image-big",
 			speed: 500,
 			slidesToScroll: 1,
 			cssEase: "linear",
 			slidesToShow: 1,
-			appendArrows: ".new__products .slider-arrows",
+			appendArrows: ".page-block_new-products .slider-arrows",
 			prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 			nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		});
-	} else if (window.innerWidth > 1080) {
-		$(".new__products .image").slick("unslick");
-		$(".new__products .products").slick("unslick");
 
-		$(".new__products .image").slick({
+	} else if (window.innerWidth > 1080) {
+
+		$(".page-block_new-products__image-big").slick("unslick");
+		$(".page-block_new-products__products").slick("unslick");
+
+		$(".page-block_new-products__image-big").slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			fade: true,
 		});
-		$(".new__products .products").slick({
+
+		$(".page-block_new-products__products").slick({
 			dots: false,
 			arrows: true,
 			fade: true,
 			autoplay: false,
 			autoplaySpeed: 1000,
-			asNavFor: ".new__products .image",
+			asNavFor: ".page-block_new-products__image-big",
 			speed: 500,
 			cssEase: "linear",
-			appendArrows: ".new__products .slider-arrows",
+			appendArrows: ".page-block_new-products .slider-arrows",
 			prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 			nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
 		});
@@ -287,7 +270,6 @@ $(".arrow-bottom").on("click", function (event) {
 });
 
 //product card hover
-
 $(".item_product_list").mouseenter(function () {
 	$(".item_product_list").removeClass("unpper-z-index");
 	$(this).addClass("unpper-z-index");
@@ -297,16 +279,10 @@ setTimeout(function () {
 	$(".item_product_list-wrapper").height($(".item_product_list-wrapper").height());
 }, 300);
 
-// $(window).resize(function () {
-// 	$(".item_product_list-wrapper").each(function () {
-// 		$(this).height($(this).find(".item_product_list").height());
-// 	});
-// });
-
 //popular products hover
 
 function popularProductsInit() {
-	$(".popular__sections .media").each(function () {
+	$(".page-block_popular-sections__body .media").each(function () {
 		let ths = $(this);
 		ths.find(".text").not(":first").hide();
 		ths.find(".image").not(":first").hide();
@@ -324,22 +300,6 @@ function popularProductsInit() {
 }
 
 popularProductsInit();
-
-//images mini slider reinit
-
-// $(window).resize(function () {
-// 	$(".item_product_list .images").slick("unslick");
-// 	$(".item_product_list .images").slick({
-// 		dots: true,
-// 		arrows: false,
-// 		fade: true,
-// 		touchMove: false,
-// 		autoplay: false,
-// 		autoplaySpeed: 1000,
-// 		speed: 500,
-// 		cssEase: "linear",
-// 	});
-// });
 
 //hover slider
 
