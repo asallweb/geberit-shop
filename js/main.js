@@ -270,13 +270,13 @@ $(".arrow-bottom").on("click", function (event) {
 });
 
 //product card hover
-$(".item_product_list").mouseenter(function () {
-	$(".item_product_list").removeClass("unpper-z-index");
+$(".product-preview").mouseenter(function () {
+	$(".product-preview").removeClass("unpper-z-index");
 	$(this).addClass("unpper-z-index");
 });
 
 setTimeout(function () {
-	$(".item_product_list-wrapper").height($(".item_product_list-wrapper").height());
+	$(".product-preview-wrapper").height($(".product-preview-wrapper").height());
 }, 300);
 
 //popular products hover
@@ -354,4 +354,4 @@ popularProductsInit();
 	};
 })(jQuery);
 
-$(".item_product_list .images").HvrSlider();
+$(".product-preview .images").HvrSlider();

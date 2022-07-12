@@ -22,10 +22,9 @@ input[type="submit"] {
 	justify-content: center;
 	text-align: center;
 	cursor: pointer;
-	// &:hover{
-	// 	background: var(--color-light);
-	// 	color: var(--color-dark);
-	// }
+}
+input[type="number"] {
+	-moz-appearance: textfield;
 }
 ::placeholder {
 	color: var(--color-light-grey);
@@ -156,9 +155,50 @@ input[type="submit"] {
 		}
 	}
 }
+label {
+	transition: color 0.3s ease-in-out;
+	&:hover {
+		color: var(--black-60);
+	}
+}
 
-/* Customize the select
-<div class="custom-select">
+input[type="checkbox"] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+
+	&:checked + label {
+		font-weight: 700;
+	}
+
+	&:checked + label::before {
+		border-color: var(--blue-100);
+		background-color: var(--blue-100);
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEwIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDQuMDAwMDlMNC4yODU3MSA3LjAwMDA5TDkgMS4wMDAwOSIgc3Ryb2tlPSJ3aGl0ZSIvPgo8L3N2Zz4K");
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+
+	& + label {
+		display: inline-flex;
+		align-items: center;
+		user-select: none;
+		cursor: pointer;
+		white-space: nowrap;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			border: 1px solid var(--black-40);
+			border-radius: 2px;
+			margin-right: 6px;
+		}
+	}
+}
+/* Customize the select*/
+/*<div class="custom-select">
 	<select name="" id="">
 		<option value="">0 ₽ — 1000 ₽</option>
 		<option value="">1000 ₽ — 2000 ₽</option>

@@ -12,7 +12,7 @@ body {
 	color: var(--color-dark);
 	line-height: var(--line-height-base);
 	font-weight: 400;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 }
 
 a, button, input[type="submit"], .btn{

@@ -13,8 +13,6 @@ button:hover, .btn:hover{
 button:focus, .btn:focus {
 	
 }
-
-
 .btn-blue{
 	background-color: var(--color-accent);
 	color: var(--color-light);
@@ -48,4 +46,16 @@ button:focus, .btn:focus {
 	height: 40px;
 	font-size: 14px;
 }
+::-webkit-scrollbar {
+	width: 4px;
+}
 
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px var(--black-10);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--black-30);
+	border-radius: 10px;
+}

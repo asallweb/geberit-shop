@@ -11,9 +11,28 @@
 }
 .container {
 	max-width: var(--main-container-width);
-	padding: var(--main-container-padding);
 	margin: 0 auto;
+	padding-left: 120px;
+	padding-right: 120px;
+
+	@media (max-width: 1600px) {
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+
+	@media (max-width: 1250px) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	@media (max-width: 768px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
+
+
+
 .hidden {
 	opacity: 0;
 }
@@ -29,7 +48,6 @@
 
 @import "_header";
 @import "_main";
-@import "_sidebar";
 @import "_footer";
 @import "_ui";
 @import "_popups";
