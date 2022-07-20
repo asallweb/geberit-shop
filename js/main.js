@@ -138,59 +138,16 @@ $(document).ready(function () {
 	info__toggler();
 	popularCategoriesToggler();
 	productCardHover();
+	introSectionArrow();
+	headerPhonesToggle();
+	headerMenuToggle();
 	$(".product-preview__images").HvrSlider();
 });
 
 //menu acc
 
-$(".menu ul li.main").click(function () {
-	$(this).toggleClass("active");
-	$(this)
-		.find(".acc-list")
-		.slideToggle(300, function () {});
-});
 
-$(document).mouseup(function (e) {
-	// событие клика по веб-документу
-	$(".menu ul li.main").each(function () {
-		if ($(this).hasClass("active")) {
-			var div = $(this); // тут указываем ID элемента
-			if (
-				!div.is(e.target) && // если клик был не по нашему блоку
-				div.has(e.target).length === 0
-			) {
-				// и не по его дочерним элементам
-				div.find(".acc-list").slideUp(300, function () {}); // скрываем его
-				$(".menu ul li.main").removeClass("active");
-			}
-		}
-	});
-});
 
-//phones acc
-$(".phones svg").click(function () {
-	$(this).toggleClass("active");
-	$(this)
-		.parent()
-		.find(".phones-list")
-		.slideToggle(300, function () {});
-});
-
-$(document).mouseup(function (e) {
-	// событие клика по веб-документу
-	var div = $(".phones svg"); // тут указываем ID элемента
-	if (
-		!div.is(e.target) && // если клик был не по нашему блоку
-		div.has(e.target).length === 0
-	) {
-		// и не по его дочерним элементам
-		div
-			.parent()
-			.find(".phones-list")
-			.slideUp(300, function () {}); // скрываем его
-		div.removeClass("active");
-	}
-});
 
 //big main slider reinit
 $(window).resize(function () {
@@ -247,22 +204,6 @@ $(window).resize(function () {
 	}
 });
 
-//scroll links
-
-$(".anchor").on("click", function (event) {
-	event.preventDefault();
-	var id = $(this).attr("href"),
-		top = $(id).offset().top;
-	$("body,html").animate({ scrollTop: top }, 500);
-});
-
-$(".intro-section__arrow").on("click", function (event) {
-	event.preventDefault();
-	var id = $(this).attr("href"),
-		top = $(id).offset().top;
-	$("body,html").animate({ scrollTop: top }, 500);
-});
-
 
 setTimeout(function () {
 	$(".new-products-slider__products-wrapper").height($(".new-products-slider__products-wrapper").height());
@@ -301,6 +242,50 @@ function productCardHover(){
 	});
 }
 
+function introSectionArrow(){
+	$(".intro-section__arrow").on("click", function (event) {
+		event.preventDefault();
+		var id = $(this).attr("href"),
+			top = $(id).offset().top;
+		$("body,html").animate({ scrollTop: top }, 500);
+	});
+}
+
+function headerPhonesToggle(){
+	$(".phones svg").click(function () {
+		$(this).toggleClass("active");
+		$(this)
+			.parent()
+			.find(".phones-list")
+			.slideToggle(300, function () {});
+	});
+}
+
+function headerMenuToggle(){
+	let menuMain = $(".menu ul li.main");
+	menuMain.click(function () {
+		$(this).toggleClass("active");
+		$(this)
+			.find(".acc-list")
+			.slideToggle(300, function () {});
+	});
+	$(document).mouseup(function (e) {
+		// событие клика по веб-документу
+		menuMain.each(function () {
+			if ($(this).hasClass("active")) {
+				var div = $(this); // тут указываем ID элемента
+				if (
+					!div.is(e.target) && // если клик был не по нашему блоку
+					div.has(e.target).length === 0
+				) {
+					// и не по его дочерним элементам
+					div.find(".acc-list").slideUp(300, function () {}); // скрываем его
+					menuMain.removeClass("active");
+				}
+			}
+		});
+	});
+}
 //hover slider
 
 (function ($) {
