@@ -620,34 +620,33 @@
 		margin: 26px 0;
 		position: relative;
 		z-index: 10;
-		span {
-			font-size: 26px;
-			max-width: 70%;
-			font-weight: 700;
-		}
-		.ico {
-			width: 48px;
-			height: 48px;
-			position: absolute;
-			right: 20px;
-			bottom: 20px;
-			border-radius: 50%;
-			background: #fec533;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: var(--color-dark);
-			opacity: 0;
-		}
 		&.active {
 			background-color: #fff;
-			.ico {
-				opacity: 1;
-			}
 		}
 		&:hover {
 			background-color: #fff;
-			.ico {
+		}
+	}
+	&__buttons-name {
+		font-size: 26px;
+		max-width: 70%;
+		font-weight: 700;
+	}
+	&__buttons-ico {
+		width: 48px;
+		height: 48px;
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		border-radius: 50%;
+		background: #fec533;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-dark);
+		opacity: 0;
+		.active & {
+			& {
 				opacity: 1;
 			}
 		}
@@ -1061,18 +1060,16 @@
 		font-size: 16px;
 		display: flex;
 		align-items: center;
-		.dot {
-			width: 6px;
-			height: 6px;
-			border-radius: 50%;
-			margin-right: 9px;
-		}
 		&_available {
 			color: #00d072;
-			.dot {
-				background: #00d072;
-			}
 		}
+	}
+	&__dot {
+		background: #00d072;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		margin-right: 9px;
 	}
 	&__price {
 		font-weight: 700;
@@ -1093,22 +1090,22 @@
 	&__buttons {
 		display: flex;
 		align-items: center;
-		.add_to_busket {
-			margin-right: 42px;
-			font-weight: 700;
-			width: 130px;
-			height: 48px;
-		}
-		.compare,
-		.favorite {
-			background: transparent;
-			padding: 0;
-			color: var(--color-dark);
-			margin-left: auto;
-		}
-		.compare {
-			margin-right: 25px;
-		}
+	}
+	&__add_to_busket {
+		margin-right: 42px;
+		font-weight: 700;
+		width: 130px;
+		height: 48px;
+	}
+	&__compare,
+	&__favorite {
+		background: transparent;
+		padding: 0;
+		color: var(--color-dark);
+		margin-left: auto;
+	}
+	&__compare {
+		margin-right: 25px;
 	}
 	@media (max-width: 1080px) {
 		padding: 37px 20px 20px 20px;
@@ -1131,13 +1128,13 @@
 		&__buttons {
 			justify-content: space-between;
 			grid-gap: 10px;
-			.add_to_busket {
-				margin-right: 0;
-				width: 98px;
-			}
-			.compare {
-				margin-right: 0;
-			}
+		}
+		&__add_to_busket {
+			margin-right: 0;
+			width: 98px;
+		}
+		&__compare {
+			margin-right: 0;
 		}
 	}
 }
@@ -1213,9 +1210,10 @@
 		&:hover {
 			background: #35353b;
 			border: 1px solid #35353b;
+			border-bottom: 1px solid #fff;
 			opacity: 1;
 		}
-		&.active {
+		&_active {
 			background: #35353b;
 			border: 1px solid #35353b;
 			opacity: 1;
@@ -1316,12 +1314,12 @@
 	&__img {
 		flex: 1 0 auto;
 		flex-basis: 50%;
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			max-height: 580px;
-		}
+	}
+	&__img-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		max-height: 580px;
 	}
 	&__content {
 		flex-basis: 50%;

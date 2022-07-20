@@ -228,8 +228,8 @@ function info__toggler() {
 	// let 
 	$(".info-section__button").mouseenter(function () {
 		let bannerid = $(this).data("bannerid");
-		$(".info-section__button").removeClass("active");
-		$(this).addClass("active");
+		$(".info-section__button").removeClass("info-section__button_active");
+		$(this).addClass("info-section__button_active");
 		$(".info-section__item").hide();
 		$(".info-section__item#bannerid-" + bannerid).show();
 	});
