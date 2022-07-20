@@ -1512,7 +1512,7 @@ a, button, input[type="submit"], .btn {
 }
 
 .slick-list {
-  padding-bottom: 15px;
+  padding-bottom: 1px;
 }
 
 /* BEM  */
@@ -2073,6 +2073,7 @@ a, button, input[type="submit"], .btn {
 
 .bestseller-section__slider .slick-list {
   margin: 0 -15px;
+  padding-bottom: 15px;
 }
 
 .bestseller-section__slider .slick-list .product-preview-wrapper {
