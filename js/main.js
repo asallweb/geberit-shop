@@ -252,21 +252,21 @@ function introSectionArrow(){
 }
 
 function headerPhonesToggle(){
-	$(".phones svg").click(function () {
+	$(".header-top__phones svg").click(function () {
 		$(this).toggleClass("active");
 		$(this)
 			.parent()
-			.find(".phones-list")
+			.find(".header-top__phones-list")
 			.slideToggle(300, function () {});
 	});
 }
 
 function headerMenuToggle(){
-	let menuMain = $(".menu ul li.main");
+	let menuMain = $(".header-top__menu-item");
 	menuMain.click(function () {
 		$(this).toggleClass("active");
 		$(this)
-			.find(".acc-list")
+			.find(".header-top__submenu-list")
 			.slideToggle(300, function () {});
 	});
 	$(document).mouseup(function (e) {
@@ -279,7 +279,7 @@ function headerMenuToggle(){
 					div.has(e.target).length === 0
 				) {
 					// и не по его дочерним элементам
-					div.find(".acc-list").slideUp(300, function () {}); // скрываем его
+					div.find(".header-top__submenu-list").slideUp(300, function () {}); // скрываем его
 					menuMain.removeClass("active");
 				}
 			}

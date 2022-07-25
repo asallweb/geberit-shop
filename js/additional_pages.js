@@ -421,7 +421,7 @@ $(".basket__item").each(function () {
 
 // our shops acc
 
-$(".our-shops").click(function () {
+$(".header-top__menu-item_our-shops").click(function () {
 	$(".shops").slideToggle(300, function () {});
 });
 
@@ -429,8 +429,8 @@ $(document).mouseup(function (e) {
 	// событие клика по веб-документу
 	var div = $(".shops"); // тут указываем ID элемента
 	if (
-		!div.parent().find(".our-shops").is(e.target) && // если клик был не по нашему блоку
-		div.parent().find(".our-shops").has(e.target).length === 0
+		!div.parent().find(".header-top__menu-item_our-shops").is(e.target) && // если клик был не по нашему блоку
+		div.parent().find(".header-top__menu-item_our-shops").has(e.target).length === 0
 	) {
 		// и не по его дочерним элементам
 		div.slideUp(300, function () {}); // скрываем его
@@ -467,17 +467,17 @@ $(".show-more").click(function () {
 //search
 
 $(document).ready(function () {
-	$(".search").on("keyup", function () {
+	$(".header-bottom__search-form").on("keyup", function () {
 		var value = $(this).val().toLowerCase();
 
-		$(".input-scroll-wrapper .input-wrapper")
+		$(".header-bottom__search-dropdown")
 			.show()
 			.filter(function () {
 				return $(this).find("label").text().toLowerCase().indexOf(value) === -1;
 			})
 			.hide();
 
-		if ($(this).parent().find(".input-scroll-wrapper").height() < 143) {
+		if ($(this).parent().find(".header-bottom__search-dropdown").height() < 143) {
 			$(this).parent().find(".more").removeClass("button-visibility");
 		} else {
 			$(this).parent().find(".more").addClass("button-visibility");
