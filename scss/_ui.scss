@@ -30,6 +30,23 @@ button:focus, .btn:focus {
 		background: #9A9A9D;
 	}
 }
+.btn-light{
+	border: 1px solid var(--blue-100);
+	color: var(--blue-100);
+	background-color: white;
+
+	svg {
+		margin-right: 7px;
+	}
+
+	&:hover {
+		background-color: var(--blue-10);
+	}
+
+	&:active {
+		background-color: var(--blue-20);
+	}
+}
 .btn-lg{
 	max-width: 198px;
 	width: 100%;
