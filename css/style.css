@@ -7118,66 +7118,6 @@ input[type="checkbox"] + label::before {
   padding-bottom: 80px;
 }
 
-.basket .empty-title {
-  color: var(--black-40);
-  font-size: 26px;
-  font-weight: 700;
-  display: block;
-  text-align: center;
-}
-
-.basket .info_empty {
-  display: block;
-  margin-top: 38px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.basket .btn-blue {
-  color: var(--color-light);
-  padding: 11px 20px;
-  font-weight: 700;
-  margin: 0 auto;
-  display: block;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.basket .btn-blue.centered {
-  max-width: 190px;
-}
-
-.basket .info {
-  text-align: center;
-  display: block;
-  font-size: var(--font-size-subtitle);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.basket .tel {
-  font-size: 22px;
-  text-align: center;
-  font-weight: 700;
-  display: block;
-  margin-top: 13px;
-  margin-bottom: 240px;
-}
-
-@media (max-width: 1440px) {
-  .basket .tel {
-    margin-bottom: 100px;
-  }
-}
-
-@media (max-width: 1080px) {
-  .basket .tel {
-    margin-bottom: 10px;
-  }
-}
-
 .basket__title {
   font-size: var(--font-size-title);
   font-weight: 700;
@@ -7190,6 +7130,53 @@ input[type="checkbox"] + label::before {
   color: var(--black-50);
   font-size: 22px;
   margin-left: 8px;
+}
+
+.basket__empty-title {
+  color: var(--black-40);
+  font-size: 26px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+}
+
+.basket__btn {
+  padding: 11px 20px;
+  font-weight: 700;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.basket__btn_centered {
+  max-width: 190px;
+}
+
+.basket__info {
+  text-align: center;
+  display: block;
+  font-size: var(--font-size-subtitle);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.basket__info_empty {
+  display: block;
+  margin-top: 38px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.basket__tel {
+  font-size: 22px;
+  text-align: center;
+  font-weight: 700;
+  display: block;
+  margin-top: 13px;
+  margin-bottom: 240px;
 }
 
 .basket__wrapper {
@@ -7508,6 +7495,9 @@ input[type="checkbox"] + label::before {
   .basket__right-block {
     max-width: 390px;
   }
+  .basket__tel {
+    margin-bottom: 100px;
+  }
 }
 
 @media (max-width: 1250px) {
@@ -7537,6 +7527,9 @@ input[type="checkbox"] + label::before {
   .basket__right-block {
     width: 100%;
     max-width: unset;
+  }
+  .basket__tel {
+    margin-bottom: 10px;
   }
 }
 

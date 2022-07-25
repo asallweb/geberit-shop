@@ -2932,59 +2932,6 @@
 
 .basket {
 		padding-bottom: 80px;
-
-		.empty-title {
-			color: var(--black-40);
-			font-size: 26px;
-			font-weight: 700;
-			display: block;
-			text-align: center;
-		}
-
-		.info_empty {
-			display: block;
-			margin-top: 38px;
-			justify-content: center;
-		}
-
-		.btn-blue {
-			color: var(--color-light);
-			padding: 11px 20px;
-			font-weight: 700;
-			margin: 0 auto;
-			display: block;
-			margin-top: 10px;
-			text-align: center;
-
-			&.centered {
-				max-width: 190px;
-			}
-		}
-
-		.info {
-			text-align: center;
-			display: block;
-			font-size: var(--font-size-subtitle);
-			display: flex;
-		}
-
-		.tel {
-			font-size: 22px;
-			text-align: center;
-			font-weight: 700;
-			display: block;
-			margin-top: 13px;
-			margin-bottom: 240px;
-
-			@media (max-width: 1440px) {
-				margin-bottom: 100px;
-			}
-
-			@media (max-width: 1080px) {
-				margin-bottom: 10px;
-			}
-		}
-
 		&__title {
 			font-size: var(--font-size-title);
 			font-weight: 700;
@@ -2996,6 +2943,43 @@
 				font-size: 22px;
 				margin-left: 8px;
 			}
+		}
+		&__empty-title {
+			color: var(--black-40);
+			font-size: 26px;
+			font-weight: 700;
+			display: block;
+			text-align: center;
+		}
+		&__btn {
+			padding: 11px 20px;
+			font-weight: 700;
+			margin: 0 auto;
+			display: block;
+			margin-top: 10px;
+			text-align: center;
+			&_centered {
+				max-width: 190px;
+			}
+		}
+		&__info {
+			text-align: center;
+			display: block;
+			font-size: var(--font-size-subtitle);
+			display: flex;
+			&_empty{
+				display: block;
+				margin-top: 38px;
+				justify-content: center;
+			}
+		}
+		&__tel {
+			font-size: 22px;
+			text-align: center;
+			font-weight: 700;
+			display: block;
+			margin-top: 13px;
+			margin-bottom: 240px;
 		}
 		&__wrapper {
 			display: flex;
@@ -3199,6 +3183,9 @@
 		&__right-block {
 			max-width: 390px;
 		}
+		&__tel {
+			margin-bottom: 100px;
+		}
 	}
 	@media (max-width: 1250px) {
 			padding-bottom: 50px;
@@ -3220,6 +3207,9 @@
 			&__right-block {
 				width: 100%;
 				max-width: unset;
+			}
+			&__tel {
+				margin-bottom: 10px;
 			}
 	}
 	@media (max-width: 768px) {
