@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
 });
 $(document).ready(function () {
 	/* Phone validation */
-	$(".wpcf7-validates-as-tel").mask("+7 (999) 999-9999");
+	$(".validates-as-tel").mask("+7 (999) 999-9999");
 
 	/* Popup initialize */
 	popupInitialize();

@@ -330,150 +330,162 @@
 			</div>
 		</div>
 
-		<section class="order">
-			<div class="container">
-				<h2 class="order__title">Оформление заказа</h2>
-				<div class="order-wrapper">
-					<div class="order__left-block">
-						<div class="tab-buttons no-margin">
-							<div class="scroll-wrapper">
-								<button class="active">Экспресс оформление</button>
-								<button>Оформить самостоятельно</button>
+		<section class="order container">
+			<h2 class="order__title">Оформление заказа</h2>
+			<div class="order__wrapper">
+				<div class="order__left-block">
+						<div class="tab-buttons tab-buttons_no-margin tab-buttons_order">
+							<div class="tab-buttons__scroll">
+								<button class="tab-buttons__item tab-buttons__item_active">Экспресс оформление</button>
+								<button class="tab-buttons__item">Оформить самостоятельно</button>
 							</div>
 						</div>
-						<div class="order__page tab-item">
-							<h3>Мы ценим ваше время!</h3>
-							<span class="subtitle"><b>Введите только номер телефона.</b> Адрес, удобную дату доставки и способ оплаты вы сможете согласовать с менеджером по телефону.</span>
-							<form action="">
-								<div class="form__input-wrapper form__input-wrapper_tel not-valid">
-								<input class="wpcf7-validates-as-tel" type="tel" placeholder="Номер телефона" />
-								<span class="error">Это поле необходимо заполнить.</span>
+						<div class="order__express tab-item">
+							<h3 class="order__express-title">Мы ценим ваше время!</h3>
+							<span class="order__express-subtitle"><b>Введите только номер телефона.</b> Адрес, удобную дату доставки и способ оплаты вы сможете согласовать с менеджером по телефону.</span>
+							<form action="" class="order__express-form">
+								<div class="order__form-wrapper 
+														field-wrapper 
+														field-wrapper_tel
+														field-wrapper_not-valid">
+									<input class="validates-as-tel" type="tel" placeholder="Номер телефона" />
+									<span class="form-error">Это поле необходимо заполнить.</span>
 								</div>
 								<input type="submit" value="Отправить" />
 							</form>
 						</div>
-						<div class="order__page-detail tab-item">
-							<div class="account-check">Уже есть аккаунт? <a>Авторизоваться</a></div>
-							<div class="step">
-								<h2 class="order__step-title"><span>1</span> Выберите способ получения заказа</h2>
-								<div class="cards-wrapper">
-									<div class="order__card active">
-										<div class="head-block">
+						<div class="order__full tab-item">
+							<div class="order__account-check">
+								Уже есть аккаунт? 
+								<a href="">Авторизоваться</a>
+							</div>
+							<div class="order__step">
+								<h2 class="order__step-title">
+									<span>1</span> 
+									Выберите способ получения заказа
+								</h2>
+								<div class="order__step-cards">
+									<div class="order__card order__card_active">
+										<div class="order__card-header">
 											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#delivery-car"></use></svg>
 											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
 										</div>
-										<span>Самовывоз со склада в Москве</span>
+										<span class="order__card-text">Самовывоз со склада в Москве</span>
 									</div>
 									<div class="order__card">
-										<div class="head-block">
+										<div class="order__card-header">
 											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#delivery-van"></use></svg>
 											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
 										</div>
-										<span>Доставка в города России транспортной компанией</span>
+										<span class="order__card-text">Доставка в города России транспортной компанией</span>
 									</div>
 									<div class="order__card">
-										<div class="head-block">
+										<div class="order__card-header">
 											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#delivery-moscow"></use></svg>
 											<div class="choosed">
 												<svg class="" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
 											</div>
 										</div>
-										<span>Доставка по Москве</span>
+										<span class="order__card-text">Доставка по Москве</span>
 									</div>
 								</div>
-								<div class="info">
-									<div class="bold">
+								<div class="order__info">
+									<div class="order__info-bold">
 										Стоимость доставки:
-										<span class="price">Бесплатно</span>
+										<span>Бесплатно</span>
 									</div>
 									<div>Вы можете самостоятельно забрать заказ из одного из наших <a href="#">магазинов.</a></div>
 								</div>
 							</div>
-							<div class="step">
-								<h2 class="order__step-title"><span>2</span> Контактные данные</h2>
-
-								<form action="/contacts/#wpcf7-f11-o1" method="post" class="step-form" novalidate="novalidate" data-status="init">
-									<div class="form__input-wrapper not-valid">
+							<div class="order__step">
+								<h2 class="order__step-title">
+									<span>2</span> 
+									Контактные данные
+								</h2>
+								<form action="" class="order__step-form">
+									<div class="field-wrapper field-wrapper_not-valid">
 										<span>Ваше имя*</span>
-										<span class="step-input-wrapper your-name"><input type="text" name="Ваше имя" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-block__input form-block__input_name" aria-required="true" aria-invalid="false" placeholder="Ваше имя" /></span>
-										<span class="error">Это поле необходимо заполнить.</span>
+										<span class="step-input-wrapper your-name">
+											<input type="text" placeholder="Ваше имя" />
+										</span>
+										<span class="form-error">Это поле необходимо заполнить.</span>
 									</div>
-									<div class="form__input-wrapper">
+									<div class="field-wrapper">
 										<span>Текст*</span>
-										<span class="step-input-wrapper text"><input type="text" name="text" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required form-block__input form-block__input_tel" aria-required="true" aria-invalid="false" placeholder="Текст" /></span>
-										<span class="error">Это поле необходимо заполнить.</span>
+										<span class="step-input-wrapper text">
+											<input type="text" placeholder="Текст" />
+										</span>
+										<span class="form-error">Это поле необходимо заполнить.</span>
 									</div>
-									<div class="form__input-wrapper">
+									<div class="field-wrapper">
 										<span>Ваш E-mail*</span>
-										<span class="step-input-wrapper email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-block__input form-block__input_tel" aria-required="true" aria-invalid="false" placeholder="Ваш E-mail" /></span>
-										<span class="error">Это поле необходимо заполнить.</span>
+										<span class="step-input-wrapper email">
+											<input type="email" placeholder="Ваш E-mail" />
+										</span>
+										<span class="form-error">Это поле необходимо заполнить.</span>
 									</div>
-									<div class="form__input-wrapper textarea not-valid">
+									<div class="field-wrapper field-wrapper_textarea field-wrapper_not-valid">
 										<span>Комментарий к заказу*</span>
 										<span class="step-input-wrapper textarea">
-											<textarea name="textarea" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-block__input form-block__input_tel" aria-required="true" aria-invalid="false" placeholder="Комментарий к заказу*" /></textarea>
-											<span class="error">Это поле необходимо заполнить.</span>
+											<textarea placeholder="Комментарий к заказу*" /></textarea>
+											<span class="form-error">Это поле необходимо заполнить.</span>
 										</span>
 									</div>
 								</form>
-
 							</div>
-							
-							<div class="step">
+							<div class="order__step">
 								<h2 class="order__step-title"><span>3</span> Выберите способ оплаты</h2>
-								<div class="cards-wrapper">
-									<div class="order__card active">
-										<div class="head-block">
+								<div class="order__step-cards">
+									<div class="order__card order__card_active">
+										<div class="order__card-header">
 											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#pay-card"></use></svg>
 											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
 										</div>
-										<span>Банковской картой</span>
+										<span class="order__card-text">Банковской картой</span>
 									</div>
 									<div class="order__card">
-										<div class="head-block">
+										<div class="order__card-header">
 											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#pay-paper"></use></svg>
 											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
 										</div>
-										<span>Наличный расчет</span>
+										<span class="order__card-text">Наличный расчет</span>
 									</div>
 									<div class="order__card">
-										<div class="head-block">
+										<div class="order__card-header">
 											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#pay-crypto"></use></svg>
 											<div class="choosed">
 												<svg class="" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
 											</div>
 										</div>
-										<span>Безналичный расчёт</span>
+										<span class="order__card-text">Безналичный расчёт</span>
 									</div>
 								</div>
 							</div>
-							
-							<div class="step">
+							<div class="order__step">
 								<h2 class="order__step-title"><span>4</span> Сервис и услуги</h2>
-								<div class="cards-wrapper">
-									<div class="order__card active">
-										<div class="head-block">
+								<div class="order__step-cards">
+									<div class="order__card order__card_active">
+										<div class="order__card-header">
 											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#service-floor"></use></svg>
 											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
 										</div>
-										<span>Нужен подъем на этаж</span>
+										<span class="order__card-text">Нужен подъем на этаж</span>
 									</div>
 									<div class="order__card">
-										<div class="head-block">
+										<div class="order__card-header">
 											<svg width="32" height="32"><use xlink:href="./images/icons/icons.svg#service-montage"></use></svg>
 											<svg class="choosed" width="32" height="32"><use xlink:href="./images/icons/icons.svg#choosed"></use></svg>
 										</div>
-										<span>Нужен монтаж</span>
+										<span class="order__card-text">Нужен монтаж</span>
 									</div>
 								</div>
 							</div>
-							
-							<div class="step">
+							<div class="order__step">
 								<h2 class="order__step-title"><span>5</span> Итого: 79 699 ₽</h2>
 							</div>
 						</div>
-					</div>
-					<div class="basket__right-block">
+				</div>
+				<div class="basket__right-block">
 						<h3 class="basket__right-title">Ваш заказ:</h3>
 						<div class="basket__right-info">
 							<div class="basket__right-row">
@@ -516,7 +528,6 @@
 								Купить в рассрочку
 							</button>
 						</div>
-					</div>
 				</div>
 			</div>
 		</section>

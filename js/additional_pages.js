@@ -271,14 +271,15 @@ $(document).mouseup(function (e) {
 //tabs
 
 function tabsInit() {
-	$(".container").each(function () {
+	$(".tab-buttons").each(function () {
 		let ths = $(this);
-		ths.find(".tab-item").not(":first").hide();
+		$(".tab-item").not(":first").hide();
 		ths
-			.find(".tab-buttons .scroll-wrapper button")
+			.find(".tab-buttons__item")
 			.click(function () {
-				ths.find(".tab-buttons .scroll-wrapper button").removeClass("active").eq($(this).index()).addClass("active");
-				ths.find(".tab-item").hide().eq($(this).index()).fadeIn();
+				ths.find(".tab-buttons__item").removeClass("tab-buttons__item_active").eq($(this).index()).addClass("tab-buttons__item_active");
+
+				ths.parent().find(".tab-item").hide().eq($(this).index()).fadeIn();
 
 				$(".description__lines-wrapper").each(function () {
 					if ($(this).height() > 325) {
@@ -371,7 +372,7 @@ function tabsInit() {
 				});
 			})
 			.eq(0)
-			.addClass("active");
+			.addClass("tab-buttons__item_active");
 	});
 }
 
@@ -379,7 +380,6 @@ tabsInit();
 
 $(".show__popup-btn").click(function () {
 	tabsInit();
-	console.log(1);
 });
 
 //message fixed btn
