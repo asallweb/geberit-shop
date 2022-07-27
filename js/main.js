@@ -204,9 +204,9 @@ $(window).resize(function () {
 	}
 });
 
-
+// FIX дергания блоков из за изменения высоты при наведении
 setTimeout(function () {
-	$(".new-products-slider__products-wrapper").height($(".new-products-slider__products-wrapper").height());
+	$(".product-preview-wrapper").height($(".product-preview-wrapper").height());
 }, 300);
 
 
