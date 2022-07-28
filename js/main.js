@@ -26,6 +26,7 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		fade: true,
+		arrows: false,
 	});
 
 	//additional slider
@@ -39,8 +40,8 @@ $(document).ready(function () {
 		speed: 500,
 		cssEase: "linear",
 		appendArrows: ".new-products-slider .slider-arrows",
-		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		prevArrow: "<button type='button' class='slick-prev pull-left'></button>",
+		nextArrow: "<button type='button' class='slick-next pull-right'></button>",
 		responsive: [
 			{
 				breakpoint: 1080,
@@ -60,8 +61,8 @@ $(document).ready(function () {
 		dots: false,
 		arrows: true,
 		appendArrows: ".bestseller-section__head .slider-arrows",
-		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		prevArrow: "<button type='button' class='slick-prev pull-left'></button>",
+		nextArrow: "<button type='button' class='slick-next pull-right'></button>",
 		responsive: [
 			{
 				breakpoint: 1600,
@@ -103,8 +104,8 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		arrows: true,
 		appendArrows: ".collections-section__arrows",
-		prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-		nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+		prevArrow: "<button type='button' class='slick-prev pull-left'></button>",
+		nextArrow: "<button type='button' class='slick-next pull-right'></button>",
 		fade: true,
 		asNavFor: ".collections-section__slider-nav",
 	});
@@ -173,8 +174,8 @@ $(window).resize(function () {
 			cssEase: "linear",
 			slidesToShow: 1,
 			appendArrows: ".new-products-slider .slider-arrows",
-			prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-			nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+			prevArrow: "<button type='button' class='slick-prev pull-left'></button>",
+			nextArrow: "<button type='button' class='slick-next pull-right'></button>",
 		});
 
 	} else if (window.innerWidth > 1080) {
@@ -198,8 +199,8 @@ $(window).resize(function () {
 			speed: 500,
 			cssEase: "linear",
 			appendArrows: ".new-products-slider .slider-arrows",
-			prevArrow: "<button type='button' class='slick-prev pull-left'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
-			nextArrow: "<button type='button' class='slick-next pull-right'><svg width='20' height='20'><use xlink:href='./images/icons/icons.svg#slick-arrow'></use></svg></button>",
+			prevArrow: "<button type='button' class='slick-prev pull-left'></button>",
+			nextArrow: "<button type='button' class='slick-next pull-right'></button>",
 		});
 	}
 });

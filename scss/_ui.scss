@@ -16,6 +16,9 @@ button:focus, .btn:focus {
 .btn-blue{
 	background-color: var(--color-accent);
 	color: var(--color-light);
+	&_bold{
+		font-weight: 700;
+	}
 	&:hover{
 		background: #005FA3;
 	}

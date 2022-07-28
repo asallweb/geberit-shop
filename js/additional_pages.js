@@ -7,155 +7,7 @@ $(".top-button").on("click", function (event) {
 	$("body,html").animate({ scrollTop: top }, 500);
 });
 
-//product detail slider
-
-$(".product-head__main-photo").slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	arrows: false,
-	fade: true,
-	asNavFor: ".product-head__nav-slider",
-});
-
-$(".product-head__nav-slider").slick({
-	slidesToShow: 3,
-	slidesToScroll: 1,
-	asNavFor: ".product-head__main-photo",
-	dots: false,
-	centerMode: true,
-	focusOnSelect: true,
-	arrows: true,
-	variableWidth: true,
-	responsive: [
-		{
-			breakpoint: 1080,
-			settings: {
-				arrows: true,
-				centerMode: false,
-				slidesToShow: 3,
-			},
-		},
-		{
-			breakpoint: 380,
-			settings: {
-				arrows: true,
-				centerMode: true,
-				slidesToShow: 3,
-			},
-		},
-	],
-});
-
-
-//add-slider
-
-$(".product-kit__slider").slick({
-	infinite: false,
-	slidesToShow: 6,
-	slidesToScroll: 1,
-	dots: false,
-	arrows: true,
-	responsive: [
-		{
-			breakpoint: 1700,
-			settings: {
-				slidesToShow: 5,
-			},
-		},
-		{
-			breakpoint: 1400,
-			settings: {
-				slidesToShow: 4,
-			},
-		},
-		{
-			breakpoint: 1080,
-			settings: {
-				arrows: true,
-				centerMode: false,
-				slidesToShow: 3,
-			},
-		},
-		{
-			breakpoint: 768,
-			settings: {
-				variableWidth: true,
-				arrows: false,
-			},
-		},
-	],
-});
-
-//bonus slider
-
-$(".bonus__slider").slick({
-	infinite: false,
-	slidesToShow: 5,
-	slidesToScroll: 1,
-	dots: false,
-	arrows: true,
-	responsive: [
-		{
-			breakpoint: 1700,
-			settings: {
-				arrows: true,
-				centerMode: false,
-				slidesToShow: 4,
-			},
-		},
-		{
-			breakpoint: 1400,
-			settings: {
-				arrows: true,
-				centerMode: false,
-				slidesToShow: 3,
-			},
-		},
-		{
-			breakpoint: 992,
-			settings: {
-				arrows: true,
-				centerMode: false,
-				slidesToShow: 2,
-			},
-		},
-		{
-			breakpoint: 576,
-			settings: {
-				arrows: true,
-				centerMode: false,
-				slidesToShow: 1,
-			},
-		},
-	],
-});
-
-//geberit slider
-
-$(".geberit-slider").slick({
-	infinite: true,
-	slidesToShow: 5,
-	dots: false,
-	arrows: true,
-	responsive: [
-		{
-			breakpoint: 1600,
-			settings: {
-				slidesToShow: 4,
-			},
-		},
-		{
-			breakpoint: 1440,
-			settings: {
-				variableWidth: true,
-				arrows: false,
-			},
-		},
-	],
-});
-
 //count acc
-
 $(".price-wrapper .count").click(function () {
 	$(".count-acc").slideToggle(300, function () {});
 	$(".count svg").toggleClass("active");
@@ -177,7 +29,6 @@ $(document).mouseup(function (e) {
 });
 
 //sorting acc
-
 $(".sorting-tags__sort").click(function () {
 	$(this).toggleClass("active");
 	$(".sorting-tags__sort-dropdown").slideToggle(300, function () {});
@@ -342,108 +193,23 @@ function catalogFilterToggle(){
 	});
 }
 function tabsInit() {
-	$(".tab-buttons").each(function () {
+	$(".tab-buttons__item").each(function () {
 		let ths = $(this);
-		$(".tab-item").not(":first").hide();
+		ths.parent().parent().parent().find(".tab-item").not(":first").hide();
 		ths
-			.find(".tab-buttons__item")
 			.click(function () {
-				ths.find(".tab-buttons__item").removeClass("tab-buttons__item_active").eq($(this).index()).addClass("tab-buttons__item_active");
+				ths.parent().find(".tab-buttons__item").removeClass("tab-buttons__item_active");
+				ths.addClass("tab-buttons__item_active");
 
-				ths.parent().find(".tab-item").hide().eq($(this).index()).fadeIn();
+				ths.parent().parent().parent().find(".tab-item").hide().eq($(this).index()).fadeIn();
 
-				$(".description__lines-wrapper").each(function () {
-					if ($(this).height() > 325) {
-						$(this).parent().find(".show-more-char").addClass("button-visibility");
-						$(this).parent().find(".description__lines-wrapper").removeClass("visible");
-					}
-				});
-
-				$(".show-more-char").html("Все характеристики");
+				description__lines();
 
 				$(".bonus__slider").slick("unslick");
-				$(".bonus__slider").slick({
-					infinite: false,
-					slidesToShow: 5,
-					slidesToScroll: 1,
-					dots: false,
-					arrows: true,
-					responsive: [
-						{
-							breakpoint: 1700,
-							settings: {
-								arrows: true,
-								centerMode: false,
-								slidesToShow: 4,
-							},
-						},
-						{
-							breakpoint: 1400,
-							settings: {
-								arrows: true,
-								centerMode: false,
-								slidesToShow: 3,
-							},
-						},
-						{
-							breakpoint: 992,
-							settings: {
-								arrows: true,
-								centerMode: false,
-								slidesToShow: 2,
-							},
-						},
-						{
-							breakpoint: 576,
-							settings: {
-								arrows: true,
-								centerMode: false,
-								slidesToShow: 1,
-							},
-						},
-					],
-				});
-
-				$(".add__slider").slick("unslick");
-				$(".add__slider").slick({
-					infinite: false,
-					slidesToShow: 6,
-					slidesToScroll: 1,
-					dots: false,
-					arrows: true,
-					responsive: [
-						{
-							breakpoint: 1700,
-							settings: {
-								slidesToShow: 5,
-							},
-						},
-						{
-							breakpoint: 1400,
-							settings: {
-								slidesToShow: 4,
-							},
-						},
-						{
-							breakpoint: 1080,
-							settings: {
-								arrows: true,
-								centerMode: false,
-								slidesToShow: 3,
-							},
-						},
-						{
-							breakpoint: 768,
-							settings: {
-								variableWidth: true,
-								arrows: false,
-							},
-						},
-					],
-				});
+				bonusSliderInit();
+				//productKitSliderInit();
 			})
-			.eq(0)
-			.addClass("tab-buttons__item_active");
+			.eq(0);
 	});
 }
 function sidebar__acc(){
@@ -496,7 +262,163 @@ function sidebar__acc(){
 		}
 	});
 }
+function description__lines(){
+	$(".description__lines-wrapper").each(function () {
+		if ($(this).height() > 325) {
+			$(this).parent().find(".description__show-more").addClass("button-visibility");
+			$(this).parent().find(".description__lines-wrapper").removeClass("visible");
+		}
+	});
+	$(".description__show-more").html("Все характеристики");
+}
+function productKitSliderInit(){
+	//$(".product-kit__slider").slick("unslick");
+	$(".product-kit__slider").slick({
+		infinite: false,
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		responsive: [
+			{
+				breakpoint: 1700,
+				settings: {
+					slidesToShow: 5,
+				},
+			},
+			{
+				breakpoint: 1400,
+				settings: {
+					slidesToShow: 4,
+				},
+			},
+			{
+				breakpoint: 1080,
+				settings: {
+					arrows: true,
+					centerMode: false,
+					slidesToShow: 3,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					variableWidth: true,
+					arrows: false,
+				},
+			},
+		],
+	});
+}
+function bonusSliderInit(){
+	$(".bonus__slider").slick({
+		infinite: false,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		responsive: [
+			{
+				breakpoint: 1700,
+				settings: {
+					arrows: true,
+					centerMode: false,
+					slidesToShow: 4,
+				},
+			},
+			{
+				breakpoint: 1400,
+				settings: {
+					arrows: true,
+					centerMode: false,
+					slidesToShow: 3,
+				},
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					arrows: true,
+					centerMode: false,
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					arrows: true,
+					centerMode: false,
+					slidesToShow: 1,
+				},
+			},
+		],
+	});
+}
+function productDetailSliderInit(){
+	$(".product-detail__slider-main").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: ".product-detail__slider-nav",
+	});
+
+	$(".product-detail__slider-nav").slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: ".product-detail__slider-main",
+		dots: false,
+		centerMode: true,
+		focusOnSelect: true,
+		arrows: true,
+		variableWidth: true,
+		responsive: [
+			{
+				breakpoint: 1080,
+				settings: {
+					arrows: true,
+					centerMode: false,
+					slidesToShow: 3,
+				},
+			},
+			{
+				breakpoint: 380,
+				settings: {
+					arrows: true,
+					centerMode: true,
+					slidesToShow: 3,
+				},
+			},
+		],
+	});
+}
+function geberitSliderInit(){
+	$(".geberit__slider").slick({
+		infinite: true,
+		slidesToShow: 5,
+		dots: false,
+		arrows: true,
+		responsive: [
+			{
+				breakpoint: 1600,
+				settings: {
+					slidesToShow: 4,
+				},
+			},
+			{
+				breakpoint: 1440,
+				settings: {
+					variableWidth: true,
+					arrows: false,
+				},
+			},
+		],
+	});
+}
 
 sidebar__acc();
 tabsInit();
 catalogFilterToggle();
+productKitSliderInit();
+bonusSliderInit();
+productDetailSliderInit();
+geberitSliderInit();

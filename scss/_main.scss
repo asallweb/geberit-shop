@@ -57,33 +57,10 @@
 	grid-gap: 20px;
 	.slick-prev,
 	.slick-next {
-		width: 48px;
-		height: 48px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: var(--color-dark);
-		border: 1px solid var(--color-dark);
-		border-radius: 50%;
-		z-index: 1;
-		background: #fff;
 		position: relative;
 		top: auto;
 		left: auto;
 		right: auto;
-		transform: none;
-		&::before {
-			display: none;
-		}
-		&:hover {
-			color: var(--color-accent);
-			border: 1px solid var(--color-accent);
-		}
-	}
-	.slick-prev {
-		svg {
-			transform: rotate(180deg);
-		}
 	}
 	@media (max-width: 768px) {
 		grid-gap: 15px;
@@ -421,7 +398,7 @@
 		display: flex;
 		.slider-arrows {
 			position: absolute;
-			bottom: 60px;
+			bottom: 74px;
 		}
 	}
 	&__content-wrapper {
