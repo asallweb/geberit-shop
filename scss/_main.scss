@@ -752,7 +752,7 @@
 		margin-bottom: 30px;
 	}
 	&__item-title {
-		font-size: var(--font-size-title);
+		font-size: var(--font-size-title) !important;
 		line-height: 1.2;
 		position: relative;
 		svg {
@@ -897,7 +897,7 @@
 		.product-preview__characteristic {
 			height: 195px;
 		}
-		.quick-view {
+		.product-preview__quick-view {
 			opacity: 1;
 		}
 	}
@@ -908,23 +908,23 @@
 		height: 0;
 		overflow: hidden;
 		transition: all 0.3s ease-in-out;
-		li {
-			color: var(--black-60);
-			margin-top: 5px;
+	}
+	&__characteristic-li {
+		color: var(--black-60);
+		margin-top: 5px;
 
-			&:first-child {
-				margin-top: 16px;
-			}
+		&:first-child {
+			margin-top: 16px;
+		}
 
-			&:last-child {
-				margin-bottom: 16px;
-			}
+		&:last-child {
+			margin-bottom: 16px;
+		}
 
-			span {
-				color: var(--black-100);
-				display: inline-block;
-				margin-left: 5px;
-			}
+		span {
+			color: var(--black-100);
+			display: inline-block;
+			margin-left: 5px;
 		}
 	}
 	&__markers {
@@ -992,25 +992,6 @@
 		.hvr__dot--active {
 			background: var(--blue-100);
 		}
-		.quick-view {
-			position: absolute;
-			opacity: 0;
-			transition: all 0.3s ease-in-out;
-			text-align: center;
-			padding: 10px;
-			font-size: 14px;
-			bottom: 15px;
-			left: 50%;
-			color: var(--black-70);
-			font-weight: 700;
-			background-color: rgba($color: #fff, $alpha: 0.5);
-			transform: translateX(-50%);
-			width: 160px;
-			border: 1px solid var(--color-border);
-			&:hover {
-				opacity: 0.7;
-			}
-		}
 	}
 	&__images {
 		display: flex;
@@ -1023,6 +1004,25 @@
 			height: 100%;
 			width: 100%;
 			object-fit: contain;
+		}
+	}
+	&__quick-view {
+		position: absolute;
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		text-align: center;
+		padding: 10px;
+		font-size: 14px;
+		bottom: 15px;
+		left: 50%;
+		color: var(--black-70);
+		font-weight: 700;
+		background-color: rgba($color: #fff, $alpha: 0.5);
+		transform: translateX(-50%);
+		width: 160px;
+		border: 1px solid var(--color-border);
+		&:hover {
+			opacity: 0.7;
 		}
 	}
 	.slick-list {
@@ -1333,5 +1333,28 @@
 		&__content-list {
 			grid-gap: 30%;
 		}
+	}
+}
+.page-title{
+	font-size: var(--font-size-title);
+	font-weight: 700;
+	margin-top: 15px;
+	margin-bottom: 40px;
+	span {
+		font-weight: 700;
+		color: var(--black-50);
+		font-size: 22px;
+		margin-left: 8px;
+	}
+}
+.section-title{
+	font-size: var(--font-size-detail-title);
+	font-weight: 700;
+	width: 100%;
+	span {
+		font-weight: 700;
+		color: var(--black-50);
+		font-size: 22px;
+		margin-left: 8px;
 	}
 }

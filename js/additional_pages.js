@@ -218,11 +218,11 @@ function sidebar__acc(){
 		$(this)
 		.next()
 		.slideToggle(300)
-		.find(".input-scroll-wrapper")
+		.find(".sidebar__acc-scroll-wrapper")
 		.each(function () {
 			if ($(this).height() > 144) {
-				$(this).parent().find(".more").addClass("button-visibility");
-				$(this).parent().find(".input-scroll-wrapper").removeClass("show-scroll");
+				$(this).parent().find(".sidebar__acc-more").addClass("button-visibility");
+				$(this).parent().find(".sidebar__acc-scroll-wrapper").removeClass("show-scroll");
 			}
 		});
 
@@ -253,8 +253,8 @@ function sidebar__acc(){
 		$(this).slideToggle(0, function(){});
 	});
 
-	$(".more").click(function () {
-		$(this).parent().find(".input-scroll-wrapper ").toggleClass("show-scroll");
+	$(".sidebar__acc-more").click(function () {
+		$(this).parent().find(".sidebar__acc-scroll-wrapper ").toggleClass("show-scroll");
 		if ($(this).html() == "Показать ещё") {
 			$(this).html("Скрыть");
 		} else {
