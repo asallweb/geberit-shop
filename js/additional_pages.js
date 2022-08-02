@@ -205,7 +205,7 @@ function tabsInit() {
 
 				description__lines();
 
-				$(".bonus__slider").slick("unslick");
+				$(".product-slider").slick("unslick");
 				bonusSliderInit();
 				//productKitSliderInit();
 			})
@@ -311,7 +311,7 @@ function productKitSliderInit(){
 	});
 }
 function bonusSliderInit(){
-	$(".bonus__slider").slick({
+	$(".product-slider").slick({
 		infinite: false,
 		slidesToShow: 5,
 		slidesToScroll: 1,
@@ -392,7 +392,7 @@ function productDetailSliderInit(){
 	});
 }
 function geberitSliderInit(){
-	$(".geberit__slider").slick({
+	$(".geberit-slider").slick({
 		infinite: true,
 		slidesToShow: 5,
 		dots: false,
