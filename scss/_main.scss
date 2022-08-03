@@ -1456,23 +1456,32 @@
 .geberit-slider {
 	position: relative;
 	margin: 0 -15px;
-	&__item {
-		border: 1px solid var(--color-border);
-		transition: all 0.3s ease-in-out;
-		margin: 0 15px;
-		&.active {
-			border: 1px solid var(--black-100);
+	@media (max-width: 1440px) {
+		margin: 0;
+	}
+	@media (max-width: 1200px) {
+		margin: 0 -30px 0 0;
+	}
+	@media (max-width: 768px) {
+		margin: 0 -20px 0 0;
+	}
+}
+.geberit-item {
+	border: 1px solid var(--color-border);
+	transition: all 0.3s ease-in-out;
+	margin: 0 15px;
+	&.active {
+		border: 1px solid var(--black-100);
+		font-weight: 700;
+		cursor: pointer;
+		.geberit__item-title {
 			font-weight: 700;
-			cursor: pointer;
-			.geberit__item-title {
-				font-weight: 700;
-			}
 		}
-		&:hover {
-			border: 1px solid var(--black-40);
-			font-weight: 700;
-			cursor: pointer;
-		}
+	}
+	&:hover {
+		border: 1px solid var(--black-40);
+		font-weight: 700;
+		cursor: pointer;
 	}
 	&__image-wrapper {
 		width: 100%;
@@ -1484,26 +1493,17 @@
 			height: 100%;
 		}
 	}
-	&__item-title {
+	&__title {
 		padding: 30px;
 		transition: all 0.3s ease-in-out;
 		font-weight: 400;
 	}
-	@media (max-width: 1440px) {
-		margin: 0;
-	}
-	@media (max-width: 1200px) {
-		margin: 0 -30px 0 0;
-	}
 	@media (max-width: 768px) {
-		margin: 0 -20px 0 0;
-		&__item {
-			max-width: 220px;
-		}
+		max-width: 220px;
 		&__image-wrapper {
 			height: 170px;
 		}
-		&__item-title {
+		&__title {
 			padding: 20px;
 		}
 	}
@@ -1841,14 +1841,14 @@
 	&__complect-info {
 		display: flex;
 		grid-gap: 30px;
-		span {
-			display: flex;
-			grid-gap: 10px;
-			align-items: center;
-			.num {
-				font-size: 22px;
-				font-weight: 700;
-			}
+	}
+	&__complect-txt {
+		display: flex;
+		grid-gap: 10px;
+		align-items: center;
+		.num {
+			font-size: 22px;
+			font-weight: 700;
 		}
 	}
 	&__add-busket {

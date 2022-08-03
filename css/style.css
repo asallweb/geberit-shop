@@ -3197,49 +3197,6 @@ a, button, input[type="submit"], .btn {
   margin: 0 -15px;
 }
 
-.geberit-slider__item {
-  border: 1px solid var(--color-border);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  margin: 0 15px;
-}
-
-.geberit-slider__item.active {
-  border: 1px solid var(--black-100);
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.geberit-slider__item.active .geberit__item-title {
-  font-weight: 700;
-}
-
-.geberit-slider__item:hover {
-  border: 1px solid var(--black-40);
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.geberit-slider__image-wrapper {
-  width: 100%;
-  height: 210px;
-}
-
-.geberit-slider__image-wrapper img {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.geberit-slider__item-title {
-  padding: 30px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  font-weight: 400;
-}
-
 @media (max-width: 1440px) {
   .geberit-slider {
     margin: 0;
@@ -3256,13 +3213,59 @@ a, button, input[type="submit"], .btn {
   .geberit-slider {
     margin: 0 -20px 0 0;
   }
-  .geberit-slider__item {
+}
+
+.geberit-item {
+  border: 1px solid var(--color-border);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 0 15px;
+}
+
+.geberit-item.active {
+  border: 1px solid var(--black-100);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.geberit-item.active .geberit__item-title {
+  font-weight: 700;
+}
+
+.geberit-item:hover {
+  border: 1px solid var(--black-40);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.geberit-item__image-wrapper {
+  width: 100%;
+  height: 210px;
+}
+
+.geberit-item__image-wrapper img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.geberit-item__title {
+  padding: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .geberit-item {
     max-width: 220px;
   }
-  .geberit-slider__image-wrapper {
+  .geberit-item__image-wrapper {
     height: 170px;
   }
-  .geberit-slider__item-title {
+  .geberit-item__title {
     padding: 20px;
   }
 }
@@ -3758,7 +3761,7 @@ a, button, input[type="submit"], .btn {
   grid-gap: 30px;
 }
 
-.product-kit__complect-info span {
+.product-kit__complect-txt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3768,7 +3771,7 @@ a, button, input[type="submit"], .btn {
           align-items: center;
 }
 
-.product-kit__complect-info span .num {
+.product-kit__complect-txt .num {
   font-size: 22px;
   font-weight: 700;
 }
