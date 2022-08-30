@@ -1,0 +1,44 @@
+.pre-loader {
+	background-color: #fff;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 9999999999999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.loader {
+  width: 157px;
+  height: 22px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.rotate{
+  animation: spin 2s linear infinite;
+}
+.pulse{
+	animation-name: stretch;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes stretch {
+	0% {
+			transform: scale(.9);
+	}
+	50% {
+			transform: scale(1.1);
+	}
+	100% {
+			transform: scale(0.9);
+	}
+}
