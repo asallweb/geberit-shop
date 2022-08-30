@@ -308,7 +308,7 @@ input[type=submit],
 }
 
 .absoluteCenter {
-  position: absolute;
+  position: absolute !important;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -903,6 +903,11 @@ input[type=submit],
 
 .collections-section__slider-list {
   margin-bottom: 30px;
+}
+
+.slick-initialized .collections-section__item.slick-slide {
+  display: -ms-grid;
+  display: grid;
 }
 
 .collections-section__item.slick-slide {
