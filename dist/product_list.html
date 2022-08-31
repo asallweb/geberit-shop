@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Список продуктов</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220831180026">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="files/preloader.css?_v=20220831180026" rel="stylesheet" />
+	<script>
+		window.addEventListener("load", function() {
+			document.querySelector(".pre-loader").style.display = "none";
+			document.querySelector("body").classList.remove("overflowed");
+		});
+	</script>
+	<link href="files/animate.min.css?_v=20220831180026" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="pre-loader">
+			<div class="loader pulse">
+				<picture><source srcset="img/logo_bottom.webp" type="image/webp"><img src="img/logo_bottom.png" alt="" /></picture>
+			</div>
+		</div>
+		<div class="body-filters-on"></div>
+		<div class="header-supertop">С 1 марта 2022 года повышение цен на всю продукцию Geberit до 20%. Успей купить по выгодной цене. Бесплатное хранение заказов на нашем складе.</div>
+		<header class="header">
+			<div class="header__top header-top">
+				<div class="header-top__content container">
+					<button class="header-top__menu-btn">
+						<svg width="24" height="16">
+							<use xlink:href="img/icons.svg#menu-btn"></use>
+						</svg>
+					</button>
+					<a href="/" class="header-top__logo">
+						<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="" class="header-top__logo-logo" /></picture>
+						Cеть экспертных<br />магазинов сантехники
+					</a>
+					<div class="header-top__city">
+						<button class="header-top__city-btn btn-show-popup" data-popup="locationPopup">
+							<svg width="18" height="18">
+								<use xlink:href="img/icons.svg#map_pin"></use>
+							</svg>
+							Москва
+						</button>
+					</div>
+					<div class="header-top__menu">
+						<ul class="header-top__menu-list">
+							<li class="header-top__menu-item header-top__menu-item_our-stores ">
+								<a href="javascript:void(0);" class="header-top__menu-item-link">
+									Наши магазины
+									<svg width="10" height="6" class="header-top__menu-item-icon">
+										<use xlink:href="img/icons.svg#chevron"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="header-top__menu-item">
+								<a href="javascript:void(0);" class="header-top__menu-item-link">
+									Сервис
+									<svg width="10" height="6" class="header-top__menu-item-icon">
+										<use xlink:href="img/icons.svg#chevron"></use>
+									</svg>
+								</a>
+								<div class="header-top__submenu-list">
+									<a href="" class="header-top__submenu-item">Гарантия</a>
+									<a href="" class="header-top__submenu-item">Возврат товаров</a>
+									<a href="" class="header-top__submenu-item">Монтаж</a>
+									<a href="" class="header-top__submenu-item">Подъем товаров</a>
+								</div>
+							</li>
+							<li class="header-top__menu-item">
+								<a href="javascript:void(0);" class="header-top__menu-item-link">
+									Контакты
+									<svg width="10" height="6" class="header-top__menu-item-icon">
+										<use xlink:href="img/icons.svg#chevron"></use>
+									</svg>
+								</a>
+								<div class="header-top__submenu-list">
+									<a href="" class="header-top__submenu-item">Гарантия</a>
+									<a href="" class="header-top__submenu-item">Возврат товаров</a>
+									<a href="" class="header-top__submenu-item">Монтаж</a>
+									<a href="" class="header-top__submenu-item">Подъем товаров</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="header-top__phones">
+						<a href="tel:+74952680406" class="header-top__phones-item">+7 (495) 268-04-06</a>
+						<svg width="10" height="6" class="header-top__menu-item-icon">
+							<use xlink:href="img/icons.svg#chevron"></use>
+						</svg>
+						<div class="header-top__phones-list">
+							<a href="tel:+74952680406" class="header-top__phones-item header-top__phones-item_additional">+7 (495) 268-04-06 </a>
+							<a href="tel:+74952680406" class="header-top__phones-item header-top__phones-item_additional">+7 (495) 268-04-06 </a>
+						</div>
+					</div>
+					<div class="header-top__phones-mobile">
+						<a href="tel:+7 (495) 268-04-06" class="header-top__phones-mobile-item">
+							<svg width="24" height="24">
+								<use xlink:href="img/icons.svg#phone"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="header-top__account">
+						<button class="header-top__account-profile btn-show-popup" data-popup="account-auth-popup">
+							<svg width="24" height="24">
+								<use xlink:href="img/icons.svg#account_avatar"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom header-bottom">
+				<div class="header-bottom__content container">
+					<a href="" class="header-bottom__logo"><picture><source srcset="img/logo_bottom.webp" type="image/webp"><img src="img/logo_bottom.png" alt="" /></picture></a>
+					<button class="header-bottom__catalog btn-lg btn-blue katalog-btn">Каталог товаров</button>
+					<div class="header-bottom__search">
+						<form class="header-bottom__search-form">
+							<input type="text" placeholder="Поиск" class="header-bottom__form-text" />
+							<input type="submit" value="" class="header-bottom__form-submit" />
+							<button class="header-bottom__form-close">╳</button>
+						</form>
+						<div class="header-bottom__search-dropdown">
+							<div class="header-bottom__dropdown-section">
+								<a class="header-bottom__dropdown-link" href="#">Унитазы подвесные</a>
+								<a class="header-bottom__dropdown-link" href="#">Унитазы напольные</a>
+								<a class="header-bottom__dropdown-link" href="#">Унитазы с функцией биде</a>
+								<a class="header-bottom__dropdown-link" href="#">Унитазы приставные</a>
+							</div>
+							<div class="header-bottom__dropdown-section">
+								<h5 class="header-bottom__dropdown-title">Категории</h5>
+								<a class="header-bottom__dropdown-link" href="#">Унитазы</a>
+								<a class="header-bottom__dropdown-link" href="#">Биде</a>
+								<a class="header-bottom__dropdown-link" href="#">Писсуары</a>
+								<a class="header-bottom__dropdown-link" href="#">Готовые решения с унитазом</a>
+								<span class="header-bottom__dropdown-more">Смотреть ещё</span>
+							</div>
+							<div class="header-bottom__dropdown-section header-bottom__dropdown-section_last">
+								<h5 class="header-bottom__dropdown-title">Товар</h5>
+								<a class="header-bottom__dropdown-product" href="#">
+									<div class="header-bottom__dropdown-product-image">
+										<picture><source srcset="img/dropdown-item.webp" type="image/webp"><img src="img/dropdown-item.jpg" alt="#" /></picture>
+									</div>
+									<div class="header-bottom__dropdown-product-info">
+										<span class="header-bottom__dropdown-product-title">Подвесной унитаз Geberit Acanto 500.600.01.2 безободковый </span>
+										<span class="header-bottom__dropdown-product-price">27 983 руб.</span>
+									</div>
+								</a>
+								<a class="header-bottom__dropdown-product" href="#">
+									<div class="header-bottom__dropdown-product-image">
+										<picture><source srcset="img/dropdown-item.webp" type="image/webp"><img src="img/dropdown-item.jpg" alt="#" /></picture>
+									</div>
+									<div class="header-bottom__dropdown-product-info">
+										<span class="header-bottom__dropdown-product-title">Унитаз подвесной Geberit iCon 204060000 безободковый (без сиденья)</span>
+										<span class="header-bottom__dropdown-product-price">28 683 руб.</span>
+									</div>
+								</a>
+								<span class="header-bottom__dropdown-more">Смотреть ещё</span>
+							</div>
+						</div>
+					</div>
+					<div class="header-bottom__tools">
+						<button class="header-bottom__search-ico-mobile"></button>
+						<a href="" class="header-bottom__tools-favorite header-bottom__tools-item">
+							<svg width="24" height="24">
+								<use xlink:href="img/icons.svg#favorite"></use>
+							</svg>
+						</a>
+						<a href="" class="header-bottom__tools-compare header-bottom__tools-item">
+							<svg width="24" height="24">
+								<use xlink:href="img/icons.svg#compare"></use>
+							</svg>
+						</a>
+						<a href="" class="header-bottom__tools-cart header-bottom__tools-item">
+							<svg width="31" height="30">
+								<use xlink:href="img/icons.svg#cart"></use>
+							</svg>
+							<span class="header-bottom__tools-cart-count">2</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="menu-stores">
+				<button class="menu-stores__close">╳</button>
+				<div class="menu-stores__mobile-head">
+					<div class="menu-stores__mobile-head-wrapper">
+						<a href="" class="menu-stores__mobile-logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture></a>
+						<button class="menu-stores__mobile-location header-top__city-btn btn-show-popup" data-popup="locationPopup">
+							<svg width="18" height="18">
+								<use xlink:href="img/icons.svg#map_pin"></use>
+							</svg>
+							Москва
+						</button>
+					</div>
+					<div class="menu-stores__mobile-tools">
+						<a href="" class="menu-stores__tools-item header-bottom__tools-favorite header-bottom__tools-item">
+							<svg width="24" height="24">
+								<use xlink:href="img/icons.svg#favorite"></use>
+							</svg>
+						</a>
+						<a href="" class="menu-stores__tools-item header-bottom__tools-compare header-bottom__tools-item">
+							<svg width="24" height="24">
+								<use xlink:href="img/icons.svg#compare"></use>
+							</svg>
+						</a>
+						<a href="" class="menu-stores__tools-item header-bottom__tools-cart header-bottom__tools-item">
+							<svg width="31" height="30">
+								<use xlink:href="img/icons.svg#cart"></use>
+							</svg>
+							<span class="header-bottom__tools-cart-count">2</span>
+						</a>
+					</div>
+					<button class="menu-stores__mobile-back">
+						<img src="img/back_ico-arrow.svg" alt="">
+						Назад</button>
+				</div>
+				<div class="menu-stores__list-wrapper container">
+					<div class="menu-stores__main-item">
+						<picture><source srcset="img/cems-logo.webp" type="image/webp"><img src="img/cems-logo.png" class="menu-stores__main-item-logo" /></picture>
+						<div class="menu-stores__main-item-subtitle">Cеть экспертных <br> магазинов сантехники</div>
+						<a href="#" class="menu-stores__main-item-btn btn btn-blue">Каталог всех товаров</a>
+						<a href="#" class="menu-stores__main-item-link">expert-santehniki.ru</a>
+					</div>
+					<div class="menu-stores__list">
+						<div class="menu-stores__item">
+							<div class="menu-stores__item-logo"><picture><source srcset="img/geberit-logo.webp" type="image/webp"><img src="img/geberit-logo.png" alt="" /></picture></div>
+							<a href="" class="menu-stores__item-link">
+								В магазин
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="menu-stores__item">
+							<div class="menu-stores__item-logo">
+								<picture><source srcset="img/akvaton-logo.webp" type="image/webp"><img src="img/akvaton-logo.png" alt="" /></picture>
+							</div>
+							<a href="" class="menu-stores__item-link">
+								В магазин
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="menu-stores__item">
+							<div class="menu-stores__item-logo">
+								<picture><source srcset="img/roca-logo.webp" type="image/webp"><img src="img/roca-logo.png" alt="" /></picture>
+							</div>
+							<a href="" class="menu-stores__item-link">
+								В магазин
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="menu-stores__item">
+							<div class="menu-stores__item-logo">
+								<picture><source srcset="img/jd-logo.webp" type="image/webp"><img src="img/jd-logo.png" alt="" /></picture>
+							</div>
+							<a href="" class="menu-stores__item-link">
+								В магазин
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="menu-stores__item">
+							<div class="menu-stores__item-logo">
+								<picture><source srcset="img/cezares-logo.webp" type="image/webp"><img src="img/cezares-logo.png" alt="" /></picture>
+							</div>
+							<a href="" class="menu-stores__item-link">
+								В магазин
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="menu-stores__item">
+							<div class="menu-stores__item-logo">
+								<picture><source srcset="img/ravak-logo.webp" type="image/webp"><img src="img/ravak-logo.png" alt="" /></picture>
+							</div>
+							<a href="" class="menu-stores__item-link">
+								В магазин
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="menu-stores__item">
+							<div class="menu-stores__item-logo">
+								<picture><source srcset="img/grohe-logo.webp" type="image/webp"><img src="img/grohe-logo.png" alt="" /></picture>
+							</div>
+							<a href="" class="menu-stores__item-link">
+								В магазин
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="menu-stores__item">
+							<div class="menu-stores__item-logo">
+								<picture><source srcset="img/hansgrohe-logo.webp" type="image/webp"><img src="img/hansgrohe-logo.png" alt="" /></picture>
+							</div>
+							<a href="" class="menu-stores__item-link">
+								В магазин
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="menu-stores__item">
+							<div class="menu-stores__item-logo">
+								<picture><source srcset="img/duravit-logo.webp" type="image/webp"><img src="img/duravit-logo.png" alt="" /></picture>
+							</div>
+							<a href="" class="menu-stores__item-link">
+								В магазин
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="katalog">
+				<div class="item active">Инсталляции</div>
+				<div class="item">Мебель для ванной комнаты</div>
+				<div class="item">Унитазы</div>
+				<div class="item">Готовые решения с унитазом</div>
+				<div class="item">Душевые кабины</div>
+				<div class="item">Смывные клавиши</div>
+				<div class="item">Ванны</div>
+				<div class="item">Биде</div>
+				<div class="item">Писсуары</div>
+				<div class="item">Модули Monolith</div>
+				<div class="item">Смывные бачки</div>
+				<div class="item">Смесители</div>
+				<div class="item">Душевые трапы</div>
+				<div class="item">Приводы смыва</div>
+				<div class="item">Аксессуары</div>
+				<div class="item">Душевые уголки</div>
+				<div class="item">Сиситемы защиты от протечек</div>
+				<div class="item">Комплектующие</div>
+				<div class="item">Полотенцесушители</div>
+				<div class="item">Сантехнические люки</div>
+				<div class="item">Вентиляторы</div>
+				<div class="item">Вентиляторы</div>
+				<div class="item">Вентиляторы</div>
+			</div>
+		</header>
+		<main class="site-main page">
+			<div class="breadcrumbs">
+				<div class="breadcrumbs__content container">
+					<a class="breadcrumbs__link" href="#">Главная</a>
+					<span class="breadcrumbs__separator">/</span>
+					<span class="breadcrumbs__link_current">Мебель для ванной комнаты </span>
+				</div>
+			</div>
+			<section class="products container">
+				<h1 class="products__title page-title">Мебель для ванной комнаты Geberit</h1>
+				<div class="products__sidebar sidebar">
+					<div class="sidebar__head">
+						<button class="sidebar__head-reset">Сбросить</button>
+						<h2 class="sidebar__head-title">Фильтры</h2>
+						<button class="sidebar__head-cross">╳</button>
+					</div>
+					<a class="youtube-section" href="#">
+						<svg width="35" height="35" class="youtube-section__icon">
+							<use xlink:href="img/icons.svg#youtube_icon"></use>
+						</svg>
+						<span class="youtube-section__text">Как подобрать мебель для ванной комнаты?</span>
+					</a>
+					<div class="sidebar__acc sidebar__acc_category">
+						<div class="sidebar__acc-head">
+							Выберите категорию
+							<div class="sidebar__plus-ico sidebar__plus-ico_closed">
+								<div class="sidebar__plus-ico-circle">
+									<div class="sidebar__plus-ico-horizontal"></div>
+									<div class="sidebar__plus-ico-vertical"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__acc-body">
+							<div class="sidebar__acc-body-content">
+								<a href="#" class="sidebar__acc-link">Тумбы под раковину<span class="sidebar__acc-link-num">428</span></a>
+								<a href="#" class="sidebar__acc-link">Зеркало<span class="sidebar__acc-link-num">57</span></a>
+								<a href="#" class="sidebar__acc-link">Мебельный комплект<span class="sidebar__acc-link-num">13</span></a>
+								<a href="#" class="sidebar__acc-link">Шкаф<span class="sidebar__acc-link-num">62</span></a>
+								<a href="#" class="sidebar__acc-link">Полки<span class="sidebar__acc-link-num">19</span></a>
+								<a href="#" class="sidebar__acc-link">Шкаф-пенал<span class="sidebar__acc-link-num">50</span></a>
+								<a href="#" class="sidebar__acc-link">Зеркало-шкаф<span class="sidebar__acc-link-num">12</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar__acc sidebar__acc_range">
+						<div class="sidebar__acc-head">
+							Цена, руб
+							<div class="sidebar__plus-ico sidebar__plus-ico_closed">
+								<div class="sidebar__plus-ico-circle">
+									<div class="sidebar__plus-ico-horizontal"></div>
+									<div class="sidebar__plus-ico-vertical"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__acc-body">
+							<div class="sidebar__acc-body-content sidebar__acc-body-content_range">
+								<div class="sidebar__acc-range">
+									<div id="range" class="sidebar__acc-range-line"></div>
+									<div id="max-label" class="sidebar__acc-label-max"></div>
+									<div id="min-label" class="sidebar__acc-label-min"></div>
+								</div>
+								<div class="sidebar__acc-range-inputs">
+									<div class="sidebar__acc-range-input-wrapper">
+										<input type="text" id="min" value="0" class="sidebar__acc-range-input" />
+										<span>руб</span>
+									</div>
+									<span class="sidebar__acc-separator"></span>
+									<div class="sidebar__acc-range-input-wrapper">
+										<input type="text" id="max" value="409764" class="sidebar__acc-range-input" />
+										<span>руб</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar__acc sidebar__acc_checkbox">
+						<div class="sidebar__acc-head">
+							Коллекция
+							<div class="sidebar__plus-ico sidebar__plus-ico_closed">
+								<div class="sidebar__plus-ico-circle">
+									<div class="sidebar__plus-ico-horizontal"></div>
+									<div class="sidebar__plus-ico-vertical"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__acc-body">
+							<div class="sidebar__acc-body-content">
+								<input class="sidebar__acc-body-search" type="text" placeholder="Поиск" />
+								<div class="sidebar__acc-scroll-wrapper show-scroll">
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="acanto" name="acanto" />
+										<label for="acanto">Acanto </label>
+										<span class="sidebar__acc-input-num">428</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="basic" name="basic" />
+										<label for="basic">Basic </label>
+										<span class="sidebar__acc-input-num">1</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="citterio" name="citterio" />
+										<label for="citterio">Citterio </label>
+										<span class="sidebar__acc-input-num">34</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="duofix/acanto" name="duofix/acanto" />
+										<label for="duofix/acanto">Duofix/Acanto </label>
+										<span class="sidebar__acc-input-num">456</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="icon" name="icon" />
+										<label for="icon">iCon </label>
+										<span class="sidebar__acc-input-num">34</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="iconxs" name="iconxs" />
+										<label for="iconxs">iCon xs </label>
+										<span class="sidebar__acc-input-num">54</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="it" name="it" />
+										<label for="it">It! </label>
+										<span class="sidebar__acc-input-num">3</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="myday" name="myday" />
+										<label for="myday">MyDay </label>
+										<span class="sidebar__acc-input-num">234</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="one" name="one" />
+										<label for="one">ONE </label>
+										<span class="sidebar__acc-input-num">45</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="option" name="option1" />
+										<label for="option">Option </label>
+										<span class="sidebar__acc-input-num">3</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="option2" name="option2" />
+										<label for="option2">Option2 </label>
+										<span class="sidebar__acc-input-num">3</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="option3" name="option3" />
+										<label for="option3">Option3 </label>
+										<span class="sidebar__acc-input-num">3</span>
+									</div>
+								</div>
+								<button class="sidebar__acc-more">Показать ещё</button>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar__acc sidebar__acc_checkbox">
+						<div class="sidebar__acc-head">
+							Тип
+							<div class="sidebar__plus-ico sidebar__plus-ico_closed">
+								<div class="sidebar__plus-ico-circle">
+									<div class="sidebar__plus-ico-horizontal"></div>
+									<div class="sidebar__plus-ico-vertical"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__acc-body">
+							<div class="sidebar__acc-body-content">
+								<div class="sidebar__acc-scroll-wrapper show-scroll">
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="hardware" name="hardware" />
+										<label for="hardware">Гарнитур мебельный</label>
+										<span class="sidebar__acc-input-num">238</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="pedestal" name="pedestal" />
+										<label for="pedestal">Тумба под раковину </label>
+										<span class="sidebar__acc-input-num">12</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="case-mirror" name="case-mirror" />
+										<label for="case-mirror">Шкаф зеркальный </label>
+										<span class="sidebar__acc-input-num">34</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="case" name="case" />
+										<label for="case">Шкаф-пенал </label>
+										<span class="sidebar__acc-input-num">1</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror" name="mirror" />
+										<label for="mirror">Зеркало </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror2" name="mirror2" />
+										<label for="mirror2">Зеркало2 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror3" name="mirror3" />
+										<label for="mirror3">Зеркало3 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror4" name="mirror4" />
+										<label for="mirror4">Зеркало4 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror5" name="mirror5" />
+										<label for="mirror5">Зеркало5 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror6" name="mirror6" />
+										<label for="mirror6">Зеркало6 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror7" name="mirror7" />
+										<label for="mirror7">Зеркало7 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror8" name="mirror8" />
+										<label for="mirror8">Зеркало8 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror9" name="mirror9" />
+										<label for="mirror9">Зеркало9 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror10" name="mirror10" />
+										<label for="mirror10">Зеркало10 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+								</div>
+								<button class="sidebar__acc-more">Показать ещё</button>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar__acc sidebar__acc_range">
+						<div class="sidebar__acc-head">
+							Габариты
+							<div class="sidebar__plus-ico sidebar__plus-ico_closed">
+								<div class="sidebar__plus-ico-circle">
+									<div class="sidebar__plus-ico-horizontal"></div>
+									<div class="sidebar__plus-ico-vertical"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__acc-body">
+							<div class="sidebar__acc-body-content">
+								<div class="sidebar__acc-range-inputs">
+									<span class="sidebar__acc-range-title">Ширина</span>
+									<div class="sidebar__acc-range-input-wrapper">
+										<input type="text" value="60" class="sidebar__acc-range-input" />
+										<span>см</span>
+									</div>
+									<span class="sidebar__acc-separator"></span>
+									<div class="sidebar__acc-range-input-wrapper">
+										<input type="text" value="60,2" class="sidebar__acc-range-input" />
+										<span>см</span>
+									</div>
+									<span class="sidebar__acc-range-title">Глубина</span>
+									<div class="sidebar__acc-range-input-wrapper">
+										<input type="text" value="30" class="sidebar__acc-range-input" />
+										<span>см</span>
+									</div>
+									<span class="sidebar__acc-separator"></span>
+									<div class="sidebar__acc-range-input-wrapper">
+										<input type="text" value="30,3" class="sidebar__acc-range-input" />
+										<span>см</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar__acc sidebar__acc_checkbox">
+						<div class="sidebar__acc-head">
+							Форма
+							<div class="sidebar__plus-ico sidebar__plus-ico_closed">
+								<div class="sidebar__plus-ico-circle">
+									<div class="sidebar__plus-ico-horizontal"></div>
+									<div class="sidebar__plus-ico-vertical"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__acc-body">
+							<div class="sidebar__acc-body-content">
+								<div class="sidebar__acc-scroll-wrapper show-scroll">
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="hardware" name="hardware" />
+										<label for="hardware">Гарнитур мебельный</label>
+										<span class="sidebar__acc-input-num">238</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="pedestal" name="pedestal" />
+										<label for="pedestal">Тумба под раковину </label>
+										<span class="sidebar__acc-input-num">12</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="case-mirror" name="case-mirror" />
+										<label for="case-mirror">Шкаф зеркальный </label>
+										<span class="sidebar__acc-input-num">34</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="case" name="case" />
+										<label for="case">Шкаф-пенал </label>
+										<span class="sidebar__acc-input-num">1</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror" name="mirror" />
+										<label for="mirror">Зеркало </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror2" name="mirror2" />
+										<label for="mirror2">Зеркало2 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror3" name="mirror3" />
+										<label for="mirror3">Зеркало3 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror4" name="mirror4" />
+										<label for="mirror4">Зеркало4 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror5" name="mirror5" />
+										<label for="mirror5">Зеркало5 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror6" name="mirror6" />
+										<label for="mirror6">Зеркало6 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror7" name="mirror7" />
+										<label for="mirror7">Зеркало7 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror8" name="mirror8" />
+										<label for="mirror8">Зеркало8 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror9" name="mirror9" />
+										<label for="mirror9">Зеркало9 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror10" name="mirror10" />
+										<label for="mirror10">Зеркало10 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+								</div>
+								<button class="sidebar__acc-more">Показать ещё</button>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar__acc sidebar__acc_checkbox">
+						<div class="sidebar__acc-head">
+							Цвет
+							<div class="sidebar__plus-ico sidebar__plus-ico_closed">
+								<div class="sidebar__plus-ico-circle">
+									<div class="sidebar__plus-ico-horizontal"></div>
+									<div class="sidebar__plus-ico-vertical"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__acc-body">
+							<div class="sidebar__acc-body-content">
+								<div class="sidebar__acc-scroll-wrapper show-scroll">
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="beige" name="beige" />
+										<label for="beige"><span class="sidebar__acc-input-color color_beige"></span>Бежевый</label>
+										<span class="sidebar__acc-input-num">238</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="white" name="white" />
+										<label for="white"><span class="sidebar__acc-input-color color_white"></span>Белый </label>
+										<span class="sidebar__acc-input-num">12</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="gloss" name="gloss" />
+										<label for="gloss"><span class="sidebar__acc-input-color color_gloss"></span>Белый глянец </label>
+										<span class="sidebar__acc-input-num">34</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="wenge" name="wenge" />
+										<label for="wenge"><span class="sidebar__acc-input-color color_wenge"></span>Венге</label>
+										<span class="sidebar__acc-input-num">1</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="tree" name="tree" />
+										<label for="tree"><span class="sidebar__acc-input-color color_tree"></span>Дерево</label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="tree1" name="tree1" />
+										<label for="tree1"><span class="sidebar__acc-input-color color_tree"></span>Дерево1</label>
+										<span class="sidebar__acc-input-num">10</span>
+									</div>
+								</div>
+								<button class="sidebar__acc-more">Показать ещё</button>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar__acc sidebar__acc_checkbox">
+						<div class="sidebar__acc-head">
+							Подсветка
+							<div class="sidebar__plus-ico sidebar__plus-ico_closed">
+								<div class="sidebar__plus-ico-circle">
+									<div class="sidebar__plus-ico-horizontal"></div>
+									<div class="sidebar__plus-ico-vertical"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__acc-body">
+							<div class="sidebar__acc-body-content">
+								<div class="sidebar__acc-scroll-wrapper show-scroll">
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="hardware" name="hardware" />
+										<label for="hardware">Гарнитур мебельный</label>
+										<span class="sidebar__acc-input-num">238</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="pedestal" name="pedestal" />
+										<label for="pedestal">Тумба под раковину </label>
+										<span class="sidebar__acc-input-num">12</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="case-mirror" name="case-mirror" />
+										<label for="case-mirror">Шкаф зеркальный </label>
+										<span class="sidebar__acc-input-num">34</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="case" name="case" />
+										<label for="case">Шкаф-пенал </label>
+										<span class="sidebar__acc-input-num">1</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror" name="mirror" />
+										<label for="mirror">Зеркало </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror2" name="mirror2" />
+										<label for="mirror2">Зеркало2 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror3" name="mirror3" />
+										<label for="mirror3">Зеркало3 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror4" name="mirror4" />
+										<label for="mirror4">Зеркало4 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror5" name="mirror5" />
+										<label for="mirror5">Зеркало5 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror6" name="mirror6" />
+										<label for="mirror6">Зеркало6 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror7" name="mirror7" />
+										<label for="mirror7">Зеркало7 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror8" name="mirror8" />
+										<label for="mirror8">Зеркало8 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror9" name="mirror9" />
+										<label for="mirror9">Зеркало9 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror10" name="mirror10" />
+										<label for="mirror10">Зеркало10 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+								</div>
+								<button class="sidebar__acc-more">Показать ещё</button>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar__acc sidebar__acc_checkbox">
+						<div class="sidebar__acc-head">
+							Монтаж
+							<div class="sidebar__plus-ico sidebar__plus-ico_closed">
+								<div class="sidebar__plus-ico-circle">
+									<div class="sidebar__plus-ico-horizontal"></div>
+									<div class="sidebar__plus-ico-vertical"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__acc-body">
+							<div class="sidebar__acc-body-content">
+								<div class="sidebar__acc-scroll-wrapper show-scroll">
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="hardware" name="hardware" />
+										<label for="hardware">Гарнитур мебельный</label>
+										<span class="sidebar__acc-input-num">238</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="pedestal" name="pedestal" />
+										<label for="pedestal">Тумба под раковину </label>
+										<span class="sidebar__acc-input-num">12</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="case-mirror" name="case-mirror" />
+										<label for="case-mirror">Шкаф зеркальный </label>
+										<span class="sidebar__acc-input-num">34</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="case" name="case" />
+										<label for="case">Шкаф-пенал </label>
+										<span class="sidebar__acc-input-num">1</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror" name="mirror" />
+										<label for="mirror">Зеркало </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror2" name="mirror2" />
+										<label for="mirror2">Зеркало2 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror3" name="mirror3" />
+										<label for="mirror3">Зеркало3 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror4" name="mirror4" />
+										<label for="mirror4">Зеркало4 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror5" name="mirror5" />
+										<label for="mirror5">Зеркало5 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror6" name="mirror6" />
+										<label for="mirror6">Зеркало6 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror7" name="mirror7" />
+										<label for="mirror7">Зеркало7 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror8" name="mirror8" />
+										<label for="mirror8">Зеркало8 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror9" name="mirror9" />
+										<label for="mirror9">Зеркало9 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror10" name="mirror10" />
+										<label for="mirror10">Зеркало10 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+								</div>
+								<button class="sidebar__acc-more">Показать ещё</button>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar__acc sidebar__acc_checkbox">
+						<div class="sidebar__acc-head">
+							Система хранения
+							<div class="sidebar__plus-ico sidebar__plus-ico_closed">
+								<div class="sidebar__plus-ico-circle">
+									<div class="sidebar__plus-ico-horizontal"></div>
+									<div class="sidebar__plus-ico-vertical"></div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__acc-body">
+							<div class="sidebar__acc-body-content">
+								<div class="sidebar__acc-scroll-wrapper show-scroll">
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="hardware" name="hardware" />
+										<label for="hardware">Гарнитур мебельный</label>
+										<span class="sidebar__acc-input-num">238</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="pedestal" name="pedestal" />
+										<label for="pedestal">Тумба под раковину </label>
+										<span class="sidebar__acc-input-num">12</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="case-mirror" name="case-mirror" />
+										<label for="case-mirror">Шкаф зеркальный </label>
+										<span class="sidebar__acc-input-num">34</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="case" name="case" />
+										<label for="case">Шкаф-пенал </label>
+										<span class="sidebar__acc-input-num">1</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror" name="mirror" />
+										<label for="mirror">Зеркало </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror2" name="mirror2" />
+										<label for="mirror2">Зеркало2 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror3" name="mirror3" />
+										<label for="mirror3">Зеркало3 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror4" name="mirror4" />
+										<label for="mirror4">Зеркало4 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror5" name="mirror5" />
+										<label for="mirror5">Зеркало5 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror6" name="mirror6" />
+										<label for="mirror6">Зеркало6 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror7" name="mirror7" />
+										<label for="mirror7">Зеркало7 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror8" name="mirror8" />
+										<label for="mirror8">Зеркало8 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror9" name="mirror9" />
+										<label for="mirror9">Зеркало9 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+									<div class="sidebar__acc-input-wrapper">
+										<input type="checkbox" id="mirror10" name="mirror10" />
+										<label for="mirror10">Зеркало10 </label>
+										<span class="sidebar__acc-input-num">90</span>
+									</div>
+								</div>
+								<button class="sidebar__acc-more">Показать ещё</button>
+							</div>
+						</div>
+					</div>
+					<button class="sidebar__apply">Показать <span>60</span> товаров</button>
+				</div>
+				<div class="products__list">
+					<div class="products__responive-btns responive-btns">
+						<button class="responive-btns__category">
+							<svg width="14" height="14">
+								<use xlink:href="img/icons.svg#category"></use>
+							</svg>
+							Категории
+						</button>
+						<button class="responive-btns__filter">
+							<svg width="16" height="16">
+								<use xlink:href="img/icons.svg#filters"></use>
+							</svg>
+							Фильтр
+							<span class="num">2</span>
+						</button>
+					</div>
+					<div class="products__filter sorting-tags">
+						<div class="sorting-tags__sort">
+							Сортировать по
+							<div class="sorting-tags__sort-dropdown">
+								<a href="" class="sorting-tags__dropitem">Популярности</a>
+								<a href="" class="sorting-tags__dropitem">По возрастанию цены</a>
+								<a href="" class="sorting-tags__dropitem active">По убыванию цены</a>
+								<a href="" class="sorting-tags__dropitem">По названию (от А до Я)</a>
+								<a href="" class="sorting-tags__dropitem">По названию (от Я до А)</a>
+							</div>
+						</div>
+						<div class="sorting-tags__sort-list">
+							<a href="#" class="sorting-tags__sort-item">
+								популярности
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+							<a href="#" class="sorting-tags__sort-item">
+								цене
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+							<a href="#" class="sorting-tags__sort-item">
+								по названию
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#top_right_arrow_short"></use>
+								</svg>
+							</a>
+						</div>
+						<a href="#" class="sorting-tags__sort-item 
+																 sorting-tags__sort-item_margin-left 
+																 sorting-tags__sort-item_active">
+							Подробно
+							<svg width="16" height="16">
+								<use xlink:href="img/icons.svg#detail"></use>
+							</svg>
+						</a>
+						<a href="#" class="sorting-tags__sort-item">
+							Кратко
+							<svg width="16" height="16">
+								<use xlink:href="img/icons.svg#short"></use>
+							</svg>
+						</a>
+						<div class="sorting-tags__tags">
+							<button class="sorting-tags__tags-item">Очистить все</button>
+							<button class="sorting-tags__tags-item">Acanto<span class="cross">╳</span></button>
+							<button class="sorting-tags__tags-item">Гарнитур мебельный<span class="cross">╳</span></button>
+						</div>
+					</div>
+					<div class="products__items">
+						<div class="product-preview-wrapper">
+							<div class="product-preview">
+								<div class="product-preview__markers">
+									<div class="product-preview__marker product-preview__marker_new">NEW</div>
+								</div>
+								<div class="product-preview__images-wrapper">
+									<div class="product-preview__images">
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct1.webp" type="image/webp"><img src="img/imageproduct1.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct2.webp" type="image/webp"><img src="img/imageproduct2.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct3.webp" type="image/webp"><img src="img/imageproduct3.jpg" alt="" /></picture></div>
+									</div>
+									<button class="product-preview__quick-view">Быстрый просмотр</button>
+								</div>
+								<a href="#" class="product-preview__title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+								<ul class="product-preview__characteristic">
+									<li class="product-preview__characteristic-li">Ширина, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Высота, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Форма:<span>прямоугольная</span></li>
+									<li class="product-preview__characteristic-li">Покрытие корпуса:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Покрытие фасада:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Материал фасада:<span>ЛДСП</span></li>
+									<li class="product-preview__characteristic-li">Материал корпуса:<span>ЛДСП</span></li>
+								</ul>
+								<div class="product-preview__availability product-preview__availability_available">
+									<div class="product-preview__dot"></div>
+									В наличии
+								</div>
+								<div class="product-preview__price">
+									<div class="product-preview__price-current">15 088 руб.</div>
+									<div class="product-preview__price-old">31 088 руб.</div>
+								</div>
+								<div class="product-preview__buttons">
+									<button class="product-preview__add_to_busket btn btn-blue">В корзину</button>
+									<button class="product-preview__compare">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#compare"></use>
+										</svg>
+									</button>
+									<button class="product-preview__favorite">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#favorite"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-preview-wrapper">
+							<div class="product-preview">
+								<div class="product-preview__markers">
+									<div class="product-preview__marker product-preview__marker_new">NEW</div>
+								</div>
+								<div class="product-preview__images-wrapper">
+									<div class="product-preview__images">
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct1.webp" type="image/webp"><img src="img/imageproduct1.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct2.webp" type="image/webp"><img src="img/imageproduct2.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct3.webp" type="image/webp"><img src="img/imageproduct3.jpg" alt="" /></picture></div>
+									</div>
+									<button class="product-preview__quick-view">Быстрый просмотр</button>
+								</div>
+								<a href="#" class="product-preview__title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+								<ul class="product-preview__characteristic">
+									<li class="product-preview__characteristic-li">Ширина, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Высота, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Форма:<span>прямоугольная</span></li>
+									<li class="product-preview__characteristic-li">Покрытие корпуса:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Покрытие фасада:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Материал фасада:<span>ЛДСП</span></li>
+									<li class="product-preview__characteristic-li">Материал корпуса:<span>ЛДСП</span></li>
+								</ul>
+								<div class="product-preview__availability product-preview__availability_available">
+									<div class="product-preview__dot"></div>
+									В наличии
+								</div>
+								<div class="product-preview__price">
+									<div class="product-preview__price-current">15 088 руб.</div>
+									<div class="product-preview__price-old">31 088 руб.</div>
+								</div>
+								<div class="product-preview__buttons">
+									<button class="product-preview__add_to_busket btn btn-blue">В корзину</button>
+									<button class="product-preview__compare">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#compare"></use>
+										</svg>
+									</button>
+									<button class="product-preview__favorite">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#favorite"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-preview-wrapper">
+							<div class="product-preview">
+								<div class="product-preview__markers">
+									<div class="product-preview__marker product-preview__marker_new">NEW</div>
+								</div>
+								<div class="product-preview__images-wrapper">
+									<div class="product-preview__images">
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct1.webp" type="image/webp"><img src="img/imageproduct1.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct2.webp" type="image/webp"><img src="img/imageproduct2.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct3.webp" type="image/webp"><img src="img/imageproduct3.jpg" alt="" /></picture></div>
+									</div>
+									<button class="product-preview__quick-view">Быстрый просмотр</button>
+								</div>
+								<a href="#" class="product-preview__title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+								<ul class="product-preview__characteristic">
+									<li class="product-preview__characteristic-li">Ширина, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Высота, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Форма:<span>прямоугольная</span></li>
+									<li class="product-preview__characteristic-li">Покрытие корпуса:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Покрытие фасада:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Материал фасада:<span>ЛДСП</span></li>
+									<li class="product-preview__characteristic-li">Материал корпуса:<span>ЛДСП</span></li>
+								</ul>
+								<div class="product-preview__availability product-preview__availability_available">
+									<div class="product-preview__dot"></div>
+									В наличии
+								</div>
+								<div class="product-preview__price">
+									<div class="product-preview__price-current">15 088 руб.</div>
+									<div class="product-preview__price-old">31 088 руб.</div>
+								</div>
+								<div class="product-preview__buttons">
+									<button class="product-preview__add_to_busket btn btn-blue">В корзину</button>
+									<button class="product-preview__compare">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#compare"></use>
+										</svg>
+									</button>
+									<button class="product-preview__favorite">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#favorite"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-preview-wrapper">
+							<div class="product-preview">
+								<div class="product-preview__markers">
+									<div class="product-preview__marker product-preview__marker_new">NEW</div>
+								</div>
+								<div class="product-preview__images-wrapper">
+									<div class="product-preview__images">
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct1.webp" type="image/webp"><img src="img/imageproduct1.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct2.webp" type="image/webp"><img src="img/imageproduct2.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct3.webp" type="image/webp"><img src="img/imageproduct3.jpg" alt="" /></picture></div>
+									</div>
+									<button class="product-preview__quick-view">Быстрый просмотр</button>
+								</div>
+								<a href="#" class="product-preview__title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+								<ul class="product-preview__characteristic">
+									<li class="product-preview__characteristic-li">Ширина, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Высота, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Форма:<span>прямоугольная</span></li>
+									<li class="product-preview__characteristic-li">Покрытие корпуса:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Покрытие фасада:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Материал фасада:<span>ЛДСП</span></li>
+									<li class="product-preview__characteristic-li">Материал корпуса:<span>ЛДСП</span></li>
+								</ul>
+								<div class="product-preview__availability product-preview__availability_available">
+									<div class="product-preview__dot"></div>
+									В наличии
+								</div>
+								<div class="product-preview__price">
+									<div class="product-preview__price-current">15 088 руб.</div>
+									<div class="product-preview__price-old">31 088 руб.</div>
+								</div>
+								<div class="product-preview__buttons">
+									<button class="product-preview__add_to_busket btn btn-blue">В корзину</button>
+									<button class="product-preview__compare">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#compare"></use>
+										</svg>
+									</button>
+									<button class="product-preview__favorite">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#favorite"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-preview-wrapper">
+							<div class="product-preview">
+								<div class="product-preview__markers">
+									<div class="product-preview__marker product-preview__marker_new">NEW</div>
+								</div>
+								<div class="product-preview__images-wrapper">
+									<div class="product-preview__images">
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct1.webp" type="image/webp"><img src="img/imageproduct1.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct2.webp" type="image/webp"><img src="img/imageproduct2.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct3.webp" type="image/webp"><img src="img/imageproduct3.jpg" alt="" /></picture></div>
+									</div>
+									<button class="product-preview__quick-view">Быстрый просмотр</button>
+								</div>
+								<a href="#" class="product-preview__title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+								<ul class="product-preview__characteristic">
+									<li class="product-preview__characteristic-li">Ширина, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Высота, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Форма:<span>прямоугольная</span></li>
+									<li class="product-preview__characteristic-li">Покрытие корпуса:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Покрытие фасада:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Материал фасада:<span>ЛДСП</span></li>
+									<li class="product-preview__characteristic-li">Материал корпуса:<span>ЛДСП</span></li>
+								</ul>
+								<div class="product-preview__availability product-preview__availability_available">
+									<div class="product-preview__dot"></div>
+									В наличии
+								</div>
+								<div class="product-preview__price">
+									<div class="product-preview__price-current">15 088 руб.</div>
+									<div class="product-preview__price-old">31 088 руб.</div>
+								</div>
+								<div class="product-preview__buttons">
+									<button class="product-preview__add_to_busket btn btn-blue">В корзину</button>
+									<button class="product-preview__compare">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#compare"></use>
+										</svg>
+									</button>
+									<button class="product-preview__favorite">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#favorite"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-preview-wrapper">
+							<div class="product-preview">
+								<div class="product-preview__markers">
+									<div class="product-preview__marker product-preview__marker_new">NEW</div>
+								</div>
+								<div class="product-preview__images-wrapper">
+									<div class="product-preview__images">
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct1.webp" type="image/webp"><img src="img/imageproduct1.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct2.webp" type="image/webp"><img src="img/imageproduct2.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct3.webp" type="image/webp"><img src="img/imageproduct3.jpg" alt="" /></picture></div>
+									</div>
+									<button class="product-preview__quick-view">Быстрый просмотр</button>
+								</div>
+								<a href="#" class="product-preview__title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+								<ul class="product-preview__characteristic">
+									<li class="product-preview__characteristic-li">Ширина, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Высота, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Форма:<span>прямоугольная</span></li>
+									<li class="product-preview__characteristic-li">Покрытие корпуса:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Покрытие фасада:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Материал фасада:<span>ЛДСП</span></li>
+									<li class="product-preview__characteristic-li">Материал корпуса:<span>ЛДСП</span></li>
+								</ul>
+								<div class="product-preview__availability product-preview__availability_available">
+									<div class="product-preview__dot"></div>
+									В наличии
+								</div>
+								<div class="product-preview__price">
+									<div class="product-preview__price-current">15 088 руб.</div>
+									<div class="product-preview__price-old">31 088 руб.</div>
+								</div>
+								<div class="product-preview__buttons">
+									<button class="product-preview__add_to_busket btn btn-blue">В корзину</button>
+									<button class="product-preview__compare">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#compare"></use>
+										</svg>
+									</button>
+									<button class="product-preview__favorite">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#favorite"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-preview-wrapper">
+							<div class="product-preview">
+								<div class="product-preview__markers">
+									<div class="product-preview__marker product-preview__marker_new">NEW</div>
+								</div>
+								<div class="product-preview__images-wrapper">
+									<div class="product-preview__images">
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct1.webp" type="image/webp"><img src="img/imageproduct1.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct2.webp" type="image/webp"><img src="img/imageproduct2.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct3.webp" type="image/webp"><img src="img/imageproduct3.jpg" alt="" /></picture></div>
+									</div>
+									<button class="product-preview__quick-view">Быстрый просмотр</button>
+								</div>
+								<a href="#" class="product-preview__title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+								<ul class="product-preview__characteristic">
+									<li class="product-preview__characteristic-li">Ширина, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Высота, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Форма:<span>прямоугольная</span></li>
+									<li class="product-preview__characteristic-li">Покрытие корпуса:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Покрытие фасада:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Материал фасада:<span>ЛДСП</span></li>
+									<li class="product-preview__characteristic-li">Материал корпуса:<span>ЛДСП</span></li>
+								</ul>
+								<div class="product-preview__availability product-preview__availability_available">
+									<div class="product-preview__dot"></div>
+									В наличии
+								</div>
+								<div class="product-preview__price">
+									<div class="product-preview__price-current">15 088 руб.</div>
+									<div class="product-preview__price-old">31 088 руб.</div>
+								</div>
+								<div class="product-preview__buttons">
+									<button class="product-preview__add_to_busket btn btn-blue">В корзину</button>
+									<button class="product-preview__compare">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#compare"></use>
+										</svg>
+									</button>
+									<button class="product-preview__favorite">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#favorite"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="product-preview-wrapper">
+							<div class="product-preview">
+								<div class="product-preview__markers">
+									<div class="product-preview__marker product-preview__marker_new">NEW</div>
+								</div>
+								<div class="product-preview__images-wrapper">
+									<div class="product-preview__images">
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct1.webp" type="image/webp"><img src="img/imageproduct1.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct2.webp" type="image/webp"><img src="img/imageproduct2.jpg" alt="" /></picture></div>
+										<div class="product-preview__image-wrapper"><picture><source srcset="img/imageproduct3.webp" type="image/webp"><img src="img/imageproduct3.jpg" alt="" /></picture></div>
+									</div>
+									<button class="product-preview__quick-view">Быстрый просмотр</button>
+								</div>
+								<a href="#" class="product-preview__title">60 см Geberit myDay 245460600 без отверстия перелива</a>
+								<ul class="product-preview__characteristic">
+									<li class="product-preview__characteristic-li">Ширина, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Высота, см:<span>116</span></li>
+									<li class="product-preview__characteristic-li">Форма:<span>прямоугольная</span></li>
+									<li class="product-preview__characteristic-li">Покрытие корпуса:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Покрытие фасада:<span>глянцевое</span></li>
+									<li class="product-preview__characteristic-li">Материал фасада:<span>ЛДСП</span></li>
+									<li class="product-preview__characteristic-li">Материал корпуса:<span>ЛДСП</span></li>
+								</ul>
+								<div class="product-preview__availability product-preview__availability_available">
+									<div class="product-preview__dot"></div>
+									В наличии
+								</div>
+								<div class="product-preview__price">
+									<div class="product-preview__price-current">15 088 руб.</div>
+									<div class="product-preview__price-old">31 088 руб.</div>
+								</div>
+								<div class="product-preview__buttons">
+									<button class="product-preview__add_to_busket btn btn-blue">В корзину</button>
+									<button class="product-preview__compare">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#compare"></use>
+										</svg>
+									</button>
+									<button class="product-preview__favorite">
+										<svg width="24" height="24">
+											<use xlink:href="img/icons.svg#favorite"></use>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pagination pagination_wrapper">
+						<button class="pagination__show-more">Показать ещё</button>
+						<div class="pagination__pages">
+							<a href="" class="pagination__prev">
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#arrow-left"></use>
+								</svg>
+								Предыдущая
+							</a>
+							<div class="pagination__center">
+								<a href="" class="pagination__center-num">1</a>
+								<a href="" class="pagination__center-num">2</a>
+								<a href="" class="pagination__center-num">3</a>
+								<a href="" class="pagination__center-num active">4</a>
+								<span class="pagination__center-num">...</span>
+								<a href="" class="pagination__center-num">5</a>
+							</div>
+							<a href="" class="pagination__next">
+								Следующая
+								<svg width="16" height="16">
+									<use xlink:href="img/icons.svg#arrow-right"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="prefooter container">
+				<a href="#">
+					<svg width="10" height="10">
+						<use xlink:href="img/icons.svg#circle-icon"></use>
+					</svg>
+					Мебель для ванной комнаты Geberit в интернет-магазине в наличии</a>
+				<a href="#">
+					<svg width="10" height="10">
+						<use xlink:href="img/icons.svg#circle-icon"></use>
+					</svg>
+					Мебель для ванной комнаты Geberit по цене от 8238 руб</a>
+				<a href="#">
+					<svg width="10" height="10">
+						<use xlink:href="img/icons.svg#circle-icon"></use>
+					</svg>
+					Купить мебель для ванной Геберит в Москве с доставкой.</a>
+			</section>
+
+		</main>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+
+	<div class="popup popup_location-choose" id="locationPopup">
+		<div class="popup-inner popup-inner_location-choose">
+			<div class="popup-content popup-content_location-choose animate__animated" data-animatedin="animate__fadeInDown" data-animatedout="animate__fadeOutDown">
+				<button class="popup-close close-popup">╳</button>
+				<h2 class="popup__location-title">Выбор региона</h2>
+				<span class="popup__location-subtitle">Выберите город из списка или введите для поиска</span>
+				<form action="" class="popup__location-search">
+					<input type="text" placeholder="Введите название города" class="popup__location-search-name" />
+					<input type="submit" class="popup__location-search-submit" />
+				</form>
+				<div class="popup__location-cities">
+					<a href="" class="popup__location-city delivery stock">
+						<svg width="12" height="14" class="stock-icon">
+							<use xlink:href="img/icons.svg#stock"></use>
+						</svg>
+						<svg width="16" height="16" class="delivery-icon">
+							<use xlink:href="img/icons.svg#delivery"></use>
+						</svg>
+						Москва
+					</a>
+					<a href="" class="popup__location-city delivery">
+						<svg width="12" height="14" class="stock-icon">
+							<use xlink:href="img/icons.svg#stock"></use>
+						</svg>
+						<svg width="16" height="16" class="delivery-icon">
+							<use xlink:href="img/icons.svg#delivery"></use>
+						</svg>
+						Санкт-Петербург
+					</a>
+					<a href="" class="popup__location-city stock">
+						<svg width="12" height="14" class="stock-icon">
+							<use xlink:href="img/icons.svg#stock"></use>
+						</svg>
+						<svg width="16" height="16" class="delivery-icon">
+							<use xlink:href="img/icons.svg#delivery"></use>
+						</svg>
+						Екатеринбург
+					</a>
+					<a href="" class="popup__location-city"> Новосибирск </a>
+					<a href="" class="popup__location-city"> Краснодар </a>
+					<a href="" class="popup__location-city"> Воронеж </a>
+					<a href="" class="popup__location-city"> Казань </a>
+					<a href="" class="popup__location-city"> Красноярск </a>
+					<a href="" class="popup__location-city"> Нижний Новгород </a>
+					<a href="" class="popup__location-city"> Пермь </a>
+					<a href="" class="popup__location-city"> Самара </a>
+					<a href="" class="popup__location-city"> Челябинск </a>
+				</div>
+				<div class="popup__location-info">
+					<div class="popup__location-link"><a href="#">Прочитайте нашу инструкцию</a> по оформление заказов с доставкой транспортной компанией</div>
+					<div class="popup__location-wrapper">
+						<div class="popup__location-info-item">
+							<svg width="12" height="14" class="stock-icon">
+								<use xlink:href="img/icons.svg#stock"></use>
+							</svg>
+							В этом городе есть склад продукции
+						</div>
+						<div class="popup__location-info-item">
+							<svg width="16" height="16" class="delivery-icon">
+								<use xlink:href="img/icons.svg#delivery"></use>
+							</svg>
+							В этих городах мы доставляем своими машинами
+						</div>
+					</div>
+					<p class="popup__location-description">
+						Доставка заказа до транспортной компании бесплатная от 50 000 рублей. Стоимость доставки заказа транспортной компании и время доставки в ваш город указаны на странице товара после выбора
+						города. Вы можете вернуть товар в течение 7 дней без объяснения причины.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup popup_account-auth" id="account-auth-popup">
+		<div class="popup-inner">
+			<div class="popup-content animate__animated" data-animatedin="animate__fadeInDown" data-animatedout="animate__fadeOutDown">
+				<button class="popup-close close-popup">╳</button>
+				<div class="popup__auth-tabs">
+					<button class="active">Вход</button>
+					<button>Регистрация</button>
+				</div>
+				<div class="tab-item login">
+					<span class="popup__login-info">Авторизуйтесь, если вы уже зарегистрированы в нашем магазине.</span>
+					<form action="">
+						<div class="field-wrapper field-wrapper_2column">
+							<span>Телефон или E-mail*</span>
+							<input type="text" value="" placeholder="Телефон или E-mail" />
+							<span class="form-error">Это поле необходимо заполнить.</span>
+						</div>
+						<div class="field-wrapper field-wrapper_2column">
+							<span>Пароль*</span>
+							<input type="text" value="" placeholder="Пароль" />
+							<span class="form-error">Это поле необходимо заполнить.</span>
+						</div>
+						<input type="submit" value="Войти" />
+					</form>
+				</div>
+				<div class="tab-item register" style="display: none;">
+					<form action="">
+						<div class="field-wrapper">
+							<span>Ваше имя*</span>
+							<input type="text" name="Ваше имя" placeholder="Ваше имя" />
+							<span class="form-error">Это поле необходимо заполнить.</span>
+						</div>
+						<div class="field-wrapper">
+							<span>Ваша фамилия*</span>
+							<input type="text" placeholder="Ваша фамилия" />
+							<span class="form-error">Это поле необходимо заполнить.</span>
+						</div>
+						<div class="field-wrapper field-wrapper_2column">
+							<span>Телефон*</span>
+							<input type="tel" class="validates-as-tel" placeholder="Телефон" />
+							<span class="form-error">Это поле необходимо заполнить.</span>
+						</div>
+						<div class="field-wrapper field-wrapper_2column">
+							<span>E-mail*</span>
+							<input type="email" placeholder="E-mail" />
+							<span class="form-error">Это поле необходимо заполнить.</span>
+						</div>
+						<div class="field-wrapper field-wrapper_2column">
+							<span>Пароль*</span>
+							<input type="text" placeholder="Пароль" />
+							<span class="form-error">Это поле необходимо заполнить.</span>
+						</div>
+						<div class="field-wrapper field-wrapper_2column">
+							<span>Подтверждение пароля*</span>
+							<input type="text" placeholder="Подтверждение пароля" />
+							<span class="form-error">Это поле необходимо заполнить.</span>
+						</div>
+						<div class="field-wrapper field-wrapper_2column confirmation">
+							<input type="checkbox" id="confirmation" name="confirmation" />
+							<label for="confirmation"></label>
+							<div class="confirmation__text">Регистрируясь, я принимаю <a href="">условия пользовательского соглашения</a></div>
+						</div>
+						<input type="submit" value="Регистрация" />
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220831180026"></script>
+</body>
+
+</html>
