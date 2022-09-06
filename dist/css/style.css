@@ -511,56 +511,6 @@ input[type=submit],
   font-weight: bold;
 }
 
-.site-main h1 {
-  font-size: var(--font-size-title);
-}
-
-.site-main h2 {
-  font-size: 32px;
-}
-
-.site-main h3 {
-  font-size: 26px;
-}
-
-.site-main h4 {
-  font-size: 20px;
-}
-
-.site-main p {
-  margin-bottom: 15px;
-}
-
-.site-main ul,
-.site-main ol {
-  margin: 15px;
-  padding-left: 15px;
-  list-style: disc;
-}
-
-.site-main ul li,
-.site-main ol li {
-  margin-bottom: 10px;
-}
-
-.site-main ol {
-  list-style: none;
-  counter-reset: my-awesome-counter;
-}
-
-.site-main ol li {
-  counter-increment: my-awesome-counter;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  grid-gap: 15px;
-}
-
-.site-main ol li::before {
-  content: counter(my-awesome-counter) ". ";
-  font-weight: bold;
-}
-
 .absoluteCenter {
   position: absolute !important;
   top: 50%;
@@ -4590,7 +4540,7 @@ input[type=checkbox] + label::before {
 }
 
 .no-webp .order__express{
-  background-image: url(../img/backgrounds/message-bg.png); }
+  background-image: url(../img/message-bg.png); }
 
 .order__express {
   padding: 50px;
@@ -5447,6 +5397,59 @@ input[type=checkbox] + label::before {
   left: 0;
 }
 
+.gift-popup .popup-content {
+  padding: 30px;
+  max-width: 330px;
+  left: 33%;
+}
+
+.gift-popup .popup-close {
+  top: 10px;
+  right: 10px;
+  min-height: auto;
+}
+
+.gift-popup__background {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  z-index: -1;
+}
+
+.gift-popup__title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 130%;
+  color: #02020A;
+  margin-bottom: 15px;
+  margin-left: 50px;
+}
+
+.gift-popup__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #02020A;
+  margin-bottom: 15px;
+}
+
+.gift-popup__waranty {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: #0075C9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gift-popup__icon {
+  margin-right: 10px;
+}
+
 .header {
   position: relative;
 }
@@ -5629,31 +5632,6 @@ input[type=checkbox] + label::before {
           align-items: center;
 }
 
-.header-top__phones-item {
-  font-weight: bold;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
-}
-
-.header-top__phones-item:hover {
-  color: var(--text-links-hover);
-}
-
-.header-top__phones-item_additional {
-  margin-top: 15px;
-  display: inline-block;
-  white-space: nowrap;
-  font-weight: 400;
-}
-
 .header-top__phones-list {
   display: none;
   -webkit-box-orient: vertical;
@@ -5667,6 +5645,47 @@ input[type=checkbox] + label::before {
   padding: 5px 20px 20px 20px;
   border: 1px solid var(--color-border);
   z-index: 10;
+  left: -15px;
+}
+
+.header-top__phones-item {
+  font-weight: bold;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  white-space: nowrap;
+  color: #02020A;
+}
+
+.header-top__phones-item:hover {
+  color: var(--text-links-hover);
+}
+
+.header-top__phones-item_chat {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 15px auto;
+}
+
+.header-top__phones-item_send {
+  margin: 15px auto;
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.header-top__phones-item_time {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .header-top__phones-mobile {
@@ -5676,6 +5695,7 @@ input[type=checkbox] + label::before {
 .header-top__account {
   height: 100%;
   margin-left: 30px;
+  position: relative;
 }
 
 .header-top__account-profile {
@@ -5704,6 +5724,43 @@ input[type=checkbox] + label::before {
   color: var(--text-links-hover);
   background-color: var(--blue-10);
   border: 1px solid var(--text-links-hover);
+}
+
+.header-top__account-profile.active {
+  fill: var(--text-links-hover);
+  color: var(--text-links-hover);
+  background-color: var(--blue-10);
+  border: 1px solid var(--text-links-hover);
+}
+
+.header-top__account-popup {
+  display: none;
+  position: absolute;
+  top: 54px;
+  right: 0;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-border);
+  z-index: 10;
+  padding: 20px;
+}
+
+.header-top__account-enter {
+  width: 110px;
+}
+
+.header-top__account-or {
+  display: block;
+  text-align: center;
+  margin: 2px auto;
+}
+
+.header-top__account-register {
+  background-color: transparent;
+  color: #02020A;
+  font-weight: 700;
+  padding: 0;
+  width: 100%;
+  min-height: auto;
 }
 
 .header-bottom__content {
@@ -6641,6 +6698,10 @@ input[type=checkbox] + label::before {
     margin-left: 0;
   }
 
+  .header-top__account-popup {
+    top: 62px;
+  }
+
   .header-bottom__logo {
     margin-right: 15px;
   }
@@ -7112,6 +7173,12 @@ input[type=checkbox] + label::before {
 
   .collections-section__item-body {
     padding-top: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .gift-popup .popup-content {
+    left: auto;
   }
 }
 
@@ -8094,4 +8161,4 @@ input[type=checkbox] + label::before {
 
 .webp .sidebar__acc-input-color.color_wenge{ background-image: url(data:image/webp;base64,UklGRqoAAABXRUJQVlA4WAoAAAAQAAAADwAADwAAQUxQSF0AAAABV0AgQJlkgSZ4YIqICEHveBRsam1b8mK7V9DdJysAKxEYifFH+Eecr+YvVIjo/wQA48diAD0RUQj3FZjRkdTeZe0tW14Zp9+fjF2y9ZDlk8xxX4EZmIUIwPbyAgAAVlA4ICYAAABQAQCdASoQABAAAgA0JQBOgC6gAP737BGkQAGy0iEHwJK1ZhAAAA==); }
 
-.webp .order__express{ background-image: url(../img/backgrounds/message-bg.webp); }
+.webp .order__express{ background-image: url(../img/message-bg.webp); }

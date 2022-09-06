@@ -6,18 +6,18 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220906085512">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220906150835">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="files/preloader.css?_v=20220906085512" rel="stylesheet" />
+	<link href="files/preloader.css?_v=20220906150835" rel="stylesheet" />
 	<script>
 		window.addEventListener("load", function() {
 			document.querySelector(".pre-loader").style.display = "none";
 			document.querySelector("body").classList.remove("overflowed");
 		});
 	</script>
-	<link href="files/animate.min.css?_v=20220906085512" rel="stylesheet" />
+	<link href="files/animate.min.css?_v=20220906150835" rel="stylesheet" />
 </head>
 
 <body>
@@ -95,8 +95,9 @@
 							<use xlink:href="img/icons.svg#chevron"></use>
 						</svg>
 						<div class="header-top__phones-list">
-							<a href="tel:+74952680406" class="header-top__phones-item header-top__phones-item_additional">+7 (495) 268-04-06 </a>
-							<a href="tel:+74952680406" class="header-top__phones-item header-top__phones-item_additional">+7 (495) 268-04-06 </a>
+							<a href="#" class="header-top__phones-item header-top__phones-item_chat">Чат консультант</a>
+							<a href="#" class="header-top__phones-item header-top__phones-item_send">Отправить заявку</a>
+							<span class="header-top__phones-item header-top__phones-item_time">С <b>9:00</b> до <b>21:00</b> по МСК</span>
 						</div>
 					</div>
 					<div class="header-top__phones-mobile">
@@ -107,11 +108,17 @@
 						</a>
 					</div>
 					<div class="header-top__account">
-						<button class="header-top__account-profile btn-show-popup" data-popup="account-auth-popup">
+						<!-- "btn-show-popup" data-popup="account-auth-popup" -->
+						<button class="header-top__account-profile">
 							<svg width="24" height="24">
 								<use xlink:href="img/icons.svg#account_avatar"></use>
 							</svg>
 						</button>
+						<div class="header-top__account-popup">
+							<button class="header-top__account-enter btn-show-popup" data-popup="account-auth-popup" data-enter="enter">Войти</button>
+							<span class="header-top__account-or">или</span>
+							<button class="header-top__account-register btn-show-popup" data-popup="account-auth-popup" data-register="register">Регистрация</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -523,7 +530,7 @@
 							<div class="product-detail__info-price-wrapper">
 								<span class="product-detail__info-price">28 964 руб</span>
 							</div>
-							<button class="btn-blue btn-blue_bold">Добавить в корзину</button>
+							<button class="btn-blue btn-blue_bold btn-show-popup" data-popup="gift-popup">Добавить в корзину</button>
 							<button class="product-detail__info-one-click">Купить в один клик</button>
 							<div class="product-detail__info-credit">
 								<svg width="16" height="16">
@@ -3770,8 +3777,8 @@
 			<div class="popup-content animate__animated" data-animatedin="animate__fadeInDown" data-animatedout="animate__fadeOutDown">
 				<button class="popup-close close-popup">╳</button>
 				<div class="popup__auth-tabs">
-					<button class="active">Вход</button>
-					<button>Регистрация</button>
+					<button class="popup__enter-btn">Вход</button>
+					<button class="popup__register-btn">Регистрация</button>
 				</div>
 				<div class="tab-item login">
 					<span class="popup__login-info">Авторизуйтесь, если вы уже зарегистрированы в нашем магазине.</span>
@@ -3832,7 +3839,22 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220906085512"></script>
+
+	<div class="popup gift-popup" id="gift-popup">
+		<div class="popup-inner">
+			<div class="popup-content animate__animated" data-animatedin="animate__fadeInDown" data-animatedout="animate__fadeOutDown">
+				<button class="popup-close close-popup">╳</button>
+				<picture><source srcset="img.webpt-bg.webp" type="image/webp"><img src="img/gift-bg.png" class="gift-popup__background"></picture>
+				<div class="gift-popup__title">Получи подарок</div>
+				<div class="gift-popup__text">Добавьте товар в корзину и получите один из подарков*: </div>
+				<div class="gift-popup__waranty">
+					<picture><source srcset="img.webpt-icon.webp" type="image/webp"><img src="img/gift-icon.png" class="gift-popup__icon"></picture>
+					Дополнительная гарантия 1 год
+				</div>
+			</div>
+		</div>
+		</section>
+		<script src="js/app.min.js?_v=20220906150835"></script>
 </body>
 
 </html>

@@ -11684,6 +11684,7 @@
         info__toggler();
         popularCategoriesToggler();
         headerPhonesToggle();
+        headerAccountPopup();
         headerMenuToggle();
         sidebar__acc();
         tabsInit();
@@ -11725,6 +11726,16 @@
         $(".header-top__phones svg").click((function() {
             $(this).toggleClass("active");
             $(this).parent().find(".header-top__phones-list").slideToggle(300, (function() {}));
+        }));
+    }
+    function headerAccountPopup() {
+        $(".header-top__account-profile").click((function() {
+            $(this).toggleClass("active");
+            $(this).parent().find(".header-top__account-popup").slideToggle(300, (function() {}));
+        }));
+        $(document).mouseup((function(e) {
+            var container = $(".header-top__account-popup");
+            if (!container.is(e.target) && 0 === container.has(e.target).length) $(".header-top__account-popup").hide();
         }));
     }
     function headerMenuToggle() {
@@ -12163,9 +12174,16 @@
         }));
     }
     function account_auth_popup() {
-        $(".popup__auth-tabs button").click((function() {
-            $(this).parent().parent().find(".tab-item").toggle();
-            $(".popup__auth-tabs button").removeClass("active");
+        $(".popup__enter-btn").click((function() {
+            $(".tab-item.register").hide();
+            $(".tab-item.login").show();
+            $(".popup__register-btn").removeClass("active");
+            $(this).addClass("active");
+        }));
+        $(".popup__register-btn").click((function() {
+            $(".tab-item.register").show();
+            $(".tab-item.login").hide();
+            $(".popup__enter-btn").removeClass("active");
             $(this).addClass("active");
         }));
     }
@@ -12210,6 +12228,20 @@
         $(".btn-show-popup").each((function() {
             var idPopup = $(this).data("popup");
             $(this).click((function() {
+                if ($(this).data("register")) {
+                    $(".tab-item.register").show();
+                    $(".tab-item.login").hide();
+                    $(".popup__enter-btn").removeClass("active");
+                    $(".popup__register-btn").addClass("active");
+                    console.log("register");
+                }
+                if ($(this).data("enter")) {
+                    $(".tab-item.register").hide();
+                    $(".tab-item.login").show();
+                    $(".popup__register-btn").removeClass("active");
+                    $(".popup__enter-btn").addClass("active");
+                    console.log("enter");
+                }
                 showPopup(idPopup);
             }));
         }));
