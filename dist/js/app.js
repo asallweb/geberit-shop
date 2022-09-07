@@ -11653,9 +11653,6 @@
             }
         }));
     }));
-    $(".katalog-btn").click((function() {
-        $(".katalog").toggleClass("active");
-    }));
     window.addEventListener("load", (function() {
         setTimeout((function() {
             $(".hasAnimation").each((function() {
@@ -11697,6 +11694,7 @@
         main_showMore();
         account_auth_popup();
         show_menu_stores();
+        katalogMenu();
         $(".product-preview__images").HvrSlider();
     }));
     $(window).resize((function() {
@@ -12272,6 +12270,40 @@
             if (0 === $(".popup.opened").length) $("body").removeClass("overflowed");
             $("#" + id).find(".popup-content").removeClass(animatedOut);
         }), 400);
+    }
+    function katalogMenu() {
+        $(".katalog-btn").click((function() {
+            var heightHeader = $("header.header").height() + $(".header-supertop").outerHeight();
+            $("body").toggleClass("overflowed");
+            $(".katalog").toggleClass("active");
+            $(".body-mobileMenu-on").fadeToggle().css("top", heightHeader);
+            $(".katalog").css("top", $("header.header").height());
+        }));
+        $(".header-top__menu-btn").click((function() {
+            var superTopHeight = $(".header-supertop").outerHeight();
+            $("body").toggleClass("overflowed");
+            $(".katalog").toggleClass("active");
+            $(".katalog").css("top", "-" + superTopHeight + "px");
+            $(".body-mobileMenu-on").fadeToggle().css("top", 0);
+        }));
+        $(".katalog__close").click((function() {
+            $("body").toggleClass("overflowed");
+            $(".katalog").toggleClass("active");
+            $(".body-mobileMenu-on").hide().css("top", 0);
+        }));
+        $(".katalog__item_firstlevel").click((function(e) {
+            e.preventDefault();
+            $(".katalog__item_firstlevel").removeClass("active");
+            $(this).addClass("active");
+            var sclvl = $(this).data("secondlvl");
+            $(".katalog__secondlevel").hide();
+            $("#" + sclvl).show();
+            $(".katalog__mobile-back").show();
+            $(".katalog__mobile-back").click((function() {
+                $(".katalog__secondlevel").hide();
+                $(".katalog__mobile-back").hide();
+            }));
+        }));
     }
     (function($) {
         $.fn.HvrSlider = function() {

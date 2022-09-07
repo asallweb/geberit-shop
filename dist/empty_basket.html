@@ -6,18 +6,18 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220906155937">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220907114730">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="files/preloader.css?_v=20220906155937" rel="stylesheet" />
+	<link href="files/preloader.css?_v=20220907114730" rel="stylesheet" />
 	<script>
 		window.addEventListener("load", function() {
 			document.querySelector(".pre-loader").style.display = "none";
 			document.querySelector("body").classList.remove("overflowed");
 		});
 	</script>
-	<link href="files/animate.min.css?_v=20220906155937" rel="stylesheet" />
+	<link href="files/animate.min.css?_v=20220907114730" rel="stylesheet" />
 </head>
 
 <body>
@@ -28,6 +28,7 @@
 			</div>
 		</div>
 		<div class="body-filters-on"></div>
+		<div class="body-mobileMenu-on"></div>
 		<div class="header-supertop">С 1 марта 2022 года повышение цен на всю продукцию Geberit до 20%. Успей купить по выгодной цене. Бесплатное хранение заказов на нашем складе.</div>
 		<header class="header">
 			<div class="header__top header-top">
@@ -108,7 +109,6 @@
 						</a>
 					</div>
 					<div class="header-top__account">
-						<!-- "btn-show-popup" data-popup="account-auth-popup" -->
 						<button class="header-top__account-profile">
 							<svg width="24" height="24">
 								<use xlink:href="img/icons.svg#account_avatar"></use>
@@ -335,29 +335,85 @@
 				</div>
 			</div>
 			<div class="katalog">
-				<div class="item active">Инсталляции</div>
-				<div class="item">Мебель для ванной комнаты</div>
-				<div class="item">Унитазы</div>
-				<div class="item">Готовые решения с унитазом</div>
-				<div class="item">Душевые кабины</div>
-				<div class="item">Смывные клавиши</div>
-				<div class="item">Ванны</div>
-				<div class="item">Биде</div>
-				<div class="item">Писсуары</div>
-				<div class="item">Модули Monolith</div>
-				<div class="item">Смывные бачки</div>
-				<div class="item">Смесители</div>
-				<div class="item">Душевые трапы</div>
-				<div class="item">Приводы смыва</div>
-				<div class="item">Аксессуары</div>
-				<div class="item">Душевые уголки</div>
-				<div class="item">Сиситемы защиты от протечек</div>
-				<div class="item">Комплектующие</div>
-				<div class="item">Полотенцесушители</div>
-				<div class="item">Сантехнические люки</div>
-				<div class="item">Вентиляторы</div>
-				<div class="item">Вентиляторы</div>
-				<div class="item">Вентиляторы</div>
+				<button class="katalog__close">╳</button>
+				<div class="menu-stores__mobile-head">
+					<div class="menu-stores__mobile-head-wrapper menu-stores__mobile-head-wrapper_katalog">
+						<a href="" class="menu-stores__mobile-logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture></a>
+						<button class="menu-stores__mobile-location header-top__city-btn btn-show-popup" data-popup="locationPopup">
+							<svg width="18" height="18">
+								<use xlink:href="img/icons.svg#map_pin"></use>
+							</svg>
+							Москва
+						</button>
+					</div>
+				</div>
+				<div class="katalog__mobile-head">
+					<button class="katalog__mobile-back">Назад</button>
+					<div class="katalog__mobile-title">Каталог товаров</div>
+				</div>
+				<div class="katalog__firstlevel">
+					<a href="" class="katalog__item katalog__item_firstlevel active" data-secondlvl="sclvl-1">Инсталляции</a>
+					<a href="" class="katalog__item katalog__item_firstlevel" data-secondlvl="sclvl-2">Мебель для ванной комнаты</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Унитазы</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Готовые решения с унитазом</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Душевые кабины</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Смывные клавиши</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Ванны</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Биде</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Писсуары</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Модули Monolith</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Смывные бачки</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Смесители</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Душевые трапы</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Приводы смыва</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Аксессуары</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Душевые уголки</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Сиситемы защиты от протечек</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Комплектующие</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Полотенцесушители</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Сантехнические люки</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Вентиляторы</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Вентиляторы</a>
+					<a href="" class="katalog__item katalog__item_firstlevel">Вентиляторы</a>
+				</div>
+				<div class="katalog__secondlevel" id="sclvl-1">
+					<div class="katalog__secondlevel-inner">
+						<div class="katalog__secondlevel-left">
+							<div class="katalog__secondlevel-title">Инсталляции</div>
+							<a href="" class="katalog__item katalog__item_sclvl active">Инсталляции для унитаза</a>
+							<a href="" class="katalog__item katalog__item_sclvl">Инсталляции с унитазом</a>
+							<a href="" class="katalog__item katalog__item_sclvl">Инсталляции для биде</a>
+							<a href="" class="katalog__item katalog__item_sclvl">Инсталляции для писсуара</a>
+							<a href="" class="katalog__item katalog__item_sclvl">Инсталляции Plattenbau</a>
+							<a href="" class="katalog__item katalog__item_sclvl">Инсталляции для умывальника</a>
+							<a href="" class="katalog__item katalog__item_sclvl">С креплением к стене</a>
+						</div>
+						<div class="katalog__secondlevel-right">
+							<div class="katalog__secondlevel-title">Популярные серии</div>
+							<a href="" class="katalog__item katalog__item_sclvl">Duofix</a>
+							<a href="" class="katalog__item katalog__item_sclvl">iCon</a>
+						</div>
+					</div>
+				</div>
+				<div class="katalog__secondlevel" id="sclvl-2">
+					<div class="katalog__secondlevel-inner">
+						<div class="katalog__secondlevel-left">
+							<div class="katalog__secondlevel-title">Мебель для ванной комнаты</div>
+							<a href="" class="katalog__item katalog__item_sclvl active">Мебель для ванной комнаты 1</a>
+							<a href="" class="katalog__item katalog__item_sclvl">Мебель для ванной комнаты 2</a>
+							<a href="" class="katalog__item katalog__item_sclvl">Инсталляции для биде</a>
+							<a href="" class="katalog__item katalog__item_sclvl">Инсталляции для писсуара</a>
+							<a href="" class="katalog__item katalog__item_sclvl">Инсталляции Plattenbau</a>
+							<a href="" class="katalog__item katalog__item_sclvl">Инсталляции для умывальника</a>
+							<a href="" class="katalog__item katalog__item_sclvl">С креплением к стене</a>
+						</div>
+						<div class="katalog__secondlevel-right">
+							<div class="katalog__secondlevel-title">Популярные серии</div>
+							<a href="" class="katalog__item katalog__item_sclvl">Duofix 2</a>
+							<a href="" class="katalog__item katalog__item_sclvl">iCon 2</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</header>
 		<main class="site-main page">
@@ -868,7 +924,7 @@
 			</div>
 		</div>
 		</section>
-		<script src="js/app.min.js?_v=20220906155937"></script>
+		<script src="js/app.min.js?_v=20220907114730"></script>
 </body>
 
 </html>
