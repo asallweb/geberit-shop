@@ -500,6 +500,12 @@
 		<path d="M6.25 5.97998H10.75" stroke="#02020A" />
 		<path d="M6.25 7.97998H10.75" stroke="#02020A" />
 		<path d="M6.25 9.97998H8.25" stroke="#02020A" />
+	</symbol>	
+	<symbol id="application-2" width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<rect x="1.1" y="0.600305" width="13.8001" height="16.8001" stroke="#02020A" stroke-width="1.2"/>
+		<path d="M4.10547 4.50031H11.8894" stroke="#02020A" stroke-width="1.2"/>
+		<path d="M4.10547 8.10095H11.8894" stroke="#02020A" stroke-width="1.2"/>
+		<path d="M4.10547 11.7016H7.56499" stroke="#02020A" stroke-width="1.2"/>
 	</symbol>
 	<symbol id="chat" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path d="M12.5003 8.31331L14.5003 10.3133V6.97998V2.97998H7.16699V8.31331H12.5003Z" stroke="#02020A" stroke-width="1.2" stroke-linecap="square" />

@@ -11695,6 +11695,7 @@
         account_auth_popup();
         show_menu_stores();
         katalogMenu();
+        mainMenu();
         $(".product-preview__images").HvrSlider();
     }));
     $(window).resize((function() {
@@ -12279,12 +12280,14 @@
             $(".body-mobileMenu-on").fadeToggle().css("top", heightHeader);
             $(".katalog").css("top", $("header.header").height());
         }));
-        $(".header-top__menu-btn").click((function() {
+        $(".mobile-menu__item_katalog").click((function(e) {
+            e.preventDefault();
             var superTopHeight = $(".header-supertop").outerHeight();
-            $("body").toggleClass("overflowed");
-            $(".katalog").toggleClass("active");
+            $("body").addClass("overflowed");
+            $(".mobile-menu").removeClass("active");
+            $(".katalog").addClass("active");
             $(".katalog").css("top", "-" + superTopHeight + "px");
-            $(".body-mobileMenu-on").fadeToggle().css("top", 0);
+            $(".body-mobileMenu-on").fadeIn().css("top", 0);
         }));
         $(".katalog__close").click((function() {
             $("body").toggleClass("overflowed");
@@ -12292,10 +12295,10 @@
             $(".body-mobileMenu-on").hide().css("top", 0);
         }));
         $(".katalog__item_firstlevel").click((function(e) {
-            e.preventDefault();
+            var sclvl = $(this).data("secondlvl");
+            if (sclvl) e.preventDefault();
             $(".katalog__item_firstlevel").removeClass("active");
             $(this).addClass("active");
-            var sclvl = $(this).data("secondlvl");
             $(".katalog__secondlevel").hide();
             $("#" + sclvl).show();
             $(".katalog__mobile-back").show();
@@ -12303,6 +12306,20 @@
                 $(".katalog__secondlevel").hide();
                 $(".katalog__mobile-back").hide();
             }));
+        }));
+    }
+    function mainMenu() {
+        $(".header-top__menu-btn").click((function() {
+            var superTopHeight = $(".header-supertop").outerHeight();
+            $("body").toggleClass("overflowed");
+            $(".mobile-menu").toggleClass("active");
+            $(".mobile-menu").css("top", "-" + superTopHeight + "px");
+            $(".body-mobileMenu-on").fadeToggle().css("top", 0);
+        }));
+        $(".mobile-menu__close").click((function() {
+            $("body").removeClass("overflowed");
+            $(".mobile-menu").toggleClass("active");
+            $(".body-mobileMenu-on").hide().css("top", 0);
         }));
     }
     (function($) {
