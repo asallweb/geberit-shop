@@ -11734,7 +11734,10 @@
         }));
         $(document).mouseup((function(e) {
             var container = $(".header-top__account-popup");
-            if (!container.is(e.target) && 0 === container.has(e.target).length) $(".header-top__account-popup").hide();
+            if (!container.is(e.target) && 0 === container.has(e.target).length) {
+                $(".header-top__account-popup").hide();
+                $(".header-top__account-profile").removeClass("active");
+            }
         }));
     }
     function headerMenuToggle() {
