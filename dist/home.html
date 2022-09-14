@@ -6,18 +6,18 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220912131040">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220914102756">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="files/preloader.css?_v=20220912131040" rel="stylesheet" />
+	<link href="files/preloader.css?_v=20220914102756" rel="stylesheet" />
 	<script>
 		window.addEventListener("load", function() {
 			document.querySelector(".pre-loader").style.display = "none";
 			document.querySelector("body").classList.remove("overflowed");
 		});
 	</script>
-	<link href="files/animate.min.css?_v=20220912131040" rel="stylesheet" />
+	<link href="files/animate.min.css?_v=20220914102756" rel="stylesheet" />
 </head>
 
 <body>
@@ -1650,7 +1650,97 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20220912131040"></script>
+	<div class="popup busket-add" id="busket-add-popup">
+		<div class="popup-inner">
+			<div class="popup-content animate__animated" data-animatedin="animate__fadeInDown" data-animatedout="animate__fadeOutDown">
+				<button class="popup-close close-popup">╳</button>
+				<picture><source srcset="img/busket-add-popup.webp" type="image/webp"><img src="img/busket-add-popup.png" class="buyone-click-popup__image"></picture>
+				<div class="buyone-click-popup__title">Товар добавлен в корзину</div>
+				<div class="busket-add__product">
+					<div class="busket-add__product-image">
+						<picture><source srcset="img/busket-add__product-image.webp" type="image/webp"><img src="img/busket-add__product-image.png" alt=""></picture>
+					</div>
+					<div class="busket-add__product-body">
+						<div class="busket-add__product-name">Система инсталляции для унитазов Geberit Duofix UP320 111.300.00.5</div>
+						<div class="busket-add__product-code">
+							<svg width="15" height="15">
+								<use xlink:href="img/icons.svg#code"></use>
+							</svg>
+							Код товара: 441377
+						</div>
+						<div class="busket-add__product-price">
+							<div class="busket-add__product-price-new">28 964 руб</div>
+							<div class="busket-add__product-price-old">32 128 руб.</div>
+						</div>
+					</div>
+				</div>
+				<div class="busket-add__gift">
+					<svg width="32" height="32">
+						<use xlink:href="img/icons.svg#busket-add__gift"></use>
+					</svg>
+					Выберите подарок на странице оформления заказа
+				</div>
+				<div class="busket-add__info">
+					В корзине <b>1 товар</b> на сумму <b>28 964 руб</b>
+				</div>
+				<div class="busket-add__buttons">
+					<button class="btn btn-blue">Оформить заказ</button>
+					<button class="btn btn-light">Продолжить покупки</button>
+				</div>
+				<div class="busket-add__alsobuy">
+					<div class="busket-add__alsobuy-title">С этим товаром так же покупают</div>
+					<div class="busket-add__small-product">
+						<div class="busket-add__small-product-image">
+							<picture><source srcset="img/busket-add__small-product-image.webp" type="image/webp"><img src="img/busket-add__small-product-image.png" alt=""></picture>
+						</div>
+						<div class="busket-add__small-product-body">
+							<a href="" class="busket-add__small-product-title">Комплект крепления для инсталляций Geberit Duofix 111.815.00.1 к стене</a>
+							<div class="busket-add__small-product-count ">
+								<button class="minus unactive">
+									<svg width="12" height="16">
+										<use xlink:href="img/icons.svg#minus"></use>
+									</svg>
+								</button>
+								<input class="number" type="number" value="1" />
+								<button class="plus">
+									<svg width="12" height="12">
+										<use xlink:href="img/icons.svg#plus"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="busket-add__small-product-price">2 464 руб.</div>
+							<button class="busket-add__small-product-add">Добавить</button>
+						</div>
+					</div>
+					<div class="busket-add__small-product">
+						<div class="busket-add__small-product-image">
+							<picture><source srcset="img/busket-add__small-product-image2.webp" type="image/webp"><img src="img/busket-add__small-product-image2.png" alt=""></picture>
+						</div>
+						<div class="busket-add__small-product-body">
+							<a href="" class="busket-add__small-product-title">Комплект крепления для инсталляций Geberit Duofix 111.815.00.1 к стене</a>
+							<div class="busket-add__small-product-count ">
+								<button class="minus unactive">
+									<svg width="12" height="16">
+										<use xlink:href="img/icons.svg#minus"></use>
+									</svg>
+								</button>
+								<input class="number" type="number" value="1" />
+								<button class="plus">
+									<svg width="12" height="12">
+										<use xlink:href="img/icons.svg#plus"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="busket-add__small-product-price">3 564 руб.</div>
+							<button class="busket-add__small-product-add">Добавить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.min.js?_v=20220914102756"></script>
 </body>
 
 </html>

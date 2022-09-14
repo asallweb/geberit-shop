@@ -11687,6 +11687,7 @@
         tabsInit();
         catalogFilterToggle();
         busketCounter();
+        busketPopupCounter();
         headerSearch();
         mobileSortDropdown();
         feedbackWidget();
@@ -12106,6 +12107,23 @@
     }
     function busketCounter() {
         $(".basket__item").each((function() {
+            let amount = $(this).find(".number").val();
+            $(this).find(".plus").click((function() {
+                amount++;
+                $(this).parent().find(".number").val(amount);
+                $(this).parent().find(".minus").removeClass("unactive");
+            }));
+            $(this).find(".minus").click((function() {
+                if (amount > 1) {
+                    amount--;
+                    $(this).parent().find(".number").val(amount);
+                }
+                if (1 == amount) $(this).parent().find(".minus").addClass("unactive");
+            }));
+        }));
+    }
+    function busketPopupCounter() {
+        $(".busket-add__small-product-count").each((function() {
             let amount = $(this).find(".number").val();
             $(this).find(".plus").click((function() {
                 amount++;
