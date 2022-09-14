@@ -6,18 +6,18 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220914102756">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220914115827">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="files/preloader.css?_v=20220914102756" rel="stylesheet" />
+	<link href="files/preloader.css?_v=20220914115827" rel="stylesheet" />
 	<script>
 		window.addEventListener("load", function() {
 			document.querySelector(".pre-loader").style.display = "none";
 			document.querySelector("body").classList.remove("overflowed");
 		});
 	</script>
-	<link href="files/animate.min.css?_v=20220914102756" rel="stylesheet" />
+	<link href="files/animate.min.css?_v=20220914115827" rel="stylesheet" />
 </head>
 
 <body>
@@ -1168,7 +1168,6 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="popup busket-add" id="busket-add-popup">
 		<div class="popup-inner">
 			<div class="popup-content animate__animated" data-animatedin="animate__fadeInDown" data-animatedout="animate__fadeOutDown">
@@ -1258,8 +1257,80 @@
 			</div>
 		</div>
 	</div>
+	<div class="popup feedback-add" id="feedback-popup">
+		<div class="popup-inner">
+			<div class="popup-content animate__animated" data-animatedin="animate__fadeInDown" data-animatedout="animate__fadeOutDown">
+				<button class="popup-close close-popup">╳</button>
+				<div class="feedback-add__title">Добавить отзыв о товаре</div>
+				<div class="feedback-add__product-title">Тумба под раковину 120 см Geberit It! 819131000</div>
+				<form action="" class="feedback-add__form">
+					<div class="feedback-add__form-wrapper">
+						<div class="feedback-add__form-label">Как вас зовут?</div>
+						<div class="feedback-add__form-field">
+							<input type="text" placeholder="Ваше имя" class="feedback-add__form-input">
+						</div>
+					</div>
+					<div class="feedback-add__form-wrapper">
+						<div class="feedback-add__form-label">Ваша оценка</div>
+						<div class="feedback-add__form-field">
+							<div class="reviews__rating-stars">
+								<span class="reviews__rating-star active"></span>
+								<span class="reviews__rating-star active"></span>
+								<span class="reviews__rating-star active"></span>
+								<span class="reviews__rating-star active"></span>
+								<span class="reviews__rating-star active"></span>
+							</div>
+						</div>
+					</div>
+					<div class="feedback-add__form-wrapper">
+						<div class="feedback-add__form-label">Расскажите подробнее</div>
+						<div class="feedback-add__form-field">
+							<span class="feedback-add__form-field-name">Достоинства:</span>
+							<textarea name="" placeholder="Что вам понравилось" class="feedback-add__form-textarea"></textarea>
+							<span class="feedback-add__form-field-name">Недостатки:</span>
+							<textarea name="" placeholder="Что вам понравилось" class="feedback-add__form-textarea"></textarea>
+							<span class="feedback-add__form-field-name">Комментарии:</span>
+							<textarea name="" placeholder="Другие впечатления" class="feedback-add__form-textarea"></textarea>
+						</div>
+					</div>
+					<div class="feedback-add__form-wrapper">
+						<div class="feedback-add__form-label">Добавьте фото</div>
+						<div class="feedback-add__form-field">
+							<div class="feedback-add__form-field-files">
+								<svg width="14" height="13">
+									<use xlink:href="img/icons.svg#form-file"></use>
+								</svg>
+								<div>
+									<a href="">Нажмите на ссылку</a>, чтобы выбрать фотографии или просто перетащите их сюда
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="feedback-add__form-wrapper">
+						<div class="feedback-add__form-label"></div>
+						<div class="feedback-add__form-field feedback-add__form-field_bottom">
+							<input type="submit" class="feedback-add__form-submit" value="Отправить отзыв">
+							<div class="feedback-add__form-terms">Оставляя отзыв, вы соглашаетесь <a href="">c условиями использования сервиса</a></div>
+						</div>
+					</div>
+				</form>
+				<button class="close-popup btn-show-popup" data-popup="feedback-success-popup" style="margin: 30px auto;">Окно успешного отзыва</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup buyone-click-popup" id="feedback-success-popup">
+		<div class="popup-inner">
+			<div class="popup-content animate__animated" data-animatedin="animate__fadeInDown" data-animatedout="animate__fadeOutDown">
+				<button class="popup-close close-popup">╳</button>
+				<picture><source srcset="img/buyone-click-success-popup.webp" type="image/webp"><img src="img/buyone-click-success-popup.png" alt="" class="buyone-click-popup__image"></picture>
+				<div class="buyone-click-popup__title">Спасибо за ваш отзыв!</div>
+				<div class="buyone-click-popup__text">Отзыв успешно добавлен. Служба поддержки проверит и <br> опубликует ваш отзыв в ближайшее время.</div>
+				<button class="close-popup" style="margin: 0 auto;">Продолжить</button>
+			</div>
+		</div>
+	</div>
 
-	<script src="js/app.min.js?_v=20220914102756"></script>
+	<script src="js/app.min.js?_v=20220914115827"></script>
 </body>
 
 </html>

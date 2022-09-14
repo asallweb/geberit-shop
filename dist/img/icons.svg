@@ -535,4 +535,10 @@
 		<path d="M21.0625 9.67188C21.0625 9.22432 20.8847 8.7951 20.5682 8.47863C20.2518 8.16216 19.8226 7.98438 19.375 7.98438C16.8789 7.98438 16 11.3594 16 11.3594H19.375C19.8226 11.3594 20.2518 11.1816 20.5682 10.8651C20.8847 10.5487 21.0625 10.1194 21.0625 9.67188V9.67188Z" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="square"/>
 		<path d="M17.6875 11.3594V24.0156H14.3125V11.3594" stroke="white" stroke-width="1.2" stroke-miterlimit="10" stroke-linecap="square"/>
 	</symbol>
+	<symbol id="form-file" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<ellipse cx="7" cy="7.66699" rx="2" ry="2" stroke="#02020A" stroke-width="1.2" stroke-linecap="square"/>
+		<path d="M9 3.00033H13" stroke="#02020A" stroke-width="1.2" stroke-linecap="square"/>
+		<path d="M10.9993 1V5" stroke="#02020A" stroke-width="1.2" stroke-linecap="square"/>
+		<path d="M13 5.80744V12.3355H1L1 3.6834H5.07363V1.69043H7.57183" stroke="#1B1B23" stroke-width="1.2"/>
+	</symbol>
 </svg>
