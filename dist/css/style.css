@@ -5256,6 +5256,25 @@ input[type=checkbox] + label::before {
   font-size: 14px;
 }
 
+.total-order__promocode-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.total-order__promocode-input {
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  min-width: 60%;
+}
+
 .favorite svg {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
@@ -6078,6 +6097,12 @@ input[type=checkbox] + label::before {
   font-weight: 400;
   font-size: 16px;
   color: #67676C;
+}
+
+.fancybox__slide-caption {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header {
